@@ -4,18 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { UserModule } from './components/user/user.module';
+import { UsrModule } from './components/usr/usr.module';
+import { UsrIndexComponent } from './components/usr/usr-index/usr-index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    UsrIndexComponent
   ],
     imports: [
         BrowserModule,
-        UserModule,
+        UsrModule,
         RouterModule.forRoot([
-          { path: '', loadChildren: './components/user/user.module#UserModule'},
+          { path: '', loadChildren: './components/usr/usr.module#UsrModule'},
         ])
     ],
   providers: [],
