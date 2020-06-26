@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Allatrack';
-  onActivate(event) {
+  onActivate(event): void {
     window.scroll(0, 0 );
   }
 }
