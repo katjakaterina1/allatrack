@@ -6,12 +6,14 @@ import {RouterModule} from '@angular/router';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { UsrModule } from './components/usr/usr.module';
 import { UsrIndexComponent } from './components/usr/usr-index/usr-index.component';
+import { OurServicesComponent } from './components/shared/our-services/our-services.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    UsrIndexComponent
+    UsrIndexComponent,
+    OurServicesComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,44 @@
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 32px
+  padding-top: 24px
+  &__logo
+    font-family: 'Oswald'
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 36px
+    display: flex
+    color: #1D1D1F
+    text-decoration: none
+    margin: 0 0 0 118px
+  &__nav
+    display: flex
+    li
+      display: flex
+      align-items: center
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 140%
+      color: #1D1D1F
+      cursor: pointer
+      &:not(:last-child)
+        margin-right: 32px
+      svg
+        margin-left: 8px
+  &__wrapper
+    display: flex
+    align-items: center
+    margin-right: 118px
+  &__lang
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 140%
+    text-align: right
+    color: #1D1D1F
+    margin-right: 24px
+
