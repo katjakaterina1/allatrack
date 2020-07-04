@@ -253,6 +253,164 @@
       flex-wrap: wrap
       .link
         margin: 0 24px 24px 0
+.reviews
+  display: flex
+  flex-direction: column
+  margin: 0 0 120px 0
+  h2
+    margin: 0 150px
+    width: 50%
+  &__block
+    display: flex
+    margin-top: 40px
+    overflow: hidden
+    overflow-x: scroll
+    &_wrapp
+      display: flex
+      margin-left: 150px
+    &_single
+      display: flex
+      flex-direction: column
+      background-color: #F6F6F6
+      border-radius: 8px
+      width: 600px
+      background-image: url("/assets/images/comment-bg.png")
+      padding: 80px 80px 40px 80px
+      box-sizing: border-box
+      margin-right: 24px
+      &:nth-child(even)
+        background-image: url("/assets/images/comment-bg2.png")
+      &-heading
+        display: flex
+        justify-content: space-between
+        margin-bottom: 24px
+        .quote
+          font-family: Oswald, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 120px
+          display: flex
+          align-items: flex-end
+          text-transform: uppercase
+          color: #4545FB
+          line-height: 0
+        .view
+          display: flex
+          align-items: center
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 14px
+          line-height: 28px
+          text-decoration-line: underline
+          cursor: pointer
+          color: #4545FB
+          svg
+            margin-right: 8px
+      p
+        font-family: Archivo, sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 14px
+        line-height: 28px
+        color: #000000
+        margin-bottom: 40px
+      &-person
+        display: flex
+        align-items: center
+        img
+          object-fit: cover
+          width: 64px
+          height: 64px
+          border-radius: 100%
+          margin-right: 16px
+        &--descr
+          display: flex
+          flex-direction: column
+        .name
+          font-family: Oswald, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 16px
+          line-height: 28px
+          letter-spacing: 0.04em
+          text-transform: uppercase
+          color: #1D1D1F
+          margin-bottom: 4px
+        .position
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 12px
+          line-height: 13px
+          color: #9F9FA0
+.blog
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__articles
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    &_single
+      display: flex
+      flex-direction: column
+      width: 31%
+      &:not(:last-child)
+        margin: 0 24px 0 0
+      img
+        order: 2
+        width: 100%
+        height: 200px
+        object-fit: cover
+        border-radius: 8px
+      &-description
+        order: 1
+        width: 100%
+        display: flex
+        flex-direction: column
+        &--tags
+          display: flex
+          margin-bottom: 24px
+        h4
+          font-family: Oswald, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 18px
+          line-height: 27px
+          text-transform: uppercase
+          color: #1D1D1F
+          margin-bottom: 24px
+          min-height: 54px
+        p
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 16px
+          line-height: 28px
+          letter-spacing: 0.04em
+          color: #9F9FA0
+          margin-bottom: 24px
+      &.main
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
+        margin: 0 0 56px 0
+        img
+          order: 1
+          width: 558px
+          height: 320px
+          object-fit: cover
+          border-radius: 8px
+        h4
+          font-size: 24px
+          line-height: 36px
+        .blog__articles_single-description
+          order: 2
+          width: 45%
+          margin: 16px 0 0 32px
+
 
 
 
