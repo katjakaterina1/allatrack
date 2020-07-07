@@ -1,0 +1,152 @@
+.footer
+  display: flex
+  flex-direction: column
+  margin: 0 40px 8px 40px
+  .container
+    padding: 80px 110px 40px 110px
+    background: #171C2C
+    border-radius: 8px
+  &__wrapp
+    display: flex
+    justify-content: space-between
+  &__social
+    display: flex
+    align-items: center
+    img
+      margin-left: 20px
+  &__form
+    background: #4545FB
+    border-radius: 8px
+    margin: 40px 0 80px 0
+    padding: 40px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &_header
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 40px
+      h2
+        width: 41%
+        color: #FFFFFF
+      p
+        width: 41%
+        font-family: Archivo, sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 14px
+        line-height: 28px
+        color: #FFFFFF
+    &_block
+      width: 41%
+      display: flex
+      flex-direction: column
+      &-name
+        font-family: Archivo, sans-serif
+        font-style: normal
+        font-weight: 600
+        font-size: 12px
+        line-height: 13px
+        letter-spacing: 0.04em
+        color: #FFFFFF
+        opacity: 0.4
+        margin-bottom: 24px
+      &-info
+        font-size: 24px
+        margin-bottom: 24px
+        color: white
+      form
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        input, textarea
+          background: rgba(255, 255, 255, 0.8)
+          border-radius: 4px
+          padding: 15px 24px
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 14px
+          line-height: 140%
+          color: black
+          outline: none
+          border: none
+          margin-bottom: 16px
+          width: 49%
+          box-sizing: border-box
+          &::placeholder
+            font-family: Archivo, sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 14px
+            line-height: 140%
+            color: #9F9FA0
+        textarea
+          width: 100%
+          max-width: 100%
+          min-width: 100%
+          height: 90px
+          min-height: 90px
+          max-height: 90px
+        label
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 14px
+          line-height: 140%
+          text-align: center
+          text-decoration-line: underline
+          color: #FFFFFF
+          display: flex
+          align-items: center
+          margin-bottom: 26px
+          svg
+            margin-right: 8px
+        button
+          width: 100%
+          border-radius: 4px
+  &__nav
+    display: flex
+    justify-content: space-between
+    &_block
+      display: flex
+      flex-direction: column
+      span
+        font-family: Oswald, sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 24px
+      ul
+        display: flex
+        flex-direction: column
+        max-width: 208px
+        li
+          cursor: pointer
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: 500
+          font-size: 14px
+          line-height: 200%
+          color: #FFFFFF
+          opacity: 0.4
+          transition: all .3s
+          &:hover
+            transition: all .3s
+            opacity: 100%
+
+
+  &__copyright
+    font-family: Archivo, sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 12px
+    line-height: 200%
+    color: #9F9FA0
+    margin: 8px 0 0 110px

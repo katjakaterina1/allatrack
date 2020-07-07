@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { UsrModule } from './components/usr/usr.module';
 import { UsrIndexComponent } from './components/usr/usr-index/usr-index.component';
 import { OurServicesComponent } from './components/shared/our-services/our-services.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UsrIndexComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,
