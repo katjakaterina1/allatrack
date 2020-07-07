@@ -4,8 +4,14 @@
   align-items: center
   margin: 32px
   padding-top: 24px
+  position: relative
+  transition: all .3s
+  &.drop
+    ul li span, ul li svg
+      z-index: 200
   .logo
     margin: 0 0 0 118px
+    z-index: 200
   &__nav
     display: flex
     li
@@ -17,14 +23,24 @@
       line-height: 140%
       color: #1D1D1F
       cursor: pointer
+      z-index: 200
       &:not(:last-child)
         margin-right: 32px
+      span.active
+        color: #00CAA7
+        z-index: 200
       svg
         margin-left: 8px
+        &.active
+          z-index: 200
+          transform: rotate(180deg)
+          path
+            fill: #00CAA7
   &__wrapper
     display: flex
     align-items: center
     margin-right: 118px
+    z-index: 200
   &__lang
     font-style: normal
     font-weight: 500
@@ -33,4 +49,88 @@
     text-align: right
     color: #1D1D1F
     margin-right: 24px
+  &__dropdown
+    position: absolute
+    visibility: hidden
+    opacity: 0
+    transition: all .3s
+    background: #FFFFFF
+    border-radius: 8px
+    left: 0
+    top: 0
+    z-index: 100
+    width: 100%
+    padding: 133px 118px 118px 118px
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &.open
+      visibility: visible
+      opacity: 1
+      transition: all .3s
+    &_aside
+      padding: 40px 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 20%
+      border-right: 1px solid #D6D6D6
+      a:not(:last-child)
+        margin-bottom: 40px
+    &_info
+      display: flex
+      flex-direction: column
+      width: 45%
+      margin-left: 80px
+      &.full
+        width: 70%
+      span
+        font-family: Oswald, sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 24px
+        line-height: 36px
+        display: flex
+        align-items: center
+        text-transform: uppercase
+        color: #1D1D1F
+        margin-bottom: 24px
+      p
+        font-family: Archivo, sans-serif
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 28px
+        letter-spacing: 0.04em
+        color: #9F9FA0
+        margin-bottom: 20px
+      &-columns
+        display: flex
+        justify-content: space-between
+        margin-top: 24px
+        &--single
+          display: flex
+          flex-direction: column
+          li
+            font-family: Archivo, sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 200%
+            letter-spacing: 0.04em
+            color: #9F9FA0
+            margin-bottom: 16px
+    &_wrap
+      display: flex
+      flex-direction: column
+      width: 100%
+    &_images
+      display: flex
+      .animated-image
+        width: 174px
+        height: 174px
+        border-radius: 100%
+        &.top
+          margin-left: -87px
 

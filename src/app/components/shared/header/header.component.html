@@ -1,27 +1,137 @@
-<header class="header">
+<div class="overlay" [ngClass]="{'open': openAbout || openExpertise || openServices }"></div>
+<header class="header" [ngClass]="{'drop': openAbout || openExpertise || openServices }">
   <a routerLink="/" class="logo">Allatrack</a>
   <ul class="header__nav">
-    <li>
-      About us
-      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <li (mouseover)="openDropdown('about')" (mouseleave)="openDropdown('close')">
+      <span [ngClass]="{'active': openAbout}">About us</span>
+      <svg [ngClass]="{'active': openAbout}" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z" fill="#1D1D1F"/>
       </svg>
     </li>
-    <li>
-      Services
-      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <li (mouseover)="openDropdown('services')" (mouseleave)="openDropdown('close')">
+      <span [ngClass]="{'active': openServices}">Services</span>
+      <svg [ngClass]="{'active': openServices}"width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z" fill="#1D1D1F"/>
       </svg>
     </li>
-    <li>Expertise
-      <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <li (mouseover)="openDropdown('expertise')" (mouseleave)="openDropdown('close')">
+      <span [ngClass]="{'active': openExpertise}">Expertise</span>
+      <svg [ngClass]="{'active': openExpertise}"width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.94 0.726685L4 3.78002L7.06 0.726685L8 1.66668L4 5.66668L0 1.66668L0.94 0.726685Z" fill="#1D1D1F"/>
       </svg>
     </li>
-    <li>Clients</li>
-    <li>Blog</li>
-    <li>Careers</li>
+    <li (mouseover)="openDropdown('close')"><span>Clients</span></li>
+    <li (mouseover)="openDropdown('close')"><span>Blog</span></li>
+    <li (mouseover)="openDropdown('close')"><span>Careers</span></li>
   </ul>
+  <div class="header__dropdown" (mouseover)="openDropdown('about')" [ngClass]="{'open': openAbout}">
+    <div class="header__dropdown_aside">
+      <a href="" class="link">
+        Company overview
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <a href="" class="link">
+        Process
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <a href="" class="link">
+        Our product
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="header__dropdown_info">
+      <span class="header__dropdown_info-title">Why allatrack</span>
+      <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software.</p>
+      <a href="" class="link">
+        About us
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="header__dropdown_images">
+      <img class="animated-image" src="/assets/images/giphy.gif" alt="">
+      <img class="animated-image top" src="/assets/images/bg.gif" alt="">
+    </div>
+  </div>
+  <div class="header__dropdown" [ngClass]="{'open': openServices}" (mouseover)="openDropdown('services')">
+    <div class="header__dropdown_aside">
+      <a href="" class="link">
+        Extend your team
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <a href="" class="link">
+        Build your idea
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <a href="" class="link">
+        Manage your service
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="header__dropdown_info full">
+      <a href="" class="link">
+        All services
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <div class="header__dropdown_info-columns">
+        <ul class="header__dropdown_info-columns--single">
+          <li>Software Product Development</li>
+          <li>Mobile Application Development</li>
+          <li>Web services development</li>
+        </ul>
+        <ul class="header__dropdown_info-columns--single">
+          <li>Extended Reality (AR / VR)</li>
+          <li>R&D and innovation</li>
+        </ul>
+        <ul class="header__dropdown_info-columns--single">
+          <li>Software QA & Testing</li>
+          <li>Technical Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="header__dropdown" (mouseover)="openDropdown('expertise')" [ngClass]="{'open': openExpertise}">
+    <div class="header__dropdown_wrap">
+      <a href="" class="link">
+        Expertise
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <div class="header__dropdown_info-columns">
+        <ul class="header__dropdown_info-columns--single">
+          <li>Blockchain (DLT)</li>
+          <li>Extended Reality (AR / VR)</li>
+        </ul>
+        <ul class="header__dropdown_info-columns--single">
+          <li>Cognitive Computing (AI / ML)</li>
+          <li>Data, BI and Analytics</li>
+        </ul>
+        <ul class="header__dropdown_info-columns--single">
+          <li>Internet of Things (IoT)</li>
+          <li>Customer Experience (UX / UI)</li>
+        </ul>
+        <ul class="header__dropdown_info-columns--single">
+          <li>Cloud & DevOps</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="header__wrapper">
     <div class="header__lang">En</div>
     <button class="green-btn">Estimate project</button>
