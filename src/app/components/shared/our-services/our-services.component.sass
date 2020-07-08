@@ -5,11 +5,38 @@
   padding: 120px 110px
   background: #171C2C
   border-radius: 8px
+  position: relative
+  overflow: hidden
   background-image: url("/assets/images/services-bg.png")
+  .circle-wrap
+    width: 100%
+    height: 100%
+    filter: blur(100px)
+    -webkit-filter: blur(100px)
+    -ms-filter: blur(100px)
+    position: absolute
+    z-index: 50
+    right: 0
+    top: 0
+    bottom: 0
+    left: 0
+    .circle
+      background-image: url("/assets/images/giphy2.gif")
+      background-repeat: no-repeat
+      opacity: 0.4
+      border-radius: 100%
+      background-size: 625px 625px
+      width: 632px
+      height: 632px
+      margin: 0 0 0 auto
+      box-shadow: inset 0px 0px 40px 40px #171C2C
+      text-shadow: 0 0 20px
+      color: transparent
   &__block
     display: flex
     margin-top: 80px
     align-items: center
+    z-index: 100
     &_single
       display: flex
       flex-direction: column

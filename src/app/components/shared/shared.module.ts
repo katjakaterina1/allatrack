@@ -4,6 +4,7 @@ import { CasesComponent} from './cases/cases.component';
 import { FooterComponent} from './footer/footer.component';
 import { HeaderComponent} from './header/header.component';
 import { OurServicesComponent} from './our-services/our-services.component';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { OurServicesComponent} from './our-services/our-services.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
   ],
   exports: [
     CasesComponent,

@@ -2,11 +2,29 @@
   display: flex
   margin: -102px 32px 120px 32px
   background-color: #F6F6F6
-  background-image: url("/assets/images/main-screen-bg.png")
   border-radius: 8px
+  position: relative
+  overflow: hidden
+  .circle
+    background-image: url("/assets/images/giphy.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0.1
+    width: 836px
+    height: 836px
+    border-radius: 100%
+    filter: blur(100px)
+    -webkit-filter: blur(100px)
+    -ms-filter: blur(100px)
+    position: absolute
+    z-index: 10
+    margin: 0 auto
+    top: 193px
+    right: 270px
   .container
     margin: 172px auto 0 auto
     width: 100%
+    z-index: 20
   h1
     font-family: 'Oswald', sans-serif
     text-align: center
@@ -329,7 +347,16 @@
           width: 45%
           margin: 16px 0 0 32px
 
-
+.projects
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__heading
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
 
 
 
