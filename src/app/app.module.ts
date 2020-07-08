@@ -3,27 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
-import { HeaderComponent } from './components/shared/header/header.component';
 import { UsrModule } from './components/usr/usr.module';
-import { UsrIndexComponent } from './components/usr/usr-index/usr-index.component';
-import { OurServicesComponent } from './components/shared/our-services/our-services.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
+import { SharedModule} from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    UsrIndexComponent,
-    OurServicesComponent,
-    FooterComponent
+    AppComponent
   ],
-    imports: [
-        BrowserModule,
-        UsrModule,
-        RouterModule.forRoot([
-          { path: '', loadChildren: './components/usr/usr.module#UsrModule'},
-        ])
-    ],
+  imports: [
+    BrowserModule,
+    UsrModule,
+    SharedModule,
+    RouterModule.forRoot([
+      {path: '', loadChildren: './components/usr/usr.module#UsrModule'},
+    ])
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

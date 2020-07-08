@@ -1,0 +1,98 @@
+.expertise
+  display: flex
+  margin: -102px 32px 120px 32px
+  background: linear-gradient(180deg, #E7E8ED 0%, #D9DCE5 62.5%, #D6D9E2 82.81%)
+  background-size: contain
+  border-radius: 8px
+  position: relative
+  max-height: 660px
+  .container
+    display: flex
+    flex-direction: column
+    margin: 173px 0 0 118px
+    padding-bottom: 166px
+    width: 50%
+  &__buttons
+    display: flex
+    align-items: center
+  h1
+    font-family: Oswald, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 64px
+    line-height: 95px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: #1D1D1F
+    margin-bottom: 40px
+  p
+    font-family: Archivo, sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 28px
+    color: #000000
+    margin-bottom: 80px
+    width: 80%
+  a
+    margin-left: 40px
+  img
+    object-fit: contain
+    height: auto
+    border-radius: 0 8px 8px 0
+  &__element
+    display: flex
+    flex-direction: column
+    margin: 0 150px 200px 150px
+    &_single
+      display: flex
+      flex-direction: column
+      margin-bottom: 120px
+      &:nth-child(odd)
+        .expertise__element_single-content
+          background-image: url("/assets/images/exp-bg3.png")
+      &:nth-child(even)
+        .expertise__element_single-content
+          background-image: url("/assets/images/exp-bg2.png")
+          flex-direction: row-reverse
+      &:first-child
+        .expertise__element_single-content
+          background-image: url("/assets/images/exp-bg1.png")
+      &-heading
+        display: flex
+        margin-bottom: 40px
+        justify-content: space-between
+        align-items: center
+        a
+          font-size: 18px
+      &-content
+        display: flex
+        background-color: #F6F6F6
+        border-radius: 8px
+        padding: 16px
+        box-sizing: border-box
+        justify-content: space-between
+        &--wrap
+          display: flex
+          width: 50%
+          flex-direction: column
+          justify-content: space-between
+          margin: 80px 40px 0 56px
+          p
+            font-family: Archivo, sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 28px
+            letter-spacing: 0.04em
+            color: #9F9FA0
+        &--links
+          display: flex
+          flex-wrap: wrap
+          a
+            margin-bottom: 24px
+            margin-right: 32px
+        img
+          width: 540px
+          height: 388px
+          object-fit: cover
