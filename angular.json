@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "untitled2": {
+    "allatrack": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/untitled2",
+            "outputPath": "dist/allatrack",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "untitled2:build"
+            "browserTarget": "allatrack:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "untitled2:build:production"
+              "browserTarget": "allatrack:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "untitled2:build"
+            "browserTarget": "allatrack:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "untitled2:serve"
+            "devServerTarget": "allatrack:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "untitled2:serve:production"
+              "devServerTarget": "allatrack:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "untitled2",
+  "defaultProject": "allatrack",
   "cli": {
     "analytics": false
   }

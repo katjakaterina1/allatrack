@@ -1,11 +1,28 @@
 .expertise
   display: flex
   margin: -102px 32px 120px 32px
-  background: linear-gradient(180deg, #E7E8ED 0%, #D9DCE5 62.5%, #D6D9E2 82.81%)
+  background: #EEE9FA
   background-size: contain
   border-radius: 8px
   position: relative
   max-height: 660px
+  overflow: hidden
+  .circle
+    background-image: url("/assets/images/bg.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0.16
+    width: 559px
+    height: 559px
+    border-radius: 100%
+    filter: blur(100px)
+    -webkit-filter: blur(100px)
+    -ms-filter: blur(100px)
+    position: absolute
+    z-index: 10
+    margin: 0 auto
+    top: 140px
+    right: -134px
   .container
     display: flex
     flex-direction: column
