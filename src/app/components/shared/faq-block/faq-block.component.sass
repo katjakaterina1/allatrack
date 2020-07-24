@@ -1,0 +1,52 @@
+.faq
+  margin: 0 150px 120px 150px
+  display: flex
+  justify-content: space-between
+  &__heading
+    display: flex
+    flex-direction: column
+    width: 30%
+    h2
+      margin-bottom: 40px
+    p
+      font-family: Archivo, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.04em
+      color: #9F9FA0
+  &__questions
+    width: 60%
+    display: flex
+    flex-direction: column
+    &_single
+      background: #F6F6F6
+      padding: 24px 40px
+      margin-bottom: 8px
+      cursor: pointer
+      &.active
+        background: #4545FB
+        transition: all .3s
+        .faq__questions_single-heading
+          color: white
+          svg
+            transform: rotate(180deg)
+            path
+              fill: #FFFFFF
+
+      &-heading
+        font-family: 'Oswald Medium', sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #1D1D1F
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+
