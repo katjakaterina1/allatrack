@@ -6,6 +6,7 @@ import { HeaderComponent} from './header/header.component';
 import { OurServicesComponent} from './our-services/our-services.component';
 import {RouterModule} from '@angular/router';
 import { BlogSectionComponent } from './blog-section/blog-section.component';
+import { ThreeColumnedBlockComponent } from './three-columned-block/three-columned-block.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BlogSectionComponent } from './blog-section/blog-section.component';
     FooterComponent,
     HeaderComponent,
     OurServicesComponent,
-    BlogSectionComponent
+    BlogSectionComponent,
+    ThreeColumnedBlockComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { BlogSectionComponent } from './blog-section/blog-section.component';
     FooterComponent,
     HeaderComponent,
     OurServicesComponent,
-    BlogSectionComponent
+    BlogSectionComponent,
+    ThreeColumnedBlockComponent
   ]
 })
 export class SharedModule { }
