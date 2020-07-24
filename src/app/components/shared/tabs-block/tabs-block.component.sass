@@ -1,0 +1,45 @@
+.tabs
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  h2
+    margin: 0 auto 40px auto
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__heading
+    display: flex
+    flex-direction: column
+    &_wrap
+      display: flex
+      width: 100%
+    &_single
+      width: 150px
+      font-family: 'Oswald Medium', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 28px
+      text-align: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      padding-bottom: 16px
+      cursor: pointer
+      &.active
+        color: #4545FB
+    .line
+      width: 100%
+      height: 1px
+      background-color: #D6D6D6
+      position: relative
+      &__fill
+        width: 25%
+        position: absolute
+        background-color: #4545FB
+        top: 0
+        left: 0
+        height: 1px
+        transform: translateX(0)
+        transition: all .3s
