@@ -7,6 +7,8 @@ import { OurServicesComponent} from './our-services/our-services.component';
 import {RouterModule} from '@angular/router';
 import { BlogSectionComponent } from './blog-section/blog-section.component';
 import { ThreeColumnedBlockComponent } from './three-columned-block/three-columned-block.component';
+import { StagesSliderComponent } from './stages-slider/stages-slider.component';
+import { TabsBlockComponent } from './tabs-block/tabs-block.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { ThreeColumnedBlockComponent } from './three-columned-block/three-column
     HeaderComponent,
     OurServicesComponent,
     BlogSectionComponent,
-    ThreeColumnedBlockComponent
+    ThreeColumnedBlockComponent,
+    StagesSliderComponent,
+    TabsBlockComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,9 @@ import { ThreeColumnedBlockComponent } from './three-columned-block/three-column
     HeaderComponent,
     OurServicesComponent,
     BlogSectionComponent,
-    ThreeColumnedBlockComponent
+    ThreeColumnedBlockComponent,
+    StagesSliderComponent,
+    TabsBlockComponent
   ]
 })
 export class SharedModule { }
