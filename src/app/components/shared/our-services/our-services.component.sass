@@ -37,10 +37,13 @@
     margin-top: 80px
     align-items: center
     z-index: 100
+    flex-wrap: wrap
+    &_single.multiline
+      margin-bottom: 80px
     &_single
       display: flex
       flex-direction: column
-      max-width: 22%
+      max-width: 21%
       margin-right: 40px
       &-name
         font-family: Oswald, sans-serif
@@ -54,6 +57,7 @@
         padding-bottom: 16px
         border-bottom: 1px solid #D6D6D6
         margin-bottom: 16px
+        height: 72px
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -64,6 +68,8 @@
         color: #9F9FA0
         max-width: 90%
         margin-bottom: 16px
+  &__button-wrapper
+    margin-top: -60px
 
 
 
