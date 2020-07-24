@@ -1,0 +1,35 @@
+.triangles
+  display: flex
+  margin: 0 150px 180px 150px
+  justify-content: space-between
+  align-items: center
+  &__heading
+    width: 50%
+    display: flex
+    flex-direction: column
+    h2
+      margin-bottom: 40px
+    p
+      font-family: Archivo, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.04em
+      color: #9F9FA0
+  &__cover
+    position: relative
+    width: 213px
+    height: 189px
+    clip-path: url(#myClip)
+    background-image: url('/assets/images/giphy.gif')
+    &.right
+      margin-right: -385px
+  img
+    width: 213px
+    height: 189px
+    object-fit: cover
+    position: absolute
+    z-index: 50
+
+

@@ -21,21 +21,25 @@
     display: flex
     flex-direction: column
     &_single
-      background: #F6F6F6
-      padding: 24px 40px
       margin-bottom: 8px
       cursor: pointer
       &.active
-        background: #4545FB
-        transition: all .3s
         .faq__questions_single-heading
+          background: #4545FB
+          transition: all .3s
           color: white
           svg
             transform: rotate(180deg)
             path
               fill: #FFFFFF
+        .faq__questions_single-answer
+          height: auto
+          visibility: visible
+          padding: 40px
 
       &-heading
+        background: #F6F6F6
+        padding: 24px 40px
         font-family: 'Oswald Medium', sans-serif
         font-style: normal
         font-weight: 500
@@ -47,6 +51,30 @@
         display: flex
         justify-content: space-between
         align-items: center
+      &-answer
+        background: #F6F6F6
+        height: 0
+        visibility: hidden
+        h3
+          font-family: Oswald, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 36px
+          display: flex
+          align-items: center
+          color: #1D1D1F
+          margin-bottom: 32px
+        p
+          font-family: Archivo, sans-serif
+          font-style: normal
+          font-weight: normal
+          font-size: 16px
+          line-height: 28px
+          letter-spacing: 0.04em
+          color: #9F9FA0
+
+
 
 
 

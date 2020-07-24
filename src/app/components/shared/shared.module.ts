@@ -10,6 +10,9 @@ import { ThreeColumnedBlockComponent } from './three-columned-block/three-column
 import { StagesSliderComponent } from './stages-slider/stages-slider.component';
 import { TabsBlockComponent } from './tabs-block/tabs-block.component';
 import { FaqBlockComponent } from './faq-block/faq-block.component';
+import { NumbersBlockComponent } from './numbers-block/numbers-block.component';
+import { TrianglesBlockComponent } from './triangles-block/triangles-block.component';
+import { CaseResultComponent } from './case-result/case-result.component';
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { FaqBlockComponent } from './faq-block/faq-block.component';
     ThreeColumnedBlockComponent,
     StagesSliderComponent,
     TabsBlockComponent,
-    FaqBlockComponent
+    FaqBlockComponent,
+    NumbersBlockComponent,
+    TrianglesBlockComponent,
+    CaseResultComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +43,10 @@ import { FaqBlockComponent } from './faq-block/faq-block.component';
     ThreeColumnedBlockComponent,
     StagesSliderComponent,
     TabsBlockComponent,
-    FaqBlockComponent
+    FaqBlockComponent,
+    NumbersBlockComponent,
+    TrianglesBlockComponent,
+    CaseResultComponent
   ]
 })
 export class SharedModule { }
