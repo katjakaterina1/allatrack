@@ -11,7 +11,7 @@ import { StagesSliderComponent } from './stages-slider/stages-slider.component';
 import { TabsBlockComponent } from './tabs-block/tabs-block.component';
 import { FormComponent } from './form/form.component';
 import { SmallContactComponent } from './small-contact/small-contact.component';
-
+import { FaqBlockComponent } from './faq-block/faq-block.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { SmallContactComponent } from './small-contact/small-contact.component';
     StagesSliderComponent,
     TabsBlockComponent,
     FormComponent,
-    SmallContactComponent
+    SmallContactComponent,
+    FaqBlockComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +41,8 @@ import { SmallContactComponent } from './small-contact/small-contact.component';
     StagesSliderComponent,
     TabsBlockComponent,
     FormComponent,
-    SmallContactComponent
+    SmallContactComponent,
+    FaqBlockComponent
   ]
 })
 export class SharedModule { }

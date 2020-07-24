@@ -1,0 +1,18 @@
+<div class="faq">
+  <div class="faq__heading">
+    <h2>F.A.Q.</h2>
+    <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis.</p>
+  </div>
+  <div class="faq__questions">
+    <div class="faq__questions_single"  *ngFor="let question of questions, let i = index" (click)="openQuestion(i)" id="question-{{i}}">
+      <div class="faq__questions_single-heading">
+        1. Question
+        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M-8.44427e-05 12.3826L9.03875 21.5L11.2791 19.2402L11.279 19.2401L18 12.4607L15.7403 10.1814L10.6997 15.2658L10.6367 0.513826L7.45465 0.5L7.51848 15.4469L2.24024 10.1229L-8.44427e-05 12.3826Z" fill="#4545FB"/>
+        </svg>
+      </div>
+      <div class="faq__questions_single-answer"></div>
+    </div>
+  </div>
+
+</div>
