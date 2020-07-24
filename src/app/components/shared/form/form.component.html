@@ -1,0 +1,20 @@
+<div class="footer__form_block" [style.padding]="isFooter ? '0' : ''">
+  <span class="footer__form_block-name">Meeting</span>
+  <form action="">
+    <input type="text" placeholder="*Your name">
+    <input type="text" placeholder="*Your company">
+    <input type="text" placeholder="*Your email">
+    <input type="text" placeholder="Your phone number">
+    <input type="text" placeholder="*Country">
+    <input type="text" placeholder="*You looking for ...">
+    <textarea name="" id="" cols="30" rows="10" placeholder="*Just leave your message..."></textarea>
+    <label for="files">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.92891 5.42913C7.07851 3.27952 10.5575 3.27952 12.7071 5.42913L20.1317 12.8537C21.6944 14.4165 21.6944 16.9479 20.1317 18.5106C18.569 20.0733 16.0376 20.0733 14.4748 18.5106L8.46444 12.5002C7.48863 11.5244 7.48863 9.94047 8.46444 8.96466C9.44025 7.98885 11.0242 7.98885 12 8.96466L17.3033 14.268L15.8891 15.6822L10.5221 10.3152C10.1332 9.92633 9.4261 10.6334 9.81501 11.0223L15.8891 17.0964C16.6669 17.8742 17.9397 17.8742 18.7175 17.0964C19.4953 16.3186 19.4953 15.0458 18.7175 14.268L11.2929 6.84334C9.92815 5.47862 7.70784 5.47862 6.34312 6.84334C4.9784 8.20806 4.9784 10.4284 6.34312 11.7931L13.0606 18.5106L11.6464 19.9248L4.92891 13.2073C2.7793 11.0577 2.7793 7.57873 4.92891 5.42913Z" fill="white"/>
+      </svg>
+      <span>*Upload file</span>
+      <input id="files" type="file" style="display: none" placeholder="*Upload file"/>
+    </label>
+    <button type="submit" class="green-btn">Send message</button>
+  </form>
+</div>

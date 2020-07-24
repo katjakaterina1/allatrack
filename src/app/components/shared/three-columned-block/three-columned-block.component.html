@@ -1,32 +1,9 @@
 <div class="expertise-description__done">
-  <h2>What We Do</h2>
+  <h2>{{title}}</h2>
   <div class="expertise-description__done_wrap">
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
+    <div class="expertise-description__done_single" *ngFor="let item of threeData;">
+      <span>{{item.title}}</span>
+      <p>{{item.text}}</p>
     </div>
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
-    </div>
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
-    </div>
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
-    </div>
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
-    </div>
-    <div class="expertise-description__done_single">
-      <span>Natural Language Processing</span>
-      <p>Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots</p>
-    </div>
-
   </div>
-
-
 </div>

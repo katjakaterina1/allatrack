@@ -6,12 +6,14 @@ import { UsrExpertisesListComponent } from './usr-expertises-list/usr-expertises
 import {SharedModule} from '../shared/shared.module';
 import { UsrExpertiseSingleComponent } from './usr-expertise-single/usr-expertise-single.component';
 import { UsrServicesListComponent } from './usr-services-list/usr-services-list.component';
+import { UsrServiceSingleComponent } from './usr-service-single/usr-service-single.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
   { path: 'expertises', component: UsrExpertisesListComponent },
   { path: 'expertise-single', component: UsrExpertiseSingleComponent },
   { path: 'services-list', component: UsrServicesListComponent },
+  { path: 'service-single', component: UsrServiceSingleComponent },
 ];
 
 @NgModule({
@@ -20,6 +22,7 @@ const userRoutes: Routes = [
     UsrExpertisesListComponent,
     UsrExpertiseSingleComponent,
     UsrServicesListComponent,
+    UsrServiceSingleComponent,
   ],
   imports: [
     CommonModule,

@@ -6,13 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stages-slider.component.sass']
 })
 export class StagesSliderComponent implements OnInit {
-  firstStep: any = true;
-  secondStep: any = false;
-  thirdStep: any = false;
-  fourthStep: any = false;
+  firstStep: any;
+  secondStep: any;
+  thirdStep: any;
+  fourthStep: any;
   constructor() { }
-
   ngOnInit(): void {
+    this.runSlider();
+  }
+  runSlider(): void {
+    setTimeout(() => {
+      this.firstStep = true;
+      this.secondStep = false;
+      this.thirdStep = false;
+      this.fourthStep = false;
+    }, 0);
     setTimeout(() => {
       this.firstStep = false;
       this.secondStep = true;
@@ -31,6 +39,8 @@ export class StagesSliderComponent implements OnInit {
       this.thirdStep = false;
       this.fourthStep = true;
     }, 15000);
+    setTimeout(() => {
+      this.runSlider();
+    }, 20000);
   }
-
 }

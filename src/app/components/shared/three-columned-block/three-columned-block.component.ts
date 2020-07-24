@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-three-columned-block',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./three-columned-block.component.sass']
 })
 export class ThreeColumnedBlockComponent implements OnInit {
-
+  @Input() title: string;
+  @Input() threeData: any[];
   constructor() { }
 
   ngOnInit(): void {

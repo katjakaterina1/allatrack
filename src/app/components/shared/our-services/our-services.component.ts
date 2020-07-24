@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class OurServicesComponent implements OnInit {
   @Input() title: string;
   @Input() servicesData: any[];
+  @Input() linkData: any[];
   constructor() { }
 
   ngOnInit(): void {

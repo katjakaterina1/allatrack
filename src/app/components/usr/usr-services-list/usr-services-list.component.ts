@@ -7,9 +7,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsrServicesListComponent implements OnInit {
   public servicesData: any[];
+  public threeData: any[];
   constructor() { }
 
   ngOnInit(): void {
+    this.threeData = [
+      {
+        title: 'Software Product Development',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Mobile Application Development',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Web services development',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Extended Reality (AR / VR)',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'R&D and innovation',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Software QA & Testing',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Technical Support',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      }
+    ];
     this.servicesData = [
       {
         title: 'Blockchain (DLT)',
@@ -48,5 +86,4 @@ export class UsrServicesListComponent implements OnInit {
       }
     ];
   }
-
 }
