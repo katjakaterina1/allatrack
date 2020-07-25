@@ -3,15 +3,28 @@
     <div class="circle"></div>
   </div>
   <h2 class="white">{{title}}</h2>
-  <div class="services__block">
-    <div class="services__block_single" [ngClass]="{'multiline': servicesData.length > 3 && (i === 0 || i === 1 || i === 2 || i === 3)}" *ngFor="let service of servicesData; let i = index">
-      <h3 class="services__block_single-name">{{service.title}}</h3>
-      <p>{{service.text}}</p>
-      <a class="link white" >read more<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
-      </svg>
-      </a>
-    </div>
+  <div class="services__block" [ngClass]="{'links-only': flag === 'link'}">
+    <ng-container *ngIf="flag === 'service' || flag === 'both'">
+      <div class="services__block_single" [ngClass]="{'multiline': servicesData.length > 3 && (i === 0 || i === 1 || i === 2 || i === 3)}" *ngFor="let service of servicesData; let i = index">
+        <h3 class="services__block_single-name">{{service.title}}</h3>
+        <p>{{service.text}}</p>
+        <a class="link white" >read more
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="flag === 'link'">
+      <div class="links-wrapper">
+        <a class="link white" *ngFor="let data of linkData">
+          {{data.title}}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+      </div>
+    </ng-container>
     <div class="services__button-wrapper">
       <button class="purple-button">
         <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,6 +35,14 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6274 2.42105V9.68307H10.2274L10.2274 4.02858L2.32447 11.9999L0.627411 10.2882L8.42703 2.42105L3.02741 2.42105L3.02741 0.000280487L10.2274 0.000281122V0H12.6274V0.000281334V2.42105Z" fill="#FAFAFA"/>
         </svg>
       </button>
+    </div>
+    <div *ngIf="flag === 'both'" class="services__links">
+      <a class="link white" *ngFor="let data of linkData">
+        {{data.title}}
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+        </svg>
+      </a>
     </div>
   </div>
 </section>

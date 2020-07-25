@@ -34,7 +34,7 @@
   </div>
 </section>
 <app-cases></app-cases>
-<app-our-services></app-our-services>
+<app-our-services [flag]="'service'" [title]="'Our services'" [servicesData]="servicesData"></app-our-services>
 <section class="about">
   <div class="about__description">
     <h2>From digital healthcare to health in a digital world</h2>
@@ -209,6 +209,4 @@
 <app-blog-section></app-blog-section>
 
 <!--addition-->
-<app-numbers-block></app-numbers-block>
-<app-triangles-block></app-triangles-block>
 <app-case-result></app-case-result>

@@ -6,6 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./our-services.component.sass']
 })
 export class OurServicesComponent implements OnInit {
+  @Input() flag: string;
   @Input() title: string;
   @Input() servicesData: any[];
   @Input() linkData: any[];

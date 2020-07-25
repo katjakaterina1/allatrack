@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsrExpertiseSingleComponent implements OnInit {
   public threeData: any[];
+  public servicesData: any[];
+  public linkedData: any[];
   constructor() { }
 
   ngOnInit(): void {
@@ -52,6 +54,45 @@ export class UsrExpertiseSingleComponent implements OnInit {
         link: ''
       }
     ];
+    this.servicesData = [
+      {
+        title: 'Extand your team',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Build your idea',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      },
+      {
+        title: 'Management',
+        text: 'Help build a team or pick a ready-made team',
+        link: ''
+      }
+    ];
+    this.linkedData = [
+      {
+        title: 'Software Product Development'
+      },
+      {
+        title: 'Web services development'
+      },
+      {
+        title: 'R&D and innovation'
+      },
+      {
+        title: 'Technical Support'
+      },
+      {
+        title: 'Mobile Application Development'
+      },
+      {
+        title: 'Extended Reality (AR / VR)'
+      },
+      {
+        title: 'Software QA & Testing'
+      }
+    ]
   }
-
 }

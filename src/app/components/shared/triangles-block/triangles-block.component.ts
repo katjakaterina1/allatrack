@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-triangles-block',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./triangles-block.component.sass']
 })
 export class TrianglesBlockComponent implements OnInit {
-
+  @Input() title: string;
+  @Input() single: boolean;
   constructor() { }
 
   ngOnInit(): void {

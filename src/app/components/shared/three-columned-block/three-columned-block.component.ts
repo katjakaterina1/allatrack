@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ThreeColumnedBlockComponent implements OnInit {
   @Input() title: string;
+  @Input() figure: string;
+  @Input() text: string;
   @Input() threeData: any[];
   constructor() { }
 
