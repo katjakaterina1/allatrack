@@ -1,13 +1,13 @@
 <section class="blog">
-  <div class="projects__heading">
-    <h2>BLOG</h2>
-    <a class="link" >Discover all article<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="projects__heading" *ngIf="heading">
+    <h2>{{heading}}</h2>
+    <a class="link" >{{button}}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
     </svg>
     </a>
   </div>
   <div class="blog__articles">
-    <div class="blog__articles_single main" *ngIf="router.url == '/'">
+    <div class="blog__articles_single main" routerLink="/blog-single" *ngIf="router.url == '/'">
       <img src="/assets/images/blog-img4.png" alt="">
       <div class="blog__articles_single-description">
         <div class="blog__articles_single-description--tags">
