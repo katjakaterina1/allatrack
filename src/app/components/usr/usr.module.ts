@@ -8,6 +8,7 @@ import { UsrExpertiseSingleComponent } from './usr-expertise-single/usr-expertis
 import { UsrServicesListComponent } from './usr-services-list/usr-services-list.component';
 import { UsrServiceSingleComponent } from './usr-service-single/usr-service-single.component';
 import { UsrBlogSingleComponent } from './usr-blog-single/usr-blog-single.component';
+import { UsrCasesComponent } from './usr-cases/usr-cases.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -15,6 +16,7 @@ const userRoutes: Routes = [
   { path: 'expertise-single', component: UsrExpertiseSingleComponent },
   { path: 'services-list', component: UsrServicesListComponent },
   { path: 'service-single', component: UsrServiceSingleComponent },
+  { path: 'cases', component: UsrCasesComponent },
   { path: 'blog-single', component: UsrBlogSingleComponent },
 ];
 
@@ -26,6 +28,7 @@ const userRoutes: Routes = [
     UsrServicesListComponent,
     UsrServiceSingleComponent,
     UsrBlogSingleComponent,
+    UsrCasesComponent,
   ],
   imports: [
     CommonModule,
