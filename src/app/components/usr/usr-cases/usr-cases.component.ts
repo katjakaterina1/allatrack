@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tabs-block',
-  templateUrl: './tabs-block.component.html',
-  styleUrls: ['./tabs-block.component.sass']
+  selector: 'app-usr-cases',
+  templateUrl: './usr-cases.component.html',
+  styleUrls: ['./usr-cases.component.sass']
 })
-export class TabsBlockComponent implements OnInit {
+export class UsrCasesComponent implements OnInit {
   cloud: any = true;
   web: any;
   mobile: any;

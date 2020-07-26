@@ -1,0 +1,127 @@
+.expertise
+  display: flex
+  margin: -102px 32px 120px 32px
+  background: #FAFAFA
+  background-size: contain
+  border-radius: 8px
+  position: relative
+  max-height: 660px
+  overflow: hidden
+  .circle
+    background-image: url(/assets/images/phone.gif)
+    background-repeat: no-repeat
+    background-size: cover
+    width: 600px
+    height: 559px
+    position: absolute
+    z-index: 10
+    margin: 0 auto
+    top: 140px
+    right: -90px
+    background-position: right
+  .container
+    display: flex
+    flex-direction: column
+    margin: 173px 0 0 118px
+    padding-bottom: 166px
+    width: 50%
+  &__buttons
+    display: flex
+    align-items: center
+  h1
+    font-family: Oswald, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 64px
+    line-height: 95px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: #1D1D1F
+    margin-bottom: 40px
+  p
+    font-family: Archivo, sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 28px
+    color: #000000
+    margin-bottom: 80px
+    width: 80%
+  a
+    margin-left: 40px
+  img
+    object-fit: contain
+    height: auto
+    border-radius: 0 8px 8px 0
+
+.tabs
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__heading
+    display: flex
+    flex-direction: column
+    margin-bottom: 40px
+    &_wrap
+      display: flex
+      width: 100%
+    &_single
+      width: 150px
+      font-family: 'Oswald Medium', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 28px
+      text-align: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      padding-bottom: 16px
+      cursor: pointer
+      &.active
+        color: #4545FB
+        transition: all .3s
+    .line
+      width: 100%
+      height: 1px
+      background-color: #D6D6D6
+      position: relative
+      &__fill
+        width: 25%
+        position: absolute
+        background-color: #4545FB
+        top: 0
+        left: 0
+        height: 1px
+        transform: translateX(0)
+        transition: all .3s
+  &__content
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    &_single
+      padding: 16px 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      border: 1px solid #D6D6D6
+      border-radius: 8px
+      margin-right: 16px
+      font-family: Oswald, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      margin-bottom: 20px
+    svg
+      margin-right: 10px
+
+app-cases
+  width: 100%
