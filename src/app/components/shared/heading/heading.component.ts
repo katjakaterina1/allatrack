@@ -7,6 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class HeadingComponent implements OnInit {
   @Input() title: string;
+  @Input() hashtag: string;
+  @Input() needSocial = false;
   @Input() backgroundColor: string;
   @Input() hasDownloadButton = false;
   constructor() { }

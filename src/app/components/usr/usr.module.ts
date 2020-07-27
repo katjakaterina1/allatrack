@@ -17,6 +17,8 @@ import { UsrProductsComponent } from './usr-products/usr-products.component';
 import { UsrOverviewComponent } from './usr-overview/usr-overview.component';
 import { UsrContactUsComponent } from './usr-contact-us/usr-contact-us.component';
 import { UsrCareersApplyComponent } from './usr-careers-apply/usr-careers-apply.component';
+import { UsrCareersComponent } from './usr-careers/usr-careers.component';
+import { UsrCareersSingleComponent } from './usr-careers-single/usr-careers-single.component';
 import { UsrBlogListComponent } from './usr-blog-list/usr-blog-list.component';
 
 const userRoutes: Routes = [
@@ -34,6 +36,8 @@ const userRoutes: Routes = [
   { path: 'products', component: UsrProductsComponent },
   { path: 'overview', component: UsrOverviewComponent },
   { path: 'contacts', component: UsrContactUsComponent },
+  { path: 'careers', component: UsrCareersComponent },
+  { path: 'careers-single', component: UsrCareersSingleComponent },
   { path: 'careers-apply', component: UsrCareersApplyComponent },
   { path: 'blog', component: UsrBlogListComponent },
 ];
@@ -55,7 +59,9 @@ const userRoutes: Routes = [
     UsrOverviewComponent,
     UsrContactUsComponent,
     UsrCareersApplyComponent,
-    UsrBlogListComponent,
+    UsrCareersComponent,
+    UsrCareersSingleComponent,
+    UsrBlogListComponent
   ],
   imports: [
     CommonModule,
