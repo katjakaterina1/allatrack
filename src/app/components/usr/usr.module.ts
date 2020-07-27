@@ -9,6 +9,7 @@ import { UsrServicesListComponent } from './usr-services-list/usr-services-list.
 import { UsrServiceSingleComponent } from './usr-service-single/usr-service-single.component';
 import { UsrBlogSingleComponent } from './usr-blog-single/usr-blog-single.component';
 import { UsrCasesComponent } from './usr-cases/usr-cases.component';
+import { UsrContactUsComponent } from './usr-contact-us/usr-contact-us.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -18,6 +19,7 @@ const userRoutes: Routes = [
   { path: 'service-single', component: UsrServiceSingleComponent },
   { path: 'cases', component: UsrCasesComponent },
   { path: 'blog-single', component: UsrBlogSingleComponent },
+  { path: 'contacts', component: UsrContactUsComponent },
 ];
 
 @NgModule({
@@ -29,6 +31,7 @@ const userRoutes: Routes = [
     UsrServiceSingleComponent,
     UsrBlogSingleComponent,
     UsrCasesComponent,
+    UsrContactUsComponent,
   ],
   imports: [
     CommonModule,
