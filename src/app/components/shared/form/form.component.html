@@ -3,10 +3,15 @@
   <form action="">
     <input type="text" placeholder="*Your name">
     <input type="text" placeholder="*Your company">
-    <input type="text" placeholder="*Your email">
-    <input type="text" placeholder="Your phone number">
-    <input type="text" placeholder="*Country">
-    <input type="text" placeholder="*You looking for ...">
+    <ng-container *ngIf="apply">
+      <input class="from-apply" type="text" placeholder="Your phone number">
+    </ng-container>
+    <ng-container *ngIf="!apply">
+      <input type="text" placeholder="*Your email">
+      <input type="text" placeholder="Your phone number">
+      <input type="text" placeholder="*Country">
+      <input type="text" placeholder="*You looking for ...">
+    </ng-container>
     <textarea name="" id="" cols="30" rows="10" placeholder="*Just leave your message..."></textarea>
     <label for="files">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
