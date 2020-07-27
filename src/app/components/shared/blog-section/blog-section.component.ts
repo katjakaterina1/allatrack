@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class BlogSectionComponent implements OnInit {
   @Input() heading: string;
   @Input() button: string;
+  @Input() mainArticle: boolean;
 
   constructor(public router: Router) { }
 

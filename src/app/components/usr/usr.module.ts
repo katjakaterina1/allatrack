@@ -17,6 +17,7 @@ import { UsrProductsComponent } from './usr-products/usr-products.component';
 import { UsrOverviewComponent } from './usr-overview/usr-overview.component';
 import { UsrContactUsComponent } from './usr-contact-us/usr-contact-us.component';
 import { UsrCareersApplyComponent } from './usr-careers-apply/usr-careers-apply.component';
+import { UsrBlogListComponent } from './usr-blog-list/usr-blog-list.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -34,6 +35,7 @@ const userRoutes: Routes = [
   { path: 'overview', component: UsrOverviewComponent },
   { path: 'contacts', component: UsrContactUsComponent },
   { path: 'careers-apply', component: UsrCareersApplyComponent },
+  { path: 'blog', component: UsrBlogListComponent },
 ];
 
 @NgModule({
@@ -53,6 +55,7 @@ const userRoutes: Routes = [
     UsrOverviewComponent,
     UsrContactUsComponent,
     UsrCareersApplyComponent,
+    UsrBlogListComponent,
   ],
   imports: [
     CommonModule,

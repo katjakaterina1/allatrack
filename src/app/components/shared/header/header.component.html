@@ -21,7 +21,7 @@
       </svg>
     </li>
     <li (mouseover)="openDropdown('close')"><span>Clients</span></li>
-    <li (mouseover)="openDropdown('close')"><span>Blog</span></li>
+    <li (mouseover)="openDropdown('close')" routerLink="/blog"><span>Blog</span></li>
     <li (mouseover)="openDropdown('close')"><span>Careers</span></li>
   </ul>
   <div class="header__dropdown" (mouseover)="openDropdown('about')" [ngClass]="{'open': openAbout}">

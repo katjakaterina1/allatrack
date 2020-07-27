@@ -1,0 +1,48 @@
+.blog
+  display: flex
+  flex-direction: column
+  margin-bottom: 120px
+  &__tabs
+    display: flex
+    width: 100%
+    flex-direction: column
+    overflow: hidden
+    overflow-x: scroll
+    &_wrap
+      display: flex
+    &_heading
+      display: flex
+      margin-left: 166px
+      &_single
+        width: auto
+        white-space: nowrap
+        font-family: 'Oswald Medium', sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #1D1D1F
+        padding: 0 16px 16px 16px
+        cursor: pointer
+        &.active
+          color: #4545FB
+          transition: all .3s
+          border-bottom: 1px solid #4545FB
+    .line
+      width: 100%
+      height: 1px
+      background-color: #D6D6D6
+      position: relative
+      //&__fill
+      //  margin-left: 166px
+      //  width: 25%
+      //  position: absolute
+      //  background-color: #4545FB
+      //  top: 0
+      //  left: 0
+      //  height: 1px
+      //  transform: translateX(0)
+      //  transition: all .3s
