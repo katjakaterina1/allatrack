@@ -9,6 +9,7 @@ export class StagesSliderComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
   @Input() image: string;
+  @Input() needLink = false;
   firstStep: boolean;
   secondStep: boolean;
   thirdStep: boolean;
