@@ -19,6 +19,9 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { FoundersComponent } from './founders/founders.component';
 import { TeamBlockComponent } from './team-block/team-block.component';
 import { ProcessBlockComponent } from './process-block/process-block.component';
+import { HeadingComponent } from './heading/heading.component';
+import { AboutComponent } from './about/about.component';
+import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 
@@ -42,6 +45,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     FoundersComponent,
     TeamBlockComponent,
     ProcessBlockComponent,
+    HeadingComponent,
+    AboutComponent,
+    ExpertiseComponent,
     ContactsComponent
   ],
   imports: [
@@ -67,6 +73,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     FoundersComponent,
     TeamBlockComponent,
     ProcessBlockComponent,
+    HeadingComponent,
+    AboutComponent,
+    ExpertiseComponent,
     ContactsComponent
   ]
 })

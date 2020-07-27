@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TrianglesBlockComponent implements OnInit {
   @Input() title: string;
-  @Input() single: boolean;
+  @Input() single = true;
   constructor() { }
 
   ngOnInit(): void {

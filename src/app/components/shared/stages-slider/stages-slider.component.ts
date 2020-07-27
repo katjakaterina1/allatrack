@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-stages-slider',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./stages-slider.component.sass']
 })
 export class StagesSliderComponent implements OnInit {
-  firstStep: any;
-  secondStep: any;
-  thirdStep: any;
-  fourthStep: any;
+  @Input() title: string;
+  @Input() description: string;
+  @Input() image: string;
+  firstStep: boolean;
+  secondStep: boolean;
+  thirdStep: boolean;
+  fourthStep: boolean;
   constructor() { }
   ngOnInit(): void {
     this.runSlider();

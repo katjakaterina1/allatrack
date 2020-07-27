@@ -9,6 +9,12 @@ import { UsrServicesListComponent } from './usr-services-list/usr-services-list.
 import { UsrServiceSingleComponent } from './usr-service-single/usr-service-single.component';
 import { UsrBlogSingleComponent } from './usr-blog-single/usr-blog-single.component';
 import { UsrCasesComponent } from './usr-cases/usr-cases.component';
+import { UsrCaseSingleComponent } from './usr-case-single/usr-case-single.component';
+import { UsrInfoComponent } from './usr-info/usr-info.component';
+import { UsrAboutComponent } from './usr-about/usr-about.component';
+import { UsrProcessComponent } from './usr-process/usr-process.component';
+import { UsrProductsComponent } from './usr-products/usr-products.component';
+import { UsrOverviewComponent } from './usr-overview/usr-overview.component';
 import { UsrContactUsComponent } from './usr-contact-us/usr-contact-us.component';
 
 const userRoutes: Routes = [
@@ -18,7 +24,13 @@ const userRoutes: Routes = [
   { path: 'services-list', component: UsrServicesListComponent },
   { path: 'service-single', component: UsrServiceSingleComponent },
   { path: 'cases', component: UsrCasesComponent },
+  { path: 'case-single', component: UsrCaseSingleComponent },
   { path: 'blog-single', component: UsrBlogSingleComponent },
+  { path: 'info', component: UsrInfoComponent },
+  { path: 'about', component: UsrAboutComponent },
+  { path: 'process', component: UsrProcessComponent },
+  { path: 'products', component: UsrProductsComponent },
+  { path: 'overview', component: UsrOverviewComponent },
   { path: 'contacts', component: UsrContactUsComponent },
 ];
 
@@ -31,6 +43,12 @@ const userRoutes: Routes = [
     UsrServiceSingleComponent,
     UsrBlogSingleComponent,
     UsrCasesComponent,
+    UsrCaseSingleComponent,
+    UsrInfoComponent,
+    UsrAboutComponent,
+    UsrProcessComponent,
+    UsrProductsComponent,
+    UsrOverviewComponent,
     UsrContactUsComponent,
   ],
   imports: [
