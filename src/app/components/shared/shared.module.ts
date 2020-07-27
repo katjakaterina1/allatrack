@@ -23,7 +23,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { AboutComponent } from './about/about.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactsComponent } from './contacts/contacts.component';
-
+import { CareesBlockComponent } from '../shared/carees-block/carees-block.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     HeadingComponent,
     AboutComponent,
     ExpertiseComponent,
-    ContactsComponent
+    ContactsComponent,
+    CareesBlockComponent,
   ],
   imports: [
     CommonModule,
@@ -76,7 +77,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     HeadingComponent,
     AboutComponent,
     ExpertiseComponent,
-    ContactsComponent
+    ContactsComponent,
+    CareesBlockComponent
   ]
 })
 export class SharedModule { }
