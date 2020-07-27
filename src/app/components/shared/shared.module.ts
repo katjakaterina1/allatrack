@@ -17,6 +17,8 @@ import { TrianglesBlockComponent } from './triangles-block/triangles-block.compo
 import { CaseResultComponent } from './case-result/case-result.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { FoundersComponent } from './founders/founders.component';
+import { TeamBlockComponent } from './team-block/team-block.component';
+import { ProcessBlockComponent } from './process-block/process-block.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { FoundersComponent } from './founders/founders.component';
     TrianglesBlockComponent,
     CaseResultComponent,
     ReviewsComponent,
-    FoundersComponent
+    FoundersComponent,
+    TeamBlockComponent,
+    ProcessBlockComponent
   ],
   imports: [
     CommonModule,
@@ -58,7 +62,9 @@ import { FoundersComponent } from './founders/founders.component';
     TrianglesBlockComponent,
     CaseResultComponent,
     ReviewsComponent,
-    FoundersComponent
+    FoundersComponent,
+    TeamBlockComponent,
+    ProcessBlockComponent
   ]
 })
 export class SharedModule { }
