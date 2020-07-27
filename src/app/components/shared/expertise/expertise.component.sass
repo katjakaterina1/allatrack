@@ -1,0 +1,65 @@
+.expertise
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__block
+    display: flex
+    justify-content: space-between
+  &__variants
+    display: flex
+    flex-direction: column
+    width: 33%
+    margin-bottom: 16px
+    &_single
+      display: flex
+      justify-content: space-between
+      align-items: center
+      box-sizing: border-box
+      width: 100%
+      font-family: Oswald, sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      background: #F6F6F6
+      padding: 24px 40px
+      margin-bottom: 8px
+      cursor: pointer
+      &.active
+        background: #4545FB
+        color: #FFFFFF
+        svg
+          path
+            fill: #FFFFFF
+  &__description
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 60%
+    p
+      font-family: Archivo, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 28px
+      letter-spacing: 0.04em
+      color: #9F9FA0
+    &_links
+      display: flex
+      flex-wrap: wrap
+      .link
+        margin: 0 24px 24px 0
+
+.projects
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__heading
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px

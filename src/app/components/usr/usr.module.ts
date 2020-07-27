@@ -13,6 +13,7 @@ import { UsrCaseSingleComponent } from './usr-case-single/usr-case-single.compon
 import { UsrInfoComponent } from './usr-info/usr-info.component';
 import { UsrAboutComponent } from './usr-about/usr-about.component';
 import { UsrProcessComponent } from './usr-process/usr-process.component';
+import { UsrProductsComponent } from './usr-products/usr-products.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -26,6 +27,7 @@ const userRoutes: Routes = [
   { path: 'info', component: UsrInfoComponent },
   { path: 'about', component: UsrAboutComponent },
   { path: 'process', component: UsrProcessComponent },
+  { path: 'products', component: UsrProductsComponent },
 ];
 
 @NgModule({
@@ -41,6 +43,7 @@ const userRoutes: Routes = [
     UsrInfoComponent,
     UsrAboutComponent,
     UsrProcessComponent,
+    UsrProductsComponent,
   ],
   imports: [
     CommonModule,

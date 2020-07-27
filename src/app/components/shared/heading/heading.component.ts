@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-heading',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heading.component.sass']
 })
 export class HeadingComponent implements OnInit {
-
+  @Input() title: string;
+  @Input() backgroundColor: string;
+  @Input() hasDownloadButton = false;
   constructor() { }
 
   ngOnInit(): void {

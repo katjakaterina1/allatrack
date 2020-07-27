@@ -20,6 +20,8 @@ import { FoundersComponent } from './founders/founders.component';
 import { TeamBlockComponent } from './team-block/team-block.component';
 import { ProcessBlockComponent } from './process-block/process-block.component';
 import { HeadingComponent } from './heading/heading.component';
+import { AboutComponent } from './about/about.component';
+import { ExpertiseComponent } from './expertise/expertise.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { HeadingComponent } from './heading/heading.component';
     FoundersComponent,
     TeamBlockComponent,
     ProcessBlockComponent,
-    HeadingComponent
+    HeadingComponent,
+    AboutComponent,
+    ExpertiseComponent
   ],
   imports: [
     CommonModule,
@@ -66,7 +70,10 @@ import { HeadingComponent } from './heading/heading.component';
     ReviewsComponent,
     FoundersComponent,
     TeamBlockComponent,
-    ProcessBlockComponent
+    ProcessBlockComponent,
+    HeadingComponent,
+    AboutComponent,
+    ExpertiseComponent
   ]
 })
 export class SharedModule { }
