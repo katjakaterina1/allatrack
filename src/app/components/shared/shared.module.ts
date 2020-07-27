@@ -19,6 +19,7 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { FoundersComponent } from './founders/founders.component';
 import { TeamBlockComponent } from './team-block/team-block.component';
 import { ProcessBlockComponent } from './process-block/process-block.component';
+import { HeadingComponent } from './heading/heading.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ProcessBlockComponent } from './process-block/process-block.component';
     ReviewsComponent,
     FoundersComponent,
     TeamBlockComponent,
-    ProcessBlockComponent
+    ProcessBlockComponent,
+    HeadingComponent
   ],
   imports: [
     CommonModule,

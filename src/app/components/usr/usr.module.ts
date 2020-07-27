@@ -11,6 +11,8 @@ import { UsrBlogSingleComponent } from './usr-blog-single/usr-blog-single.compon
 import { UsrCasesComponent } from './usr-cases/usr-cases.component';
 import { UsrCaseSingleComponent } from './usr-case-single/usr-case-single.component';
 import { UsrInfoComponent } from './usr-info/usr-info.component';
+import { UsrAboutComponent } from './usr-about/usr-about.component';
+import { UsrProcessComponent } from './usr-process/usr-process.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -22,6 +24,8 @@ const userRoutes: Routes = [
   { path: 'case-single', component: UsrCaseSingleComponent },
   { path: 'blog-single', component: UsrBlogSingleComponent },
   { path: 'info', component: UsrInfoComponent },
+  { path: 'about', component: UsrAboutComponent },
+  { path: 'process', component: UsrProcessComponent },
 ];
 
 @NgModule({
@@ -35,6 +39,8 @@ const userRoutes: Routes = [
     UsrCasesComponent,
     UsrCaseSingleComponent,
     UsrInfoComponent,
+    UsrAboutComponent,
+    UsrProcessComponent,
   ],
   imports: [
     CommonModule,
