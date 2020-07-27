@@ -1,5 +1,5 @@
-<div class="footer__form_block" [style.padding]="isFooter ? '0' : ''">
-  <span class="footer__form_block-name">Meeting</span>
+<div class="footer__form_block" [ngClass]="{'white': white}" [style.padding]="isFooter ? '0' : ''">
+  <span class="footer__form_block-name" *ngIf="isFooter">Meeting</span>
   <form action="">
     <input type="text" placeholder="*Your name">
     <input type="text" placeholder="*Your company">

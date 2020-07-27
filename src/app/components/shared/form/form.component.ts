@@ -7,6 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class FormComponent implements OnInit {
   @Input() isFooter: boolean;
+  @Input() white: boolean;
   constructor() { }
 
   ngOnInit(): void {
