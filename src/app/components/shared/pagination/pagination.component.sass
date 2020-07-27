@@ -1,0 +1,51 @@
+.pagination
+  display: flex
+  justify-content: space-between
+  margin: 0 150px 120px 150px
+  &__wrap
+    display: flex
+  &__button
+    width: 48px
+    height: 48px
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    background: #FAFAFA
+    transition: all .3s
+    &:hover
+      background: #1D1D1F
+      transition: all .3s
+      svg
+        path
+          fill: white
+    &.active
+      background: #1D1D1F
+      color: white
+  &__pages
+    display: flex
+    &_single
+      width: 48px
+      height: 48px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: Oswald, sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 140%
+      text-align: center
+      text-transform: uppercase
+      color: #1D1D1F
+      cursor: pointer
+      &:hover
+        background: #1D1D1F
+        color: white
+        transition: all .3s
+      &.active
+        background: #1D1D1F
+        color: white
+  .green-btn
+    svg
+      margin-left: 16px

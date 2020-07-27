@@ -1,0 +1,120 @@
+.careers
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  h2
+    margin: 0 auto 40px auto
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 80px
+  &__heading
+    display: flex
+    justify-content: space-between
+    width: 100%
+    &_wrap
+      display: flex
+      width: 80%
+    &_single
+      width: 110px
+      font-family: 'Oswald Medium', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 28px
+      text-align: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      padding-bottom: 16px
+      cursor: pointer
+      &.active
+        color: #4545FB
+        transition: all .3s
+    &_select
+      width: 159px
+      height: 40px
+      select
+        background-color: rgba(29, 29, 31, 0.08)
+        border-radius: 4px
+        width: 100%
+        height: 100%
+        border: none
+        padding: 10px 24px
+        box-sizing: border-box
+        outline: none
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        text-indent: 1px
+        text-overflow: ''
+        background-image: url("/assets/images/select.svg")
+        background-repeat: no-repeat
+        background-position: 85% center
+  .line
+    width: 100%
+    height: 1px
+    background-color: #D6D6D6
+    position: relative
+    &__fill
+      width: 110px
+      position: absolute
+      background-color: #4545FB
+      top: 0
+      left: 0
+      height: 1px
+      transform: translateX(0)
+      transition: all .3s
+
+  &__content
+    display: flex
+    width: 100%
+    flex-direction: column
+    &_single
+      display: flex
+      width: 100%
+      padding: 40px 40px 40px 80px
+      box-sizing: border-box
+      background: #F6F6F6
+      border-radius: 8px
+      align-items: center
+      justify-content: space-between
+      position: relative
+      overflow: hidden
+      margin-bottom: 24px
+      .circle
+        background-image: url("/assets/images/giphy.gif")
+        background-repeat: no-repeat
+        background-size: cover
+        opacity: 0.16
+        width: 600px
+        height: 600px
+        border-radius: 100%
+        filter: blur(100px)
+        -webkit-filter: blur(100px)
+        -ms-filter: blur(100px)
+        position: absolute
+        z-index: 10
+        margin: 0 auto
+        top: -84px
+        right: -158px
+      &-descr
+        display: flex
+        flex-direction: column
+        z-index: 50
+        span
+          font-family: Oswald, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 24px
+          line-height: 36px
+          display: flex
+          align-items: center
+          text-transform: uppercase
+          color: #1D1D1F
+          margin-bottom: 16px
+        &--tags
+          display: flex
+      .green-btn
+        z-index: 50
