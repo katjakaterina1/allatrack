@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="container">
+  <div class="container" *ngIf="!light">
     <div class="footer__wrapp">
       <a routerLink="/" class="logo white">Allatrack</a>
       <div class="footer__social">
@@ -88,5 +88,13 @@
         </div>
     </div>
   </div>
-  <span class="footer__copyright">Allatrack @2020. All right reserved</span>
+  <div class="footer__light">
+    <span class="footer__copyright">Allatrack @2020. All right reserved</span>
+    <div class="footer__light_links">
+      <a href="">Confidential</a>
+      <a href="">Public offers</a>
+      <a href="">Privacy & Policy</a>
+      <a href="">Terms & conditions</a>
+    </div>
+  </div>
 </footer>

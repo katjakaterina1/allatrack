@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.sass']
 })
 export class FooterComponent implements OnInit {
-
+  @Input() light = false;
   constructor() { }
 
   ngOnInit(): void {

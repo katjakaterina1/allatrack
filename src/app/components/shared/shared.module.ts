@@ -22,6 +22,7 @@ import { ProcessBlockComponent } from './process-block/process-block.component';
 import { HeadingComponent } from './heading/heading.component';
 import { AboutComponent } from './about/about.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ExpertiseComponent } from './expertise/expertise.component';
     ProcessBlockComponent,
     HeadingComponent,
     AboutComponent,
-    ExpertiseComponent
+    ExpertiseComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,
@@ -73,7 +75,8 @@ import { ExpertiseComponent } from './expertise/expertise.component';
     ProcessBlockComponent,
     HeadingComponent,
     AboutComponent,
-    ExpertiseComponent
+    ExpertiseComponent,
+    ContactsComponent
   ]
 })
 export class SharedModule { }
