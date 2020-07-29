@@ -1,7 +1,8 @@
+@import "../../../../mixins.sass"
+
 .expertise
   display: flex
   flex-direction: column
-  margin: 0 150px 120px 150px
   &__block
     display: flex
     justify-content: space-between
@@ -14,11 +15,16 @@
   &__block
     display: flex
     justify-content: space-between
+    @include small-desktop
+      flex-direction: column
   &__variants
     display: flex
     flex-direction: column
     width: 33%
     margin-bottom: 16px
+    @include small-desktop
+      display: none
+      width: 100%
     &_single
       display: flex
       justify-content: space-between
@@ -42,13 +48,32 @@
         background: #4545FB
         color: #FFFFFF
         svg
+          @include small-desktop
+            transform: rotate(90deg)
           path
             fill: #FFFFFF
   &__description
-    display: flex
     flex-direction: column
     justify-content: space-between
     width: 60%
+    display: none
+    &.active
+      display: flex
+    @include small-desktop
+      display: flex
+      width: 100%
+    .expertise-section__variants
+      display: none
+      @include small-desktop
+        margin-bottom: 0
+        display: flex
+    &_content
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      @include small-desktop
+        margin: 48px 0
     p
       font-family: Archivo, sans-serif
       font-style: normal
@@ -60,6 +85,7 @@
     &_links
       display: flex
       flex-wrap: wrap
+      margin-top: 40px
       .link
         margin: 0 24px 24px 0
 

@@ -1,14 +1,22 @@
+@import "../../../../mixins.sass"
+
 .footer
   display: flex
   flex-direction: column
   margin: 0 40px 8px 40px
+  @include small-desktop
+    margin: 0 16px 8px 16px
   .container
     padding: 80px 110px 40px 110px
     background: #171C2C
     border-radius: 8px
+    @include small-desktop
+      padding: 40px 24px
   &__wrapp
     display: flex
     justify-content: space-between
+    @include small-desktop
+      margin: 0 24px
   &__social
     display: flex
     align-items: center
@@ -22,15 +30,21 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    @include small-desktop
+      padding: 40px 24px
     &_header
       width: 100%
       display: flex
       justify-content: space-between
       align-items: center
       margin-bottom: 40px
+      @include small-desktop
+        align-items: flex-start
       h2
         width: 41%
         color: #FFFFFF
+        @include small-desktop
+          width: 50%
       p
         width: 41%
         font-family: Archivo, sans-serif
@@ -39,10 +53,14 @@
         font-size: 14px
         line-height: 28px
         color: #FFFFFF
+        @include small-desktop
+          width: 43%
     &_block
       width: 41%
       display: flex
       flex-direction: column
+      @include small-desktop
+        width: 50%
       &-name
         font-family: Archivo, sans-serif
         font-style: normal
@@ -111,9 +129,14 @@
   &__nav
     display: flex
     justify-content: space-between
+    @include small-desktop
+      flex-wrap: wrap
+      justify-content: flex-start
     &_block
       display: flex
       flex-direction: column
+      @include small-desktop
+        width: 33%
       span
         font-family: Oswald, sans-serif
         font-style: normal
@@ -155,6 +178,8 @@
     justify-content: space-between
     align-items: center
     margin: 8px 150px 0 150px
+    @include small-desktop
+      margin: 8px 24px 0 24px
     &_links
       display: flex
       a
@@ -167,3 +192,6 @@
         text-decoration-line: underline
         color: #9F9FA0
         margin-left: 24px
+app-form
+  @include small-desktop
+    width: 43%

@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .services
   display: flex
   flex-direction: column
@@ -7,6 +9,9 @@
   border-radius: 8px
   position: relative
   overflow: hidden
+  @include small-desktop
+    margin: 0 16px 120px 16px
+    padding: 80px
   .circle-wrap
     width: 100%
     height: 100%
@@ -44,6 +49,12 @@
       flex-direction: column
       max-width: 21%
       margin-right: 40px
+      @include small-desktop
+        max-width: 46%
+        width: 46%
+        margin-bottom: 40px
+        &:nth-child(2n+2)
+          margin-right: 0
       &-name
         font-family: Oswald, sans-serif
         font-style: normal

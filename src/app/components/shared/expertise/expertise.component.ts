@@ -13,6 +13,7 @@ export class ExpertiseComponent implements OnInit {
   public secondTab = false;
   public thirdTab = false;
   public fourthTab = false;
+  public fifthTab = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -24,24 +25,35 @@ export class ExpertiseComponent implements OnInit {
         this.secondTab = false;
         this.thirdTab = false;
         this.fourthTab = false;
+        this.fifthTab = false;
         break;
       case 'second':
         this.firstTab = false;
         this.secondTab = true;
         this.thirdTab = false;
         this.fourthTab = false;
+        this.fifthTab = false;
         break;
       case 'third':
         this.firstTab = false;
         this.secondTab = false;
         this.thirdTab = true;
         this.fourthTab = false;
+        this.fifthTab = false;
         break;
       case 'fourth':
         this.firstTab = false;
         this.secondTab = false;
         this.thirdTab = false;
         this.fourthTab = true;
+        this.fifthTab = false;
+        break;
+      case 'fifth':
+        this.firstTab = false;
+        this.secondTab = false;
+        this.thirdTab = false;
+        this.fourthTab = false;
+        this.fifthTab = true;
         break;
     }
   }

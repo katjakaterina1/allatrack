@@ -23,7 +23,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { AboutComponent } from './about/about.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { CareesBlockComponent } from '../shared/carees-block/carees-block.component';
+import { CareesBlockComponent } from './carees-block/carees-block.component';
 import { PaginationComponent } from './pagination/pagination.component';
 @NgModule({
   declarations: [

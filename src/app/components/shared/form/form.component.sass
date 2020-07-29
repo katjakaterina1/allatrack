@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .footer__form_block
   max-width: 432px
   display: flex
@@ -5,6 +7,15 @@
   background: #4545FB
   border-radius: 8px
   padding: 45px 24px
+  &.short
+    @include small-desktop
+      form
+        input
+          display: none
+        textarea
+          display: none
+        label
+          display: none
   &.white
     padding: 0
     background: unset

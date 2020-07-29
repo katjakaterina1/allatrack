@@ -1,14 +1,35 @@
+@import "../../../../mixins.sass"
+
 .projects
   display: flex
   flex-direction: column
-  margin: 0 150px 120px 150px
+  .circle
+    background-image: url("/assets/images/giphy.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0.16
+    width: 600px
+    height: 600px
+    border-radius: 100%
+    filter: blur(90px)
+    -webkit-filter: blur(90px)
+    -ms-filter: blur(90px)
+    position: absolute
+    z-index: 10
+    margin: 0 auto
+    top: 150px
+    left: -270px
+    @include small-desktop
+      opacity: 0.1
+      right: -150px
+      top: -150px
+      left: unset
   &__heading
     width: 100%
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
-
     .link
       font-size: 18px
   &__block
@@ -19,8 +40,13 @@
     background-color: #f9f8fa
     border-radius: 8px
     margin-bottom: 40px
-    background-image: url("/assets/images/projects-bg.png")
     display: none
+    position: relative
+    overflow: hidden
+    @include small-desktop
+      flex-direction: column
+      align-items: center
+      padding: 0
     &.selected
       display: flex
     &.dark
@@ -33,6 +59,12 @@
     &_content
       margin: 180px 0 0 0
       width: 40%
+      display: flex
+      flex-direction: column
+      z-index: 50
+      @include small-desktop
+        margin: 40px auto 0 auto
+        align-items: center
     &__tags
       display: flex
       margin-bottom: 16px
@@ -47,6 +79,8 @@
       text-transform: uppercase
       color: #1D1D1F
       margin-bottom: 40px
+      @include small-desktop
+        text-align: center
     .link
       font-size: 14px
     img
@@ -54,6 +88,9 @@
       width: 465px
       height: 420px
       object-fit: cover
+      @include small-desktop
+        width: 465px
+        height: 420px
   &__wrapp
     display: flex
   &__all

@@ -1,10 +1,17 @@
+@import "../../../../mixins.sass"
+
 .reviews
   display: flex
   flex-direction: column
   margin: 0 0 120px 0
+  @include small-desktop
+    margin-bottom: 200px
   h2
     margin: 0 150px
     width: 40%
+    @include small-desktop
+      margin: 0 40px
+      width: 90%
   &__block
     display: flex
     margin-top: 40px
@@ -13,6 +20,8 @@
     &_wrapp
       display: flex
       margin-left: 150px
+      @include small-desktop
+        margin-left: 40px
     &_single
       display: flex
       flex-direction: column

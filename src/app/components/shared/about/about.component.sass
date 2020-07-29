@@ -1,12 +1,19 @@
+@import "../../../../mixins.sass"
+
 .about
   display: flex
   justify-content: space-between
   flex-wrap: wrap
-  margin: 0 150px 120px 150px
+  @include small-desktop
+    position: relative
   &__description
     display: flex
     flex-direction: column
     width: 50%
+    @include small-desktop
+      width: 80%
+    @include tablet
+      width: 100%
     p
       font-family: Archivo, sans-serif
       font-style: normal
@@ -16,25 +23,45 @@
       letter-spacing: 0.04em
       color: #9F9FA0
       margin-top: 40px
+      @include small-desktop
+        width: 50%
   &__images
     display: flex
+    @include small-desktop
+      position: absolute
+      right: 0
+      top: 158px
     .animated-image
       width: 240px
       height: 240px
       border-radius: 100%
+      @include small-desktop
+        width: 168px
+        height: 168px
       &.top
         margin-left: -120px
+        @include small-desktop
+          margin-left: -72px
   &__block
     width: 100%
     display: flex
     margin-top: 80px
     align-items: center
     justify-content: space-between
+    @include small-desktop
+      flex-wrap: wrap
+      justify-content: flex-start
     &_single
       display: flex
       flex-direction: column
       max-width: 22%
       margin-right: 40px
+      @include small-desktop
+        max-width: 47%
+        width: 47%
+        &:nth-child(2n+2)
+          margin-right: 0
+
       &-name
         font-family: Oswald, sans-serif
         font-style: normal

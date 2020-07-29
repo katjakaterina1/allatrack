@@ -9,6 +9,7 @@ export class FormComponent implements OnInit {
   @Input() isFooter: boolean;
   @Input() white: boolean;
   @Input() apply = false;
+  @Input() isShort = false;
   constructor() { }
 
   ngOnInit(): void {

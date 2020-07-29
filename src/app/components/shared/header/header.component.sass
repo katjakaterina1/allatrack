@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .header
   display: flex
   justify-content: space-between
@@ -6,15 +8,21 @@
   padding-top: 24px
   position: relative
   transition: all .3s
+  @include small-desktop
+    margin: 16px
   &.drop
     ul li span, ul li svg
       z-index: 200
   .logo
     margin: 0 0 0 118px
     z-index: 200
+    @include small-desktop
+      margin: 0 0 0 24px
   &__nav
     display: flex
     margin-left: 70px
+    @include small-desktop
+      display: none
     li
       display: flex
       align-items: center
@@ -42,6 +50,8 @@
     align-items: center
     margin-right: 118px
     z-index: 200
+    @include small-desktop
+      display: none
   &__lang
     font-style: normal
     font-weight: 500
@@ -141,3 +151,20 @@
         &.top
           margin-left: -87px
 
+  &__mobile
+    display: none
+    @include small-desktop
+      z-index: 200
+      margin-right: 28px
+      display: flex
+      font-family: Oswald, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 24px
+      align-items: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      svg
+        margin-left: 20px
