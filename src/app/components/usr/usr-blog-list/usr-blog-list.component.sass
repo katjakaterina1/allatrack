@@ -2,6 +2,7 @@
   display: flex
   flex-direction: column
   margin-bottom: 120px
+  position: relative
   &__tabs
     display: flex
     width: 100%
@@ -10,6 +11,7 @@
     overflow-x: scroll
     &_wrap
       display: flex
+      z-index: 50
     &_heading
       display: flex
       margin-left: 166px
@@ -27,6 +29,7 @@
         color: #1D1D1F
         padding: 0 16px 16px 16px
         cursor: pointer
+        transition: all .3s
         &.active
           color: #4545FB
           transition: all .3s
@@ -35,7 +38,10 @@
       width: 100%
       height: 1px
       background-color: #D6D6D6
-      position: relative
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: 1
       //&__fill
       //  margin-left: 166px
       //  width: 25%

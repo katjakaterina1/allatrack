@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-tabs-block',
@@ -10,6 +10,7 @@ export class TabsBlockComponent implements OnInit {
   web: any;
   mobile: any;
   analyze: any;
+  @Input() heading: string;
   constructor() { }
 
   ngOnInit(): void {

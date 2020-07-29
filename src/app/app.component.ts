@@ -9,6 +9,7 @@ import {Router, NavigationEnd, NavigationStart} from '@angular/router';
 })
 export class AppComponent {
   public route: string;
+  close: any = true;
   constructor(router: Router) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
@@ -20,5 +21,8 @@ export class AppComponent {
   title = 'Allatrack';
   onActivate(event): void {
     window.scroll(0, 0 );
+  }
+  closeCookie(): any {
+    this.close = false;
   }
 }

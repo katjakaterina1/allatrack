@@ -6,7 +6,7 @@
     </svg>
     </a>
   </div>
-  <div class="projects__block" [ngClass]="backgroundColor === '#181818' ? 'dark' : ''" [style.backgroundColor]="backgroundColor ? backgroundColor : ''">
+  <div class="projects__block" *ngFor="let project of cases, let i = index;" id="block-{{i}}" [ngClass]="backgroundColor === '#181818' ? 'dark' : ''" [style.backgroundColor]="backgroundColor ? backgroundColor : ''">
     <div class="projects__block_content">
       <div class="projects__block__tags">
         <div class="tag">iOs</div>
@@ -24,53 +24,14 @@
   </div>
   <div class="projects__all scrollbar" *ngIf="needExtraTabs">
     <div class="projects__wrapp">
-      <div class="projects__all_single selected">
+      <div class="projects__all_single" *ngFor="let project of cases, let i = index;" id="case-{{i}}">
         <div class="projects__all_single-name">
           TiPaymium
         </div>
         <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
+        <div class="line">
+          <div class="line__filled"></div>
         </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
-      </div>
-      <div class="projects__all_single">
-        <div class="projects__all_single-name">
-          TiPaymium
-        </div>
-        <span>iOs, Android app</span>
       </div>
     </div>
   </div>

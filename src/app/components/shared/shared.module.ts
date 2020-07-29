@@ -25,7 +25,6 @@ import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CareesBlockComponent } from '../shared/carees-block/carees-block.component';
 import { PaginationComponent } from './pagination/pagination.component';
-
 @NgModule({
   declarations: [
     CasesComponent,
@@ -81,7 +80,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     ExpertiseComponent,
     ContactsComponent,
     CareesBlockComponent,
-    PaginationComponent
+    PaginationComponent,
   ]
 })
 export class SharedModule { }

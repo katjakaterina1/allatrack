@@ -12,7 +12,6 @@
     .link
       font-size: 18px
   &__block
-    display: flex
     justify-content: space-between
     width: 100%
     padding: 0 0 0 56px
@@ -21,6 +20,9 @@
     border-radius: 8px
     margin-bottom: 40px
     background-image: url("/assets/images/projects-bg.png")
+    display: none
+    &.selected
+      display: flex
     &.dark
       h3
         color: white
@@ -62,13 +64,15 @@
     &_single
       display: flex
       flex-direction: column
-      border-bottom: 1px solid #D6D6D6
       width: 163px
       margin-right: 16px
       cursor: pointer
       &.selected
         .projects__all_single-name
           color: #4545FB
+        .line__filled
+          animation: mymove 5s linear
+          display: flex
       &-name
         margin-bottom: 8px
         font-family: 'Spartan', sans-serif
@@ -88,3 +92,21 @@
         letter-spacing: 0.04em
         color: #9F9FA0
         margin-bottom: 16px
+  .line
+    width: 100%
+    height: 1px
+    position: relative
+    background-color: #D6D6D6
+    overflow: hidden
+    &__filled
+      background-color: #1D1D1F
+      height: 1px
+      width: 100%
+      display: none
+
+
+@keyframes mymove
+  from
+    transform: translateX(-100%)
+  to
+    transform: translateX(0%)

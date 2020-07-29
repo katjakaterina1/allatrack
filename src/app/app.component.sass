@@ -1,0 +1,44 @@
+.cookie
+  background: #4545FB
+  border-radius: 8px
+  padding: 16px 40px
+  position: fixed
+  display: flex
+  align-items: center
+  width: 55%
+  box-sizing: border-box
+  justify-content: space-between
+  left: 0
+  right: 0
+  margin: 0 auto
+  animation-duration: 1s
+  animation-name: slidein
+  z-index: 100
+  bottom: 30px
+  span
+    font-family: Oswald, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 24px
+    display: flex
+    align-items: center
+    color: #FFFFFF
+  p
+    font-family: Archivo, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 24px
+    letter-spacing: 0.04em
+    color: rgba(255, 255, 255, 0.4)
+  a
+    color: white
+  svg
+    cursor: pointer
+
+@keyframes slidein
+  from
+    bottom: -60px
+  to
+    bottom: 30px

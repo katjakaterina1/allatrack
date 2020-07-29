@@ -33,9 +33,9 @@
     </div>
   </div>
 </section>
-<app-cases></app-cases>
+<app-cases [needExtraTabs]="true"></app-cases>
 <app-our-services [flag]="'service'" [title]="'Our services'" [servicesData]="servicesData"></app-our-services>
 <app-about></app-about>
-<app-expertise></app-expertise>
+<app-expertise [header]="'Expertise'" [button]="'View all Expertise'"></app-expertise>
 <app-reviews></app-reviews>
 <app-blog-section [heading]="'Blog'" [button]="'Discover all articles'" [mainArticle]="true"></app-blog-section>
