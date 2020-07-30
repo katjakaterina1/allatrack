@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .expertise
   display: flex
   margin: -102px 32px 120px 32px
@@ -7,6 +9,8 @@
   position: relative
   max-height: 660px
   overflow: hidden
+  @include small-desktop
+    display: none
   .exp-image
     width: 811px
     height: 609px
@@ -116,3 +120,10 @@
       flex-wrap: wrap
       .link
         margin: 0 24px 24px 0
+app-heading
+  display: none
+  @include small-desktop
+    display: flex
+.tags__wrapper
+  display: flex
+  margin-bottom: 107px

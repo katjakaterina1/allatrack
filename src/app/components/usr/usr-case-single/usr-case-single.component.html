@@ -4,20 +4,43 @@
     <h1>
       Tickfind
     </h1>
-    <p>Lectus risus sed orci, at at mauris venenatis faucibus massa. Velit eu viverra est ridiculus pellentesque sem pellentesque commodo eget.</p>
+    <div class="tags__wrapper">
+      <div class="tag">iOs</div>
+      <div class="tag">Android</div>
+      <div class="tag">Design</div>
+      <div class="tag">AI</div>
+    </div>
     <div class="expertise__buttons">
-      <button class="green-btn">Estimate your project</button>
+      <button class="green-btn">Estimate your App</button>
+      <a href="" class="link">
+        Launch Project
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+        </svg>
+      </a>
     </div>
   </div>
   <div class="exp-image">
     <img src="/assets/images/case1.gif" alt="">
   </div>
 </section>
+<app-heading
+  [backgroundColor]="'#E7F2F3'"
+  [top]="'-300px'"
+  [right]="'-200px'"
+  [title]="'Tickfind'"
+  [needSocial]="false"
+  [hasSocial]="false"
+  [hasLaunchButton]="true"
+  [hasTags]="true"
+  [hasContactButton]="'Estimate your App'"
+>
+</app-heading>
 <app-three-columned-block [title]="'The challenge and problems'" [threeData]="threeData"></app-three-columned-block>
 <app-triangles-block [title]="'Targets'"></app-triangles-block>
 <app-expertise [header]="'Functionality'"></app-expertise>
 <app-tabs-block [heading]="'Stack'"></app-tabs-block>
 <app-three-columned-block [title]="'Expected result'" [threeData]="threeData"></app-three-columned-block>
 <app-case-result></app-case-result>
-<app-cases [title]="'Other cases'"></app-cases>
+<app-cases [title]="'Other cases'" [needExtraTabs]="true"></app-cases>
 

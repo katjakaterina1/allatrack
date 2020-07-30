@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .expertise
   display: flex
   margin: -102px 32px 120px 32px
@@ -7,6 +9,8 @@
   position: relative
   max-height: 660px
   overflow: hidden
+  @include small-desktop
+    display: none
   .circle
     background-image: url(/assets/images/phone.gif)
     background-repeat: no-repeat
@@ -125,3 +129,7 @@
 
 app-cases
   width: 100%
+app-heading
+  display: none
+  @include small-desktop
+    display: flex

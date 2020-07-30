@@ -15,7 +15,9 @@ export class HeadingComponent implements OnInit {
   @Input() right: string;
   @Input() containerPadding: string;
   @Input() hasDownloadButton = false;
-  @Input() hasContactButton = true;
+  @Input() hasLaunchButton = false;
+  @Input() hasTags = false;
+  @Input() hasContactButton: any = true;
   @Input() hasSocial = true;
   @Input() needBackButton: string;
   @Input() buttonLink: string;

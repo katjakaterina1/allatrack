@@ -16,15 +16,28 @@
     <h1>
       {{title}} <span *ngIf="hashtag" class="hashtag">{{hashtag}}</span>
     </h1>
-    <p
+    <div class="tags__wrapper" *ngIf="hasTags">
+      <div class="tag">iOs</div>
+      <div class="tag">Android</div>
+      <div class="tag">Design</div>
+      <div class="tag">AI</div>
+    </div>
+    <p *ngIf="hasTags == false"
       [style.width]="hashtag ? '50%' : '80%'">
       Lectus risus sed orci, at at mauris venenatis faucibus massa. Velit eu viverra est ridiculus pellentesque sem pellentesque commodo eget.</p>
     <div class="expertise__buttons">
-      <button class="green-btn" *ngIf="hasContactButton">Contact us</button>
+      <button class="green-btn" *ngIf="hasContactButton == true">Contact us</button>
+      <button class="green-btn" *ngIf="hasContactButton !== true">{{hasContactButton}}</button>
       <a href="" class="link" *ngIf="hasDownloadButton">
         Download pdf
         <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M6.77351 15.7735L1.63834 10.6383L3.33539 8.94126L7.3336 12.9395L7.28525 1.71467L9.69563 1.72505L9.74336 12.8036L13.5617 8.98527L15.2735 10.697L10.1823 15.7882L10.1824 15.7882L8.4853 17.4853L8.48525 17.4852L6.77351 15.7735Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+      <a href="" class="link" *ngIf="hasLaunchButton">
+        Launch Project
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
         </svg>
       </a>
     </div>
