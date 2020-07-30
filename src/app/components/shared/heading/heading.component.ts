@@ -9,6 +9,7 @@ export class HeadingComponent implements OnInit {
   @Input() title: string;
   @Input() hashtag: string;
   @Input() needSocial = false;
+  @Input() alignLeft = false;
   @Input() needCircle = true;
   @Input() backgroundColor: string;
   @Input() top: string;

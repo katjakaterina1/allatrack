@@ -1,7 +1,13 @@
+@import "../../../../mixins.sass"
+
 .pagination
   display: flex
   justify-content: space-between
   margin: 0 150px 120px 150px
+  @include small-desktop
+    margin: 0 40px 120px 40px
+    flex-direction: column-reverse
+    align-items: center
   &__wrap
     display: flex
   &__button
@@ -47,5 +53,7 @@
         background: #1D1D1F
         color: white
   .green-btn
+    @include small-desktop
+      margin-bottom: 40px
     svg
       margin-left: 16px

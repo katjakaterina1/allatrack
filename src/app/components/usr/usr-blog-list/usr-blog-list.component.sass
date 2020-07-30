@@ -1,8 +1,13 @@
+@import "../../../../mixins.sass"
+
 .blog
   display: flex
   flex-direction: column
   margin-bottom: 120px
   position: relative
+  @include small-desktop
+    margin-bottom: 80px
+    margin-top: -80px
   &__tabs
     display: flex
     width: 100%
@@ -15,6 +20,8 @@
     &_heading
       display: flex
       margin-left: 166px
+      @include small-desktop
+        margin-left: 40px
       &_single
         width: auto
         white-space: nowrap
