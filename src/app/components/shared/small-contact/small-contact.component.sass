@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .expertise-description__contact
   margin: 0 150px 120px 150px
   background: #F6F6F6
@@ -6,6 +8,9 @@
   justify-content: space-between
   align-items: center
   padding: 80px 120px
+  @include small-desktop
+    margin: 0
+    padding: 80px 40px
   h3
     font-family: 'Oswald Medium', sans-serif
     font-style: normal
@@ -15,5 +20,10 @@
     text-transform: uppercase
     color: #1D1D1F
     width: 60%
+    @include small-desktop
+      width: 65%
+  @include small-desktop
+  .green-btn
+    width: 28%
   svg
     margin-left: 16px

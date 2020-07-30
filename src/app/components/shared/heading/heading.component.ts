@@ -18,6 +18,7 @@ export class HeadingComponent implements OnInit {
   @Input() hasContactButton = true;
   @Input() hasSocial = true;
   @Input() needBackButton: string;
+  @Input() buttonLink: string;
   constructor() { }
 
   ngOnInit(): void {

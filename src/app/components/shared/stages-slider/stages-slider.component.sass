@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .slider
   a.link
     color: white
@@ -9,6 +11,9 @@
   border-radius: 8px
   position: relative
   overflow: hidden
+  @include small-desktop
+    margin: 0 16px 120px 16px
+    padding: 80px
   .circle-wrap
     width: 100%
     height: 100%
@@ -41,6 +46,8 @@
       display: flex
       flex-direction: column
       width: 35%
+      @include small-desktop
+        width: 58%
       h2
         margin-bottom: 40px
       p
@@ -57,10 +64,20 @@
       border-radius: 8px
       width: 614px
       height: 284px
+      @include small-desktop
+        width: 212px
+        height: 200px
+  &__wrap
+    @include small-desktop
+      z-index: 100
+      overflow: hidden
+      overflow-x: scroll
   &__content
     z-index: 100
     display: flex
     justify-content: space-between
+    @include small-desktop
+      width: 1025px
     &_single
       display: flex
       flex-direction: column

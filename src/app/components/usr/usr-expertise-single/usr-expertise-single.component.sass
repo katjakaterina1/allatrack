@@ -1,79 +1,21 @@
-.expertise
-  display: flex
-  margin: -102px 32px 120px 32px
-  background: #F0F0FF
-  background-size: contain
-  border-radius: 8px
-  position: relative
-  max-height: 660px
-  overflow: hidden
-  .circle
-    background-image: url("/assets/images/bg.gif")
-    background-repeat: no-repeat
-    background-size: cover
-    opacity: 0.24
-    width: 559px
-    height: 559px
-    border-radius: 100%
-    filter: blur(100px)
-    -webkit-filter: blur(100px)
-    -ms-filter: blur(100px)
-    position: absolute
-    z-index: 10
-    margin: 0 auto
-    top: 160px
-    right: 20px
-  .container
-    display: flex
-    flex-direction: column
-    margin: 166px 0 0 118px
-    padding-bottom: 166px
-    width: 50%
-  &__buttons
-    display: flex
-    align-items: center
-  h1
-    font-family: Oswald, sans-serif
-    font-style: normal
-    font-weight: 600
-    font-size: 64px
-    line-height: 95px
-    letter-spacing: 0.04em
-    text-transform: uppercase
-    color: #1D1D1F
-    margin-bottom: 40px
-  p
-    font-family: Archivo, sans-serif
-    font-style: normal
-    font-weight: 500
-    font-size: 14px
-    line-height: 28px
-    color: #000000
-    margin-bottom: 80px
-    width: 80%
-  a.link
-    margin-left: 40px
-  a.back
-    margin-bottom: 24px
-    svg
-      margin-right: 16px
-  img
-    object-fit: contain
-    height: auto
-    border-radius: 0 8px 8px 0
+@import "../../../../mixins.sass"
+
 .expertise-description
-  margin: 0 150px 120px 150px
   h2
     margin-bottom: 40px
   &__block
     display: flex
     justify-content: space-between
     margin-bottom: 120px
+    @include small-desktop
+      flex-direction: column
     &_wrap
       display: flex
       flex-direction: column
       flex-wrap: wrap
       width: 45%
+      @include small-desktop
+        width: 100%
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -82,11 +24,16 @@
         line-height: 28px
         letter-spacing: 0.04em
         color: #9F9FA0
+        @include small-desktop
+          margin-bottom: 80px
     &_single
       display: flex
       justify-content: space-between
       &:not(:last-child)
         margin-bottom: 40px
+      @include small-desktop
+        .expertise-description__block_wrap
+          width: 47%
       span
         font-family: Oswald, sans-serif
         font-style: normal
@@ -108,5 +55,7 @@
         line-height: 28px
         letter-spacing: 0.04em
         color: #9F9FA0
+        @include small-desktop
+          margin-bottom: 0
 
 

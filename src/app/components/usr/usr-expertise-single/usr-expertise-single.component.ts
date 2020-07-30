@@ -15,17 +15,17 @@ export class UsrExpertiseSingleComponent implements OnInit {
     this.threeData = [
       {
         title: 'Natural Language Processing',
-        text: 'Help build a team or pick a ready-made team',
+        text: 'Advanced texts, speech, and cognitive analytics. Structured and unstructured data. Chatbots',
         link: ''
       },
       {
         title: 'Computer Vision',
-        text: 'Help build a team or pick a ready-made team',
+        text: 'Visual classification of object nature, image recognition, and real-time video processing',
         link: ''
       },
       {
         title: 'Data Mining and Analytics',
-        text: 'Help build a team or pick a ready-made team',
+        text: 'Advanced data analytics, clustering, pattern detection, statistical analysis, and data visualization',
         link: ''
       },
       {
