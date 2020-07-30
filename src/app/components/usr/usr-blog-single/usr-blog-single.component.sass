@@ -1,7 +1,11 @@
+@import "../../../../mixins.sass"
+
 .blog-single
   display: flex
   flex-direction: column
   margin: 133px 150px 200px 150px
+  @include small-desktop
+    margin: 133px 40px 120px 40px
   .back
     margin-bottom: 40px
   &__heading
@@ -24,6 +28,8 @@
       color: #9F9FA0
       margin-bottom: 40px
       width: 53%
+      @include small-desktop
+        width: 87%
   &__tags
     display: flex
   img
@@ -31,9 +37,14 @@
     height: 612px
     border-radius: 8px
     margin-bottom: 80px
+    object-fit: cover
+    @include small-desktop
+      height: 369px
   &__text
     width: 52%
     margin: 0 auto 200px auto
+    @include small-desktop
+      width: 100%
     p
       font-family: Archivo, sans-serif
       font-style: normal
