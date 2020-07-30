@@ -1,18 +1,12 @@
-<section class="expertise">
-  <div class="circle"></div>
-  <div class="container">
-    <h1>
-      About us
-    </h1>
-    <p>Strong customer relationships are more important than ever, but the scale and nature of online business means it's harder than ever to create personal connections with customers.
-    <br>
-    <br>
-    That's why we created the world's first Conversational Relationship Platform — to help businesses build better customer relationships through personalized, messenger-based experiences.</p>
-    <div class="expertise__buttons">
-      <button class="green-btn">Contact us</button>
-    </div>
-  </div>
-</section>
+<app-heading
+  [backgroundColor]="'#F6F6F6'"
+  [text]="'Strong customer relationships are more important than ever, but the scale and nature of online business means it\'s harder than ever to create personal connections with customers.  That\'s why we created the world\'s first Conversational Relationship Platform — to help businesses build better customer relationships through personalized, messenger-based experiences.'"
+  [top]="'-50px'"
+  [right]="'-200px'"
+  [title]="'About us'"
+  [hasContactButton]="true"
+  [hasSocial]="false"
+></app-heading>
 <div class="exp-image">
   <img src="/assets/images/about.jpg" alt="">
 </div>
@@ -23,4 +17,4 @@
 <app-three-columned-block [title]="''" [text]="'Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software development of any complexity. To each client an individual approach, depending on the specifics of the business.'" [figure]="'triangle'" [threeData]="threeData"></app-three-columned-block>
 <app-founders></app-founders>
 <app-team-block></app-team-block>
-<app-reviews></app-reviews>
+<app-reviews [heading]="'Customers about us'"></app-reviews>

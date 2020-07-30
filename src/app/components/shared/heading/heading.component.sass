@@ -8,7 +8,6 @@
   border-radius: 8px
   position: relative
   overflow: hidden
-  width: 100%
   @include small-desktop
     margin: -76px 16px 120px 16px
     max-height: unset
@@ -39,6 +38,8 @@
       width: 100%
       margin: 248px 24px 0 24px
       align-items: center
+      &.alignLeft
+        align-items: flex-start
     &.hashtag
       width: 70%
       @include small-desktop
@@ -67,10 +68,15 @@
     color: #000000
     margin-bottom: 80px
     width: 80%
+    &.about-text
+      width: 62%
+      @include small-desktop
+        width: 100%
     @include small-desktop
       &.alignLeft
         text-align: left
       text-align: center
+
   a.link
     margin-left: 40px
   a.back

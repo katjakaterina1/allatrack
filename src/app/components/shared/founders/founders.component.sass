@@ -1,12 +1,20 @@
+@import "../../../../mixins.sass"
+
 .founders
   display: flex
   flex-direction: column
-  margin: 0 150px 120px 150px
   h2
     margin-bottom: 40px
+  &__wrap
+    @include small-desktop
+      overflow: hidden
+      overflow-x: scroll
   &__block
     display: flex
     justify-content: space-between
+    @include small-desktop
+      width: max-content
+      width: -moz-max-content
     &_single
       display: flex
       flex-direction: column
@@ -17,6 +25,8 @@
         border-radius: 8px
         object-fit: cover
         margin-bottom: 24px
+        @include small-desktop
+          height: 362px
       &-tags
         display: flex
         margin-bottom: 16px

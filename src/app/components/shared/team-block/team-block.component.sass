@@ -1,7 +1,8 @@
+@import "../../../../mixins.sass"
+
 .team
   display: flex
   flex-direction: column
-  margin: 0 150px 120px 150px
   h2
     margin: 0 auto 40px auto
   &__wrapper
@@ -55,8 +56,14 @@
       width: 23%
       margin-bottom: 40px
       margin-right: 2.5%
+      @include small-desktop
+        width: 31%
+        &:nth-child(3n+3)
+          margin-right: 0
       &:nth-child(4n+4)
         margin-right: 0
+        @include small-desktop
+          margin-right: 2.5%
       img
         margin-bottom: 24px
         height: 300px
