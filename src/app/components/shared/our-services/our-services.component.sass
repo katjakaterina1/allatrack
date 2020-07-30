@@ -94,12 +94,21 @@
   .links-only
     display: flex
     align-items: flex-start
+    @include small-desktop
+      justify-content: flex-end
     .services__button-wrapper
       margin-top: 0
+      @include small-desktop
+        margin-top: -70px
+        width: 50%
   .links-wrapper
     display: flex
     width: 80%
     flex-wrap: wrap
+    @include small-desktop
+      width: 100%
+      flex-direction: column
+      max-height: 235px
     .link
       width: 32%
       margin-bottom: 16px

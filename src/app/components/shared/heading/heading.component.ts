@@ -19,6 +19,7 @@ export class HeadingComponent implements OnInit {
   @Input() hasSocial = true;
   @Input() needBackButton: string;
   @Input() buttonLink: string;
+  @Input() needForm = false;
   constructor() { }
 
   ngOnInit(): void {
