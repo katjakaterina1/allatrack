@@ -1,4 +1,4 @@
-<div class="overlay" (mouseover)="openDropdown('close')" [ngClass]="{'open': openAbout || openExpertise || openServices }"></div>
+<div class="overlay" (mouseover)="openDropdown('close')" (click)="openSidebar = false" [ngClass]="{'open': openAbout || openExpertise || openServices || openSidebar }"></div>
 <header class="header" [ngClass]="{'drop': openAbout || openExpertise || openServices }">
   <a routerLink="/" class="logo">Allatrack</a>
   <ul class="header__nav">
@@ -22,7 +22,7 @@
     </li>
     <li (mouseover)="openDropdown('close')"><span>Clients</span></li>
     <li (mouseover)="openDropdown('close')" routerLink="/blog"><span>Blog</span></li>
-    <li (mouseover)="openDropdown('close')"><span>Careers</span></li>
+    <li (mouseover)="openDropdown('close')" routerLink="/careers"><span>Careers</span></li>
   </ul>
   <div class="header__dropdown" (mouseover)="openDropdown('about')" [ngClass]="{'open': openAbout}">
     <div class="header__dropdown_aside">
@@ -134,12 +134,169 @@
   </div>
   <div class="header__wrapper">
     <div class="header__lang">En</div>
-    <button class="green-btn">Estimate project</button>
+    <button class="green-btn" routerLink="/contacts">Estimate project</button>
   </div>
-  <div class="header__mobile">
-    Menu
-    <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="header__mobile" (click)="sidebarOpen()">
+    <ng-container *ngIf="!openSidebar">Menu</ng-container>
+    <ng-container *ngIf="openSidebar">Close</ng-container>
+    <svg *ngIf="!openSidebar" width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 8H24V6H0V8ZM0 0V2H24V0H0Z" fill="black"/>
     </svg>
+    <svg *ngIf="openSidebar" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.91 1.41L16.5 0L9 7.59034L1.5 0L0.090004 1.41L7.59 9.00034L0.090004 16.59L1.5 18L9 10.4103L16.5 18.0006L17.91 16.5906L10.41 9.00034L17.91 1.41Z" fill="black"/>
+    </svg>
+  </div>
+  <div class="header__sidebar" [ngClass]="{'active': openSidebar}">
+    <ul class="header__sidebar_lang">
+      <li [ngClass]="{'active': eng}" (click)="changeLang('eng')">English</li>
+      <li [ngClass]="{'active': ukr}" (click)="changeLang('ukr')">Русский</li>
+      <li [ngClass]="{'active': ru}" (click)="changeLang('ru')">Українська</li>
+    </ul>
+    <ul class="header__sidebar_nav" *ngIf="!openExpertise && !openServices && !openAbout">
+      <li (click)="openDropdown('about')">
+        <span>About us</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.53003 11.2563L8.58336 8.19629L5.53003 5.13629L6.47003 4.19629L10.47 8.19629L6.47003 12.1963L5.53003 11.2563Z" fill="#1D1D1F"/>
+        </svg>
+      </li>
+      <li>
+        <span (click)="openDropdown('services')">Services</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.53003 11.2563L8.58336 8.19629L5.53003 5.13629L6.47003 4.19629L10.47 8.19629L6.47003 12.1963L5.53003 11.2563Z" fill="#1D1D1F"/>
+        </svg>
+      </li>
+      <li>
+        <span (click)="openDropdown('expertise')">Expertise</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.53003 11.2563L8.58336 8.19629L5.53003 5.13629L6.47003 4.19629L10.47 8.19629L6.47003 12.1963L5.53003 11.2563Z" fill="#1D1D1F"/>
+        </svg>
+      </li>
+      <li><span>Clients</span></li>
+      <li routerLink="/blog" (click)="openSidebar = false"><span>Blog</span></li>
+      <li routerLink="/careers" (click)="openSidebar = false"><span>Careers</span></li>
+    </ul>
+    <div class="header__dropdown mobile" *ngIf="openAbout" [ngClass]="{'open': openAbout}">
+      <a href="" class="back" (click)="openAbout = false">
+        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11736 18.0001L1.14441e-05 8.96124L2.25979 6.72092L2.2599 6.72102L9.03929 0L11.3186 2.25971L6.23421 7.30034L20.9862 7.36334L21 10.5454L6.05305 10.4815L11.3771 15.7598L9.11736 18.0001Z" fill="#00CAA7"/>
+        </svg>
+        Abous us
+      </a>
+      <div class="header__dropdown_aside">
+        <a href="" class="link">
+          Company overview
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <a href="" class="link">
+          Process
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <a href="" class="link">
+          Our product
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="header__dropdown_info">
+        <span class="header__dropdown_info-title">Why allatrack</span>
+        <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software.</p>
+        <a href="" class="link">
+          About us
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="header__dropdown_images">
+        <img class="animated-image" src="/assets/images/giphy.gif" alt="">
+        <img class="animated-image top" src="/assets/images/bg.gif" alt="">
+      </div>
+    </div>
+    <div class="header__dropdown mobile" *ngIf="openServices" [ngClass]="{'open': openServices}">
+      <a href="" class="back" (click)="openServices = false">
+        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11736 18.0001L1.14441e-05 8.96124L2.25979 6.72092L2.2599 6.72102L9.03929 0L11.3186 2.25971L6.23421 7.30034L20.9862 7.36334L21 10.5454L6.05305 10.4815L11.3771 15.7598L9.11736 18.0001Z" fill="#00CAA7"/>
+        </svg>
+        Services
+      </a>
+      <div class="header__dropdown_aside">
+        <a href="" class="link">
+          Extend your team
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <a href="" class="link">
+          Build your idea
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <a href="" class="link">
+          Manage your service
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="header__dropdown_info full">
+        <a href="" routerLink="/services-list" (click)="openDropdown('close')" class="link">
+          All services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <div class="header__dropdown_info-columns">
+          <ul class="header__dropdown_info-columns--single">
+            <li routerLink="/service-single" (click)="openDropdown('close')">Software Product Development</li>
+            <li>Mobile Application Development</li>
+            <li>Web services development</li>
+            <li>Extended Reality (AR / VR)</li>
+            <li>R&D and innovation</li>
+            <li>Software QA & Testing</li>
+            <li>Technical Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header__dropdown mobile expertise" *ngIf="openExpertise" [ngClass]="{'open': openExpertise}">
+      <a href="" class="back" (click)="openExpertise = false">
+        <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11736 18.0001L1.14441e-05 8.96124L2.25979 6.72092L2.2599 6.72102L9.03929 0L11.3186 2.25971L6.23421 7.30034L20.9862 7.36334L21 10.5454L6.05305 10.4815L11.3771 15.7598L9.11736 18.0001Z" fill="#00CAA7"/>
+        </svg>
+        Expertise
+      </a>
+      <div class="header__dropdown_wrap">
+        <a href="" class="link" routerLink="/expertises" (click)="openDropdown('close')">
+          Expertise
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
+          </svg>
+        </a>
+        <div class="header__dropdown_info-columns">
+          <ul class="header__dropdown_info-columns--single">
+            <li routerLink="/expertise-single" (click)="openDropdown('close')">Blockchain (DLT)</li>
+            <li>Extended Reality (AR / VR)</li>
+          </ul>
+          <ul class="header__dropdown_info-columns--single">
+            <li>Cognitive Computing (AI / ML)</li>
+            <li>Data, BI and Analytics</li>
+          </ul>
+          <ul class="header__dropdown_info-columns--single">
+            <li>Internet of Things (IoT)</li>
+            <li>Customer Experience (UX / UI)</li>
+          </ul>
+          <ul class="header__dropdown_info-columns--single">
+            <li>Cloud & DevOps</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="green-btn" routerLink="/contacts" (click)="openSidebar = false">Estimate project</button>
   </div>
 </header>

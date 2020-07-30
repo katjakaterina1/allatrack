@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .expertise
   display: flex
   margin: -102px 32px 120px 32px
@@ -7,6 +9,9 @@
   position: relative
   max-height: 660px
   overflow: hidden
+  @include small-desktop
+    margin: -76px 16px 120px 16px
+    max-height: unset
   .circle
     background-image: url("/assets/images/bg.gif")
     background-repeat: no-repeat
@@ -29,6 +34,14 @@
     margin: 166px 0 0 118px
     padding-bottom: 166px
     width: 50%
+    @include small-desktop
+      width: 100%
+      margin: 248px 24px 0 24px
+      align-items: center
+    &.hashtag
+      width: 70%
+      @include small-desktop
+        width: 100%
   &__buttons
     display: flex
     align-items: center
@@ -53,6 +66,8 @@
     color: #000000
     margin-bottom: 80px
     width: 80%
+    @include small-desktop
+      text-align: center
   a.link
     margin-left: 40px
   a.back

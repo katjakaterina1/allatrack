@@ -11,6 +11,8 @@ export class HeadingComponent implements OnInit {
   @Input() needSocial = false;
   @Input() needCircle = true;
   @Input() backgroundColor: string;
+  @Input() top: string;
+  @Input() right: string;
   @Input() containerPadding: string;
   @Input() hasDownloadButton = false;
   @Input() hasContactButton = true;

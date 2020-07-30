@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .main-screen
   display: flex
   margin: -102px 32px 120px 32px
@@ -5,6 +7,8 @@
   border-radius: 8px
   position: relative
   overflow: hidden
+  @include small-desktop
+    margin: -76px 16px 112px 16px
   .circle
     background-image: url("/assets/images/giphy.gif")
     background-repeat: no-repeat
@@ -13,18 +17,26 @@
     width: 836px
     height: 836px
     border-radius: 100%
-    filter: blur(100px)
-    -webkit-filter: blur(100px)
-    -ms-filter: blur(100px)
+    filter: blur(90px)
+    -webkit-filter: blur(90px)
+    -ms-filter: blur(90px)
     position: absolute
     z-index: 10
     margin: 0 auto
     top: 193px
     right: 270px
+    @include small-desktop
+      width: 656px
+      height: 656px
+      top: 283px
+      right: 0
+      left: 0
   .container
     margin: 172px auto 0 auto
     width: 100%
     z-index: 20
+    @include small-desktop
+      margin: 248px auto 0 auto
   h1
     font-family: 'Oswald', sans-serif
     text-align: center
@@ -56,10 +68,14 @@
     text-transform: uppercase
     color: #1D1D1F
     margin-bottom: 175px
+    @include small-desktop
+      margin-bottom: 200px
   &__bottom
     display: flex
     justify-content: space-between
     margin: 0 118px 40px 118px
+    @include small-desktop
+      margin: 0 24px 24px 24px
     &_blog
       font-family: 'Archivo', sans-serif
       font-style: normal
