@@ -1,7 +1,8 @@
+@import "../../../../mixins.sass"
+
 .careers
   display: flex
   flex-direction: column
-  margin: 0 150px 120px 150px
   h2
     margin: 0 auto 40px auto
   &__wrapper
@@ -13,9 +14,14 @@
     display: flex
     justify-content: space-between
     width: 100%
+    &_wrapper
+      @include small-desktop
+        display: flex
+        width: 80%
+        overflow: hidden
+        overflow-x: scroll
     &_wrap
       display: flex
-      width: 80%
     &_single
       width: 110px
       font-family: 'Oswald Medium', sans-serif
@@ -32,6 +38,8 @@
       &.active
         color: #4545FB
         transition: all .3s
+        @include small-desktop
+          border-bottom: 1px solid #4545FB
     &_select
       width: 159px
       height: 40px
@@ -66,6 +74,8 @@
       height: 1px
       transform: translateX(0)
       transition: all .3s
+      @include small-desktop
+      display: none
 
   &__content
     display: flex
@@ -83,6 +93,8 @@
       position: relative
       overflow: hidden
       margin-bottom: 24px
+      @include small-desktop
+        padding: 40px 40px 40px 40px
       .circle
         background-image: url("/assets/images/giphy.gif")
         background-repeat: no-repeat

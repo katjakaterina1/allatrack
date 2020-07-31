@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .contacts
   background: #F6F6F6
   padding: 321px 0 40px 118px
@@ -8,10 +10,17 @@
   position: relative
   margin-left: 32px
   margin-top: -102px
+  @include small-desktop
+    margin: -76px 0 0 16px
+    width: 248px
+    padding: 326px 24px 40px 24px
   .back
     position: absolute
     top: 180px
     left: 118px
+    @include small-desktop
+      left: 24px
+      top: 223px
   .circle
     background-image: url("/assets/images/giphy.gif")
     background-repeat: no-repeat
@@ -61,5 +70,7 @@
     display: flex
     align-items: center
     margin-top: 120px
+    @include small-desktop
+      margin-top: 260px
     img
       margin-right: 20px

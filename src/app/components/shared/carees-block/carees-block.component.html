@@ -1,16 +1,18 @@
-<section class="careers">
+<section class="careers section">
   <div class="careers__tabs">
     <div class="careers__wrapper">
       <div class="careers__heading">
-        <div class="careers__heading_wrap">
-          <span class="careers__heading_single" (click)="changeTab('all')" [ngClass]="{'active': all}">All</span>
-          <span class="careers__heading_single" (click)="changeTab('back')" [ngClass]="{'active': back}">Back end</span>
-          <span class="careers__heading_single" (click)="changeTab('front')" [ngClass]="{'active': front}">Front end</span>
-          <span class="careers__heading_single" (click)="changeTab('designer')" [ngClass]="{'active': designer}">Designer</span>
-          <span class="careers__heading_single" (click)="changeTab('devops')" [ngClass]="{'active': devops}">Devops</span>
-          <span class="careers__heading_single" (click)="changeTab('management')" [ngClass]="{'active': management}">Management</span>
-          <span class="careers__heading_single" (click)="changeTab('marketing')" [ngClass]="{'active': marketing}">Marketing</span>
-          <span class="careers__heading_single" (click)="changeTab('business')" [ngClass]="{'active': business}">Business</span>
+        <div class="careers__heading_wrapper scrollbar">
+          <div class="careers__heading_wrap">
+            <span class="careers__heading_single" (click)="changeTab('all')" [ngClass]="{'active': all}">All</span>
+            <span class="careers__heading_single" (click)="changeTab('back')" [ngClass]="{'active': back}">Back end</span>
+            <span class="careers__heading_single" (click)="changeTab('front')" [ngClass]="{'active': front}">Front end</span>
+            <span class="careers__heading_single" (click)="changeTab('designer')" [ngClass]="{'active': designer}">Designer</span>
+            <span class="careers__heading_single" (click)="changeTab('devops')" [ngClass]="{'active': devops}">Devops</span>
+            <span class="careers__heading_single" (click)="changeTab('management')" [ngClass]="{'active': management}">Management</span>
+            <span class="careers__heading_single" (click)="changeTab('marketing')" [ngClass]="{'active': marketing}">Marketing</span>
+            <span class="careers__heading_single" (click)="changeTab('business')" [ngClass]="{'active': business}">Business</span>
+          </div>
         </div>
         <div class="careers__heading_select">
           <select name="" id="">

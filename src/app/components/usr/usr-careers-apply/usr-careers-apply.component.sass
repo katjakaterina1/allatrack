@@ -1,3 +1,5 @@
+@import "../../../../mixins.sass"
+
 .contacts
   display: flex
   &__block
@@ -6,6 +8,10 @@
     margin-left: 168px
     width: 29%
     margin-top: 74px
+    @include small-desktop
+      width: 100%
+      margin-left: 32px
+      margin-top: 134px
     h1
       font-family: Oswald, sans-serif
       font-style: normal

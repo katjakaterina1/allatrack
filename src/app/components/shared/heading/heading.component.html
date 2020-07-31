@@ -3,6 +3,7 @@
   <div class="circle" *ngIf="needCircle"
        [style.top]="top ? top : '160px'"
        [style.right]="right ? right : '20px'"
+       [ngClass]="{'blueCircle': blueCircle}"
   ></div>
   <div class="container"
        [ngClass]="{'hashtag': hashtag, 'alignLeft': alignLeft}"
