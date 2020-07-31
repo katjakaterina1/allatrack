@@ -7,23 +7,44 @@
     </svg>
     </a>
   </div>
-  <div class="projects__block" *ngFor="let project of cases, let i = index;" id="block-{{i}}" [ngClass]="backgroundColor === '#181818' ? 'dark' : ''" [style.backgroundColor]="backgroundColor ? backgroundColor : ''">
-    <div class="circle"></div>
-    <div class="projects__block_content">
-      <div class="projects__block__tags">
-        <div class="tag">iOs</div>
-        <div class="tag">Android</div>
-        <div class="tag">Design</div>
-        <div class="tag">AI</div>
+  <ng-container *ngIf="!needExtraTabs">
+    <div class="projects__block selected" [ngClass]="backgroundColor === '#181818' ? 'dark' : ''" [style.backgroundColor]="backgroundColor ? backgroundColor : ''">
+      <div class="circle"></div>
+      <div class="projects__block_content">
+        <div class="projects__block__tags">
+          <div class="tag">iOs</div>
+          <div class="tag">Android</div>
+          <div class="tag">Design</div>
+          <div class="tag">AI</div>
+        </div>
+        <h3>TiPaymium modern and smart mobile payment system powered on AI.</h3>
+        <a class="link" >View case<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+        </svg>
+        </a>
       </div>
-      <h3>TiPaymium modern and smart mobile payment system powered on AI.</h3>
-      <a class="link" >View case<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
-      </svg>
-      </a>
+      <img [src]="image ? '/assets/images/' + image : '/assets/images/phone.gif'" alt="">
     </div>
-    <img [src]="image ? '/assets/images/' + image : '/assets/images/phone.gif'" alt="">
-  </div>
+  </ng-container>
+  <ng-container *ngIf="needExtraTabs">
+    <div class="projects__block" *ngFor="let project of cases, let i = index;" id="block-{{i}}" [ngClass]="backgroundColor === '#181818' ? 'dark' : ''" [style.backgroundColor]="backgroundColor ? backgroundColor : ''">
+      <div class="circle"></div>
+      <div class="projects__block_content">
+        <div class="projects__block__tags">
+          <div class="tag">iOs</div>
+          <div class="tag">Android</div>
+          <div class="tag">Design</div>
+          <div class="tag">AI</div>
+        </div>
+        <h3>TiPaymium modern and smart mobile payment system powered on AI.</h3>
+        <a class="link" >View case<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+        </svg>
+        </a>
+      </div>
+      <img [src]="image ? '/assets/images/' + image : '/assets/images/phone.gif'" alt="">
+    </div>
+  </ng-container>
   <div class="projects__all scrollbar" *ngIf="needExtraTabs">
     <div class="projects__wrapp">
       <div class="projects__all_single" *ngFor="let project of cases, let i = index;" id="case-{{i}}">

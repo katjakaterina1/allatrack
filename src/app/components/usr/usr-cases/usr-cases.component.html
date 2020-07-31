@@ -18,7 +18,7 @@
   [hasSocial]="false"
   [hasContactButton]="'Estimate your project'">
 </app-heading>
-<div class="tabs">
+<div class="tabs section">
   <div class="tabs__wrapper">
   <div class="tabs__heading">
     <div class="tabs__heading_wrap">
@@ -33,9 +33,9 @@
   </div>
 
   <div class="tabs__content" *ngIf="cloud">
-    <app-cases [needMargin]="false" [needExtraTabs]="true" [needTitle]="false"></app-cases>
-    <app-cases [needMargin]="false" [needExtraTabs]="true" [needTitle]="false" [image]="'case2.gif'" [backgroundColor]="'#181818'"></app-cases>
-    <app-cases [needMargin]="false" [needExtraTabs]="true" [needTitle]="false" [image]="'case1.gif'" [backgroundColor]="'#E7F2F3'"></app-cases>
+    <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false"></app-cases>
+    <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" [image]="'case2.gif'" [backgroundColor]="'#181818'"></app-cases>
+    <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" [image]="'case1.gif'" [backgroundColor]="'#E7F2F3'"></app-cases>
   </div>
   <div class="tabs__content" *ngIf="web">
 

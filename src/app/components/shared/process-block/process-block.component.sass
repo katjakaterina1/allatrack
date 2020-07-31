@@ -1,9 +1,13 @@
+@import "../../../../mixins.sass"
+
 .process
   display: flex
   flex-direction: column
   width: 39%
   margin: 0 auto 200px auto
   position: relative
+  @include small-desktop
+    width: 67%
   &__step
     display: flex
     flex-direction: column
@@ -47,3 +51,5 @@
   margin: 0 auto
   top: 27%
   right: 100%
+  @include small-desktop
+    right: 70%
