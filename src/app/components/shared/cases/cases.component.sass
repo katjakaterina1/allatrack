@@ -30,8 +30,13 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
+    @include mobile
+      flex-direction: column
+      h2
+        margin-bottom: 16px
     .link
       font-size: 18px
+
   &__block
     justify-content: space-between
     width: 100%
@@ -66,9 +71,14 @@
         width: 60%
         margin: 40px auto 0 auto
         align-items: center
+      @include mobile
+        width: 90%
+        margin: 40px auto 20px auto
     &__tags
       display: flex
       margin-bottom: 16px
+      @include mobile
+        margin-bottom: 24px
     h3
       font-family: Oswald, sans-serif
       font-style: normal
@@ -82,6 +92,10 @@
       margin-bottom: 40px
       @include small-desktop
         text-align: center
+      @include mobile
+        font-size: 16px
+        line-height: 24px
+        margin-bottom: 24px
     .link
       font-size: 14px
     img
@@ -92,6 +106,8 @@
       @include small-desktop
         width: 465px
         height: 420px
+      @include mobile
+        height: 310px
   &__wrapp
     display: flex
   &__all

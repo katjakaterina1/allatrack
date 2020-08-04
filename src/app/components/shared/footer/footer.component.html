@@ -34,8 +34,12 @@
       <app-form [isFooter]="true" [isShort]="true"></app-form>
     </div>
     <div class="footer__nav">
-      <div class="footer__nav_block">
-        <span class="footer__nav_block-head">Services</span>
+      <div class="footer__nav_block" (click)="openSection('services')" [ngClass]="{'open': openServices}">
+        <span class="footer__nav_block-head">Services
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
+        </svg>
+        </span>
         <ul>
           <li>Extend your team</li>
           <li>Build your idea</li>
@@ -49,8 +53,12 @@
           <li>Technical Support</li>
         </ul>
       </div>
-      <div class="footer__nav_block">
-        <span class="footer__nav_block-head">Expertise</span>
+      <div class="footer__nav_block" (click)="openSection('expertise')" [ngClass]="{'open': openExpertise}">
+        <span class="footer__nav_block-head">Expertise
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
+        </svg>
+        </span>
         <ul>
           <li>Blockchain (DLT)</li>
           <li>Extended Reality (AR / VR)</li>
@@ -60,8 +68,12 @@
           <li>Cloud & DevOps</li>
         </ul>
       </div>
-      <div class="footer__nav_block">
-        <span class="footer__nav_block-head">Company</span>
+      <div class="footer__nav_block" (click)="openSection('company')" [ngClass]="{'open': openCompany}">
+        <span class="footer__nav_block-head">Company
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
+        </svg>
+        </span>
         <ul>
           <li>About us</li>
           <li>Company overview</li>
@@ -69,8 +81,12 @@
           <li>Our product</li>
         </ul>
       </div>
-      <div class="footer__nav_block">
-        <span class="footer__nav_block-head">Blog</span>
+      <div class="footer__nav_block" (click)="openSection('blog')" [ngClass]="{'open': openBlog}">
+        <span class="footer__nav_block-head">Blog
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
+        </svg>
+        </span>
         <ul>
           <li>SoftData -> Allatrack</li>
           <li>10 Big Financial Technology Trends for 2018</li>
@@ -78,8 +94,12 @@
           <li>The Future Of Data In Banking</li>
         </ul>
       </div>
-      <div class="footer__nav_block">
-          <span class="footer__nav_block-head">Case studies</span>
+      <div class="footer__nav_block" (click)="openSection('case')" [ngClass]="{'open': openCase}">
+          <span class="footer__nav_block-head">Case studies
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
+          </svg>
+          </span>
           <ul>
             <li>The Blockchain-TFA application helps you pass through 2-step verification.</li>
             <li>Model of AR Consultant</li>

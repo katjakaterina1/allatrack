@@ -31,12 +31,16 @@
       top: 283px
       right: 0
       left: 0
+    @include mobile
+      top: 75px
   .container
     margin: 172px auto 0 auto
     width: 100%
     z-index: 20
     @include small-desktop
       margin: 248px auto 0 auto
+    @include mobile
+      margin: 140px auto 0 auto
   h1
     font-family: 'Oswald', sans-serif
     text-align: center
@@ -49,6 +53,9 @@
     -webkit-text-stroke: 1px #1D1D1F
     margin-bottom: 40px
     position: relative
+    @include mobile
+      font-size: 40px
+      line-height: 59px
     .animated
       color: transparent
       -webkit-text-fill-color: transparent
@@ -57,6 +64,8 @@
       background-position: right
       background-size: 260px 195px
       -webkit-text-stroke: 1px transparent
+      @include mobile
+        background-size: 148px 111px
   &__nav
     text-align: center
     font-family: 'Oswald', sans-serif
@@ -70,12 +79,19 @@
     margin-bottom: 175px
     @include small-desktop
       margin-bottom: 200px
+    @include mobile
+      width: 90%
+      margin: 0 auto 89px auto
   &__bottom
     display: flex
     justify-content: space-between
     margin: 0 118px 40px 118px
     @include small-desktop
       margin: 0 24px 24px 24px
+    @include mobile
+      flex-direction: column
+      align-items: center
+      margin-bottom: 16px
     &_blog
       font-family: 'Archivo', sans-serif
       font-style: normal
@@ -83,6 +99,10 @@
       font-size: 14px
       line-height: 15px
       color: #9F9FA0
+      @include mobile
+        text-align: center
+        margin-bottom: 16px
+        line-height: 140%
       a
         color: #00CAA7
         text-decoration: none

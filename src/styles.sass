@@ -36,6 +36,8 @@ table
   margin: 0 150px 120px 150px
   @include small-desktop
     margin: 0 40px 120px 40px
+  @include mobile
+    margin: 0 16px 80px 16px
 .green-btn
   background: #00CAA7
   padding: 15px 24px
@@ -117,6 +119,10 @@ h2
   align-items: center
   text-transform: uppercase
   color: #1D1D1F
+  @include mobile
+    font-size: 24px
+    line-height: 36px
+    text-align: center
   &.white
     color: #FFFFFF
 h3
@@ -156,8 +162,6 @@ h3
     visibility: visible
     opacity: 1
     transition: all .3s
-    @include small-desktop
-      opacity: 0
 .scrollbar
   -ms-overflow-style: none
   scrollbar-width: none

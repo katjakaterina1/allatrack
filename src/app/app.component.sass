@@ -20,6 +20,10 @@
   @include small-desktop
     max-width: 533px
     width: 100%
+  @include mobile
+    max-width: 359px
+    padding: 8px 16px
+
 
   span
     font-family: Oswald, sans-serif
@@ -55,6 +59,8 @@
     color: #FFFFFF
     margin: 0 21px 0 16px
     cursor: pointer
+    @include mobile
+      margin: 0 29px 0 16px
 
 @keyframes slidein
   from

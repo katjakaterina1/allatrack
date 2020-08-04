@@ -12,16 +12,22 @@
     border-radius: 8px
     @include small-desktop
       padding: 40px 24px 0 24px
+    @include mobile
+      padding: 40px 8px
   &__wrapp
     display: flex
     justify-content: space-between
     @include small-desktop
       margin: 0 24px
+    @include mobile
+      margin: 0 5%
   &__social
     display: flex
     align-items: center
     img
       margin-left: 20px
+      @include mobile
+        margin-left: 16px
   &__form
     background: #4545FB
     border-radius: 8px
@@ -32,6 +38,8 @@
     justify-content: space-between
     @include small-desktop
       padding: 40px 24px
+    @include mobile
+      margin-bottom: 40px
     &_header
       width: 100%
       display: flex
@@ -40,11 +48,17 @@
       margin-bottom: 40px
       @include small-desktop
         align-items: flex-start
+      @include mobile
+        flex-direction: column
+        justify-content: center
+        align-items: center
       h2
         width: 41%
         color: #FFFFFF
         @include small-desktop
           width: 50%
+        @include mobile
+          width: 100%
       p
         width: 41%
         font-family: Archivo, sans-serif
@@ -55,12 +69,17 @@
         color: #FFFFFF
         @include small-desktop
           width: 43%
+        @include mobile
+          display: none
     &_block
       width: 41%
       display: flex
       flex-direction: column
       @include small-desktop
         width: 50%
+      @include mobile
+        width: 100%
+        margin-bottom: 16px
       &-name
         font-family: Archivo, sans-serif
         font-style: normal
@@ -75,6 +94,8 @@
         font-size: 24px
         margin-bottom: 24px
         color: white
+        @include mobile
+          font-size: 22px
       form
         width: 100%
         display: flex
@@ -132,11 +153,24 @@
     @include small-desktop
       flex-wrap: wrap
       justify-content: flex-start
+    @include mobile
+      margin: 0 16px
     &_block
       display: flex
       flex-direction: column
       @include small-desktop
         width: 33%
+      @include mobile
+        width: 100%
+        border-top: 1px solid rgba(255, 255, 255, 0.4)
+        padding-top: 16px
+        &.open
+          ul
+            display: flex
+          span
+            svg
+              transform: rotate(135deg)
+              transition: all .3s
       span
         font-family: Oswald, sans-serif
         font-style: normal
@@ -146,12 +180,25 @@
         text-transform: uppercase
         color: #FFFFFF
         margin-bottom: 24px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @include mobile
+          margin-bottom: 16px
+        svg
+          display: none
+          @include mobile
+            display: flex
+
       ul
         display: flex
         flex-direction: column
         max-width: 208px
         @include small-desktop
           margin-bottom: 40px
+        @include mobile
+          margin-bottom: 24px
+          display: none
         li
           cursor: pointer
           font-family: Archivo, sans-serif
@@ -182,8 +229,14 @@
     margin: 8px 150px 0 150px
     @include small-desktop
       margin: 8px 24px 0 24px
+    @include mobile
+      flex-direction: column
+      margin: 8px 24px 0 24px
     &_links
       display: flex
+      @include mobile
+        flex-wrap: wrap
+        justify-content: space-around
       a
         font-family: Archivo, sans-serif
         font-style: normal
@@ -194,6 +247,10 @@
         text-decoration-line: underline
         color: #9F9FA0
         margin-left: 24px
+        @include mobile
+          margin-left: 0
 app-form
   @include small-desktop
     width: 43%
+  @include mobile
+    width: 100%

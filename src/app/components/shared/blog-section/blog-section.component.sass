@@ -16,12 +16,18 @@
         width: 48%
         &:last-child
           display: none
+      @include mobile
+        width: 100%
+        margin-bottom: 40px
       img
         order: 2
         width: 100%
         height: 200px
         object-fit: cover
         border-radius: 8px
+        @include mobile
+          height: 180px
+          width: 100%
       &-description
         order: 1
         width: 100%
@@ -40,6 +46,9 @@
           color: #1D1D1F
           margin-bottom: 24px
           min-height: 54px
+          @include mobile
+            min-height: unset
+            margin-bottom: 8px
         p
           font-family: Archivo, sans-serif
           font-style: normal
@@ -49,6 +58,8 @@
           letter-spacing: 0.04em
           color: #9F9FA0
           margin-bottom: 24px
+          @include mobile
+            margin-bottom: 18px
       &.main
         display: flex
         flex-direction: row
@@ -64,6 +75,10 @@
           @include small-desktop
             width: 346px
             height: 320px
+          @include mobile
+            height: 180px
+            width: 100%
+            order: 2
         h4
           font-size: 24px
           line-height: 36px
@@ -74,6 +89,10 @@
           @include small-desktop
             width: 46%
             margin: 16px 0 0 24px
+          @include mobile
+            width: 100%
+            margin: 0 0 0 0
+            order: 1
 .projects
   display: flex
   flex-direction: column
@@ -84,3 +103,7 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
+    @include mobile
+      flex-direction: column
+      h2
+        margin-bottom: 16px

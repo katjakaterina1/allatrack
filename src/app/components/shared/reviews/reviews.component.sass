@@ -6,12 +6,16 @@
   margin: 0 0 120px 0
   @include small-desktop
     margin-bottom: 200px
+  @include mobile
+    margin-bottom: 120px
   h2
     margin: 0 150px
     width: 40%
     @include small-desktop
       margin: 0 40px
       width: 90%
+    @include mobile
+      margin: 0 16px
   &__block
     display: flex
     margin-top: 40px
@@ -22,6 +26,8 @@
       margin-left: 150px
       @include small-desktop
         margin-left: 40px
+      @include mobile
+        margin-left: 16px
     &_single
       display: flex
       flex-direction: column
@@ -32,6 +38,9 @@
       padding: 80px 80px 40px 80px
       box-sizing: border-box
       margin-right: 24px
+      @include mobile
+        width: 343px
+        padding: 40px
       &:nth-child(even)
         background-image: url("/assets/images/comment-bg2.png")
       &-heading
@@ -69,6 +78,9 @@
         line-height: 28px
         color: #000000
         margin-bottom: 40px
+        @include mobile
+          font-size: 12px
+          margin-bottom: 24px
       &-person
         display: flex
         align-items: center

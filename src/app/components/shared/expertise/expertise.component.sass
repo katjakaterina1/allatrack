@@ -88,8 +88,13 @@
       display: flex
       flex-wrap: wrap
       margin-top: 40px
+      @include mobile
+        justify-content: space-between
       .link
         margin: 0 24px 24px 0
+        @include mobile
+          font-size: 14px
+          margin-right: 0
 
 
 .projects
@@ -102,3 +107,7 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 40px
+    @include mobile
+      flex-direction: column
+      h2
+        margin-bottom: 16px

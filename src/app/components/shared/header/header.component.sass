@@ -82,6 +82,10 @@
       padding: 0
       flex-direction: column
       position: unset
+    @include mobile
+      .header__dropdown_wrapper
+        max-height: 277px
+        overflow-y: scroll
     &.open
       visibility: visible
       opacity: 1
@@ -97,6 +101,10 @@
         flex-wrap: wrap
         &.expertise
           margin-top: -150px
+          @include mobile
+            margin-top: 0
+      @include mobile
+        padding: 88px 40px 40px 40px
 
     &_aside
       padding: 40px 0
@@ -113,8 +121,17 @@
         border-right: unset
         padding-top: 80px
         justify-content: space-between
+      @include mobile
+        flex-direction: column
+        border-right: unset
+        padding-top: 40px
+        margin-bottom: 0
+        border-bottom: unset
+        padding-bottom: 24px
       a:not(:last-child)
         margin-bottom: 40px
+        @include mobile
+          margin-bottom: 24px
     &_info
       display: flex
       flex-direction: column
@@ -139,6 +156,8 @@
         text-transform: uppercase
         color: #1D1D1F
         margin-bottom: 24px
+        @include mobile
+          display: none
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -148,6 +167,8 @@
         letter-spacing: 0.04em
         color: #9F9FA0
         margin-bottom: 20px
+        @include mobile
+          display: none
       &-columns
         display: flex
         justify-content: space-between
@@ -156,12 +177,16 @@
           flex-direction: column
           flex-wrap: wrap
           max-height: 220px
+        @include mobile
+          flex-wrap: unset
         &--single
           display: flex
           flex-direction: column
           @include small-desktop
             flex-wrap: wrap
             max-height: 210px
+          @include mobile
+            flex-wrap: unset
           li
             font-family: Archivo, sans-serif
             font-style: normal
@@ -183,6 +208,8 @@
       width: 100%
       @include small-desktop
         margin-top: 80px
+      @include mobile
+        margin-top: 40px
     &_images
       display: flex
       .animated-image
@@ -192,6 +219,8 @@
         @include small-desktop
           width: 120px
           height: 120px
+        @include mobile
+          display: none
         &.top
           margin-left: -87px
 
@@ -230,16 +259,29 @@
       top: 0
       padding: 0 0 24px 0
       box-sizing: border-box
+    @include mobile
+      min-height: 537px
+      height: 537px
       &.active
         visibility: visible
         opacity: 1
         transition: all .3s
+    @include small-desktop
+      .green-btn
+        width: 95%
+        align-self: center
+      @include mobile
+        order: 3
     &_nav
       padding: 0 80px 0 80px
       width: 100%
       box-sizing: border-box
       display: flex
       flex-direction: column
+      @include mobile
+        margin-top: 88px
+        padding: 0 40px
+        margin-bottom: 5px
       li
         font-family: 'Oswald Medium', sans-serif
         font-style: normal
@@ -255,6 +297,10 @@
       width: 33%
       margin: 0 auto
       padding-top: 32px
+      @include mobile
+        order: 3
+        width: 69%
+        padding-top: 16px
       li
         font-family: Archivo, sans-serif
         font-style: normal
@@ -267,3 +313,12 @@
         &.active
           color: #00CAA7
 
+@include mobile
+  a.link
+    font-size: 14px
+    line-height: 24px
+  .hasBorder
+    border-top: 1px solid #D6D6D6
+    padding-top: 24px
+  .moreMargin
+    margin-bottom: 69px
