@@ -16,7 +16,7 @@ export class HeadingComponent implements OnInit {
   @Input() backgroundColor: string;
   @Input() top: string;
   @Input() right: string;
-  @Input() containerPadding: string;
+  @Input() containerPadding = false;
   @Input() hasDownloadButton = false;
   @Input() hasLaunchButton = false;
   @Input() hasTags = false;

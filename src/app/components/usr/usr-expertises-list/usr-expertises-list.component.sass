@@ -4,6 +4,8 @@
   &__element
     display: flex
     flex-direction: column
+    @include mobile
+      margin-bottom: 120px
     &_single
       display: flex
       flex-direction: column
@@ -29,6 +31,10 @@
         left: 0
         @include small-desktop
           opacity: 0.08
+        @include mobile
+          width: 450px
+          height: 450px
+          opacity: 0.1
       &:nth-child(odd)
         .circle
           top: -200px
@@ -52,6 +58,10 @@
         margin-bottom: 40px
         justify-content: space-between
         align-items: center
+        @include mobile
+          flex-direction: column
+          h2
+            margin-bottom: 16px
         a
           font-size: 18px
       &-content
@@ -63,6 +73,8 @@
         justify-content: space-between
         position: relative
         overflow: hidden
+        @include mobile
+          padding: 40px 24px 16px 24px
         &--wrap
           display: flex
           width: 50%
@@ -73,6 +85,8 @@
           @include small-desktop
             width: 100%
             margin: 80px 40px 40px 40px
+          @include mobile
+            margin: 0
           p
             font-family: Archivo, sans-serif
             font-style: normal
@@ -83,6 +97,8 @@
             color: #9F9FA0
             @include small-desktop
               margin-bottom: 80px
+            @include mobile
+              margin-bottom: 24px
         &--links
           display: flex
           flex-wrap: wrap

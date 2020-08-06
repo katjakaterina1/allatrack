@@ -226,13 +226,13 @@
       </a>
       <div class="header__dropdown_wrapper scrollbar">
         <div class="header__dropdown_aside">
-          <a href="" class="link">
+          <a href="" class="link" routerLink="/service-single" (click)="openDropdown('close'); openServices = false; openSidebar = false;">
             Extend your team
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
             </svg>
           </a>
-          <a href="" class="link">
+          <a href="" class="link" >
             Build your idea
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
@@ -246,7 +246,7 @@
           </a>
         </div>
         <div class="header__dropdown_info full">
-          <a href="" routerLink="/services-list" (click)="openDropdown('close')" class="link hasBorder">
+          <a href="" routerLink="/services-list" (click)="openDropdown('close'); openServices = false; openSidebar = false;" class="link hasBorder">
             All services
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
@@ -254,7 +254,7 @@
           </a>
           <div class="header__dropdown_info-columns">
             <ul class="header__dropdown_info-columns--single">
-              <li routerLink="/service-single" (click)="openDropdown('close')">Software Product Development</li>
+              <li routerLink="/service-single" (click)="openDropdown('close'); openServices = false; openSidebar = false;">Software Product Development</li>
               <li>Mobile Application Development</li>
               <li>Web services development</li>
               <li>Extended Reality (AR / VR)</li>
@@ -276,7 +276,7 @@
       </a>
       <div class="header__dropdown_wrapper scrollbar">
         <div class="header__dropdown_wrap">
-        <a href="" class="link" routerLink="/expertises" (click)="openDropdown('close')">
+        <a href="" class="link" routerLink="/expertises" (click)="openSidebar = false; openExpertise = false">
           Expertise
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
@@ -284,7 +284,7 @@
         </a>
         <div class="header__dropdown_info-columns">
           <ul class="header__dropdown_info-columns--single">
-            <li routerLink="/expertise-single" (click)="openDropdown('close')">Blockchain (DLT)</li>
+            <li routerLink="/expertise-single" (click)="openSidebar = false; openExpertise = false; openDropdown('close')">Blockchain (DLT)</li>
             <li>Extended Reality (AR / VR)</li>
           </ul>
           <ul class="header__dropdown_info-columns--single">
@@ -302,6 +302,6 @@
       </div>
       </div>
     </div>
-    <button class="green-btn" routerLink="/contacts" (click)="openSidebar = false">Estimate project</button>
+    <button class="green-btn" routerLink="/contacts" (click)="openSidebar = false; openExpertise = false; openDropdown('close')">Estimate project</button>
   </div>
 </header>

@@ -11,6 +11,12 @@
   @include small-desktop
     margin: 0 40px 120px 40px
     padding: 80px 40px
+  @include mobile
+    margin: 0 16px 80px 16px
+    padding: 40px
+    flex-direction: column
+    justify-content: center
+    align-items: center
   h3
     font-family: 'Oswald Medium', sans-serif
     font-style: normal
@@ -22,8 +28,16 @@
     width: 60%
     @include small-desktop
       width: 65%
+    @include mobile
+      text-align: center
+      font-size: 18px
+      line-height: 27px
+      width: 100%
+      margin-bottom: 24px
   @include small-desktop
   .green-btn
     width: 28%
+    @include mobile
+      width: 65%
   svg
     margin-left: 16px

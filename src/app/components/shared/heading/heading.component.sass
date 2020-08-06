@@ -11,6 +11,8 @@
   @include small-desktop
     margin: -76px 16px 120px 16px
     max-height: unset
+  @include mobile
+    margin: -60px 8px 120px 8px
   .circle
     background-image: url("/assets/images/giphy.gif")
     background-repeat: no-repeat
@@ -36,6 +38,10 @@
     padding-bottom: 166px
     width: 50%
     z-index: 50
+    &.paddingBottom
+      padding-bottom: 0
+    @include mobile
+      padding-bottom: 64px
     @include small-desktop
       width: 100vw
       margin: 248px 24px 0 24px
@@ -46,11 +52,13 @@
       width: 70%
       @include small-desktop
         width: 100%
+    @include mobile
+      margin: 160px 8px 0 8px
   &__buttons
     display: flex
     align-items: center
   h1
-    font-family: Oswald, sans-serif
+    font-family: "Oswald SemiBold", sans-serif
     font-style: normal
     font-weight: 600
     font-size: 64px
@@ -61,6 +69,10 @@
     margin-bottom: 40px
     .hashtag
       color: #00CAA7
+    @include mobile
+      font-size: 40px
+      line-height: 59px
+      text-align: center
   p
     font-family: Archivo, sans-serif
     font-style: normal
@@ -70,6 +82,8 @@
     color: #000000
     margin-bottom: 80px
     width: 80%
+    @include mobile
+      width: 88%
     &.about-text
       width: 62%
       @include small-desktop

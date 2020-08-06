@@ -10,10 +10,14 @@
   &__element
     display: flex
     flex-direction: column
+    @include mobile
+      margin-bottom: 120px
     &_single
       display: flex
       flex-direction: column
       margin-bottom: 24px
+      @include mobile
+        margin-bottom: 120px
       &:last-child
         margin-bottom: 0
       .circle
@@ -68,6 +72,8 @@
         justify-content: space-between
         position: relative
         overflow: hidden
+        @include mobile
+          padding: 0
         &--wrap
           display: flex
           width: 50%
@@ -78,6 +84,8 @@
           @include small-desktop
             margin: 80px 40px 0 40px
             width: 100%
+          @include mobile
+            margin: 40px 24px 0 24px
           p
             font-family: Archivo, sans-serif
             font-style: normal
@@ -97,6 +105,8 @@
           a
             margin-bottom: 80px
             margin-right: 32px
+            @include mobile
+              margin-bottom: 40px
         img
           width: 540px
           height: 388px

@@ -14,6 +14,9 @@
   @include small-desktop
     margin: 0 16px 120px 16px
     padding: 80px
+  @include mobile
+    margin: 0 8px 80px 8px
+    padding: 80px 40px 40px 40px
   .circle-wrap
     width: 100%
     height: 100%
@@ -42,14 +45,20 @@
     display: flex
     margin-bottom: 40px
     justify-content: space-between
+    @include mobile
+      flex-direction: column
     &_descr
       display: flex
       flex-direction: column
       width: 35%
       @include small-desktop
         width: 58%
+      @include mobile
+        width: 100%
       h2
         margin-bottom: 40px
+        @include mobile
+          align-self: center
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -58,6 +67,9 @@
         line-height: 28px
         letter-spacing: 0.04em
         color: #9F9FA0
+        @include mobile
+          text-align: center
+          margin-bottom: 40px
     img
       object-fit: cover
       object-position: center
@@ -67,11 +79,16 @@
       @include small-desktop
         width: 212px
         height: 200px
+      @include mobile
+        width: 100%
+        height: 200px
   &__wrap
     @include small-desktop
       z-index: 100
       overflow: hidden
       overflow-x: scroll
+    @include mobile
+      width: 115%
   &__content
     z-index: 100
     display: flex
@@ -85,9 +102,16 @@
       transition: all .3s
       position: relative
       margin-bottom: 100px
+      @include mobile
+        width: 24%
+        max-width: 240px
+        margin-bottom: 184px
       &.active
         width: 36%
         transition: all .7s
+        @include mobile
+          width: 24%
+          max-width: 240px
         p
           opacity: 1
           transition: opacity .3s
@@ -121,6 +145,9 @@
       h3
         color: #9F9FA0
         margin-bottom: 16px
+        @include mobile
+          font-size: 18px
+          line-height: 27px
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -133,6 +160,8 @@
         visibility: hidden
         position: absolute
         bottom: -84px
+        @include mobile
+          bottom: -160px
 
 
 @keyframes mymove

@@ -6,6 +6,8 @@
   @include small-desktop
     flex-direction: column
     margin-bottom: 200px
+  @include mobile
+    margin-bottom: 80px
   &__heading
     display: flex
     flex-direction: column
@@ -15,11 +17,18 @@
       justify-content: space-between
       width: 100%
       margin-bottom: 40px
+    @include mobile
+      flex-direction: column
     h2
       margin-bottom: 40px
       @include small-desktop
         width: 50%
         margin-bottom: 0
+      @include mobile
+        width: auto
+        text-align: center
+        margin-bottom: 40px
+        align-self: center
     p
       font-family: Archivo, sans-serif
       font-style: normal
@@ -30,6 +39,9 @@
       color: #9F9FA0
       @include small-desktop
         width: 50%
+      @include mobile
+        width: 100%
+        text-align: center
   &__questions
     width: 60%
     display: flex

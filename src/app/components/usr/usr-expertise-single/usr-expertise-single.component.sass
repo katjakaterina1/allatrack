@@ -1,6 +1,8 @@
 @import "../../../../mixins.sass"
 
 .expertise-description
+  @include mobile
+    margin-bottom: 0
   h2
     margin-bottom: 40px
   &__block
@@ -9,6 +11,8 @@
     margin-bottom: 120px
     @include small-desktop
       flex-direction: column
+    @include mobile
+      margin-bottom: 40px
     &_wrap
       display: flex
       flex-direction: column
@@ -16,6 +20,9 @@
       width: 45%
       @include small-desktop
         width: 100%
+      @include mobile
+        h2
+          align-self: center
       p
         font-family: Archivo, sans-serif
         font-style: normal
@@ -26,14 +33,23 @@
         color: #9F9FA0
         @include small-desktop
           margin-bottom: 80px
+        @include mobile
+          margin-bottom: 40px
     &_single
       display: flex
       justify-content: space-between
       &:not(:last-child)
         margin-bottom: 40px
+        @include mobile
+          margin-bottom: 0
+      @include mobile
+        flex-wrap: wrap
       @include small-desktop
         .expertise-description__block_wrap
           width: 47%
+          @include mobile
+            width: 100%
+            margin-bottom: 40px
       span
         font-family: Oswald, sans-serif
         font-style: normal
