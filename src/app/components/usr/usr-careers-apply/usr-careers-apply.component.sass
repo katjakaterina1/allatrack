@@ -2,6 +2,8 @@
 
 .contacts
   display: flex
+  @include mobile
+    flex-direction: column-reverse
   &__block
     display: flex
     flex-direction: column
@@ -9,19 +11,29 @@
     width: 29%
     margin-top: 74px
     @include small-desktop
-      width: 100%
       margin-left: 32px
-      margin-top: 134px
+      width: 100%
+      padding-right: 40px
+      box-sizing: border-box
+      margin-bottom: 196px
+    @include mobile
+      margin: 80px 16px 40px 16px
+      padding-right: 0
+      width: auto
     h1
       font-family: Oswald, sans-serif
       font-style: normal
       font-weight: bold
-      font-size: 40px
-      line-height: 59px
+      font-size: 64px
+      line-height: 95px
       letter-spacing: 0.04em
       text-transform: uppercase
       color: #1D1D1F
       margin-bottom: 24px
+      @include mobile
+        font-size: 40px
+        line-height: 59px
+        text-align: center
     p
       font-family: Archivo, sans-serif
       font-style: normal
@@ -30,4 +42,6 @@
       line-height: 28px
       color: #000000
       margin-bottom: 20px
+      @include mobile
+        text-align: center
 

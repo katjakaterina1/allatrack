@@ -91,6 +91,9 @@
     @include small-desktop
       &.alignLeft
         text-align: left
+        @include mobile
+          text-align: center
+          margin: 0 auto 60px auto
       text-align: center
 
   a.link
@@ -113,6 +116,9 @@
   align-items: center
   width: 25%
   margin-top: 80px
+  @include mobile
+    width: 50%
+    margin: 80px auto 0 auto
 app-form
   margin-top: 154px
   z-index: 100
@@ -125,3 +131,5 @@ app-form
   @include small-desktop
     justify-content: center
     margin-bottom: 80px
+  @include mobile
+    margin-bottom: 120px

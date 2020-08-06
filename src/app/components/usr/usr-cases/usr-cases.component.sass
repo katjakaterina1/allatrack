@@ -61,6 +61,8 @@
 .tabs
   display: flex
   flex-direction: column
+  @include mobile
+    margin: 0 0 40px 0
   &__wrapper
     display: flex
     flex-direction: column
@@ -69,9 +71,13 @@
     display: flex
     flex-direction: column
     margin-bottom: 40px
+    @include mobile
+      width: 100%
     &_wrap
       display: flex
       width: 100%
+      @include mobile
+        justify-content: space-between
     &_single
       width: 150px
       font-family: 'Oswald Medium', sans-serif
@@ -85,14 +91,24 @@
       color: #1D1D1F
       padding-bottom: 16px
       cursor: pointer
+      @include mobile
+        width: auto
+        padding: 0 10px 16px 10px
       &.active
         color: #4545FB
         transition: all .3s
+        @include mobile
+          border-bottom: 1px solid #4545FB
+          z-index: 20
+
     .line
       width: 100%
       height: 1px
       background-color: #D6D6D6
       position: relative
+      @include mobile
+        margin-top: -1px
+        z-index: 10
       &__fill
         width: 25%
         position: absolute
@@ -102,10 +118,14 @@
         height: 1px
         transform: translateX(0)
         transition: all .3s
+        @include mobile
+          display: none
   &__content
     display: flex
     width: 100%
     flex-wrap: wrap
+    @include mobile
+      width: 93%
     &_single
       padding: 16px 40px
       display: flex

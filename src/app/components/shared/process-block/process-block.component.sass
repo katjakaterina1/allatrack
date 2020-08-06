@@ -8,6 +8,9 @@
   position: relative
   @include small-desktop
     width: 67%
+  @include mobile
+    width: 92%
+    margin-bottom: 120px
   &__step
     display: flex
     flex-direction: column
@@ -53,3 +56,5 @@
   right: 100%
   @include small-desktop
     right: 70%
+  @include mobile
+    display: none

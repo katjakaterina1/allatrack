@@ -7,6 +7,8 @@
   background: #4545FB
   border-radius: 8px
   padding: 45px 24px
+  @include mobile
+    max-width: 100%
   &.short
     @include small-desktop
       form
@@ -46,6 +48,8 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    @include mobile
+      flex-direction: column
     input, textarea
       background: rgba(255, 255, 255, 0.8)
       border-radius: 4px
@@ -62,6 +66,9 @@
       width: 49%
       box-sizing: border-box
       max-width: 212px
+      @include mobile
+        width: 100%
+        max-width: unset
       &.from-apply
         width: 100%
         max-width: unset
@@ -79,6 +86,9 @@
       min-height: 90px
       max-height: 90px
       max-width: 212px
+      @include mobile
+        max-width: 100%
+        min-height: 100%
     label
       font-family: Archivo, sans-serif
       font-style: normal

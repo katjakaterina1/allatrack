@@ -8,8 +8,13 @@
     margin: 0 40px 120px 40px
     flex-direction: column-reverse
     align-items: center
+  @include mobile
+    margin: 0 16px 80px 18px
   &__wrap
     display: flex
+    @include mobile
+      width: 100%
+      justify-content: space-between
   &__button
     width: 48px
     height: 48px
@@ -52,8 +57,15 @@
       &.active
         background: #1D1D1F
         color: white
+      @include mobile
+        width: 40px
+        height: 40px
+        &:nth-child(3n+2)
+          display: none
   .green-btn
     @include small-desktop
       margin-bottom: 40px
+    @include mobile
+      width: 100%
     svg
       margin-left: 16px

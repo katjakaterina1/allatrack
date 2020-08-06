@@ -3,6 +3,9 @@
 .careers
   display: flex
   flex-direction: column
+  @include mobile
+    margin: 0 0 80px 0
+    position: relative
   h2
     margin: 0 auto 40px auto
   &__wrapper
@@ -10,16 +13,24 @@
     flex-direction: column
     align-items: center
     margin-bottom: 80px
+    @include mobile
+      margin-bottom: 60px
   &__heading
     display: flex
     justify-content: space-between
     width: 100%
+    @include mobile
+      flex-direction: column
     &_wrapper
       @include small-desktop
         display: flex
         width: 80%
         overflow: hidden
         overflow-x: scroll
+      @include mobile
+        width: auto
+        margin-bottom: 8px
+        margin-left: 16px
     &_wrap
       display: flex
     &_single
@@ -35,6 +46,8 @@
       color: #1D1D1F
       padding-bottom: 16px
       cursor: pointer
+      z-index: 20
+      border-bottom: 1px solid transparent
       &.active
         color: #4545FB
         transition: all .3s
@@ -43,6 +56,9 @@
     &_select
       width: 159px
       height: 40px
+      @include mobile
+        width: auto
+        margin: 0 16px
       select
         background-color: rgba(29, 29, 31, 0.08)
         border-radius: 4px
@@ -60,11 +76,18 @@
         background-image: url("/assets/images/select.svg")
         background-repeat: no-repeat
         background-position: 85% center
+        @include mobile
+          background-position: 92% center
   .line
     width: 100%
     height: 1px
     background-color: #D6D6D6
     position: relative
+    @include mobile
+      position: absolute
+      top: 44px
+      z-index: 10
+      left: 0
     &__fill
       width: 110px
       position: absolute
@@ -81,6 +104,9 @@
     display: flex
     width: 100%
     flex-direction: column
+    @include mobile
+      margin: 0 16px
+      width: auto
     &_single
       display: flex
       width: 100%
@@ -95,6 +121,9 @@
       margin-bottom: 24px
       @include small-desktop
         padding: 40px 40px 40px 40px
+      @include mobile
+        padding: 24px 16px
+        align-items: flex-end
       .circle
         background-image: url("/assets/images/giphy.gif")
         background-repeat: no-repeat
@@ -126,6 +155,9 @@
           text-transform: uppercase
           color: #1D1D1F
           margin-bottom: 16px
+          @include mobile
+            font-size: 18px
+            line-height: 27px
         &--tags
           display: flex
       .green-btn

@@ -6,6 +6,8 @@
   flex-direction: column
   @include small-desktop
     margin-bottom: 200px
+  @include mobile
+    margin-bottom: 120px
   p
     font-family: Archivo, sans-serif
     font-style: normal
@@ -19,16 +21,23 @@
     width: 52%
     @include small-desktop
       width: 90%
+    @include mobile
+      width: 100%
+      margin: 40px 0 52px 0
   &__images
     display: flex
     justify-content: space-between
     flex-wrap: wrap
     width: 100%
     margin-bottom: 200px
+    @include mobile
+      margin-bottom: 120px
     &_column
       display: flex
       flex-direction: column
       width: 49%
+      @include mobile
+        width: 100%
     &_single
       display: flex
       flex-direction: column
@@ -41,6 +50,8 @@
           height: 857px
           @include small-desktop
             height: 514px
+          @include mobile
+            height: 258px
       &.short
         img
           height: 408px
@@ -53,6 +64,8 @@
           @include small-desktop
             height: 361px
             margin-top: 40px
+          @include mobile
+            height: 180px
       img
         object-fit: cover
         height: 590px
@@ -75,3 +88,9 @@
     font-size: 40px
     line-height: 59px
     color: #1D1D1F
+    @include mobile
+      font-size: 24px
+      line-height: 36px
+      svg
+        width: 24px
+        height: 24px

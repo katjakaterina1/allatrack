@@ -11,6 +11,8 @@
     left: 0
     justify-content: center
     display: flex
+  @include mobile
+    top: 630px
   img
     width: 620px
     object-fit: cover
@@ -19,6 +21,10 @@
     @include small-desktop
       width: 688px
       height: 400px
+    @include mobile
+      height: 200px
+      width: 93%
+
 .expertise
   display: flex
   margin: -102px 32px 120px 32px
@@ -84,3 +90,5 @@ app-numbers-block
   display: block
   @include small-desktop
     margin-top: 444px
+  @include mobile
+    margin-top: 240px
