@@ -48,7 +48,7 @@
     <div class="header__dropdown_info">
       <span class="header__dropdown_info-title">Why allatrack</span>
       <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software.</p>
-      <a href="" class="link">
+      <a href="" class="link" routerLink="/about" (click)="openDropdown('close')">
         About us
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
@@ -183,19 +183,19 @@
         Abous us
       </a>
       <div class="header__dropdown_aside">
-        <a href="" class="link">
+        <a href="" class="link" routerLink="/overview" (click)="openAbout = false; openDropdown('close'); openSidebar = false">
           Company overview
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
           </svg>
         </a>
-        <a href="" class="link">
+        <a href="" class="link" routerLink="/process" (click)="openAbout = false; openDropdown('close'); openSidebar = false">
           Process
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
           </svg>
         </a>
-        <a href="" class="link">
+        <a href="" class="link" routerLink="/products" (click)="openAbout = false; openDropdown('close'); openSidebar = false">
           Our product
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
@@ -205,7 +205,7 @@
       <div class="header__dropdown_info">
         <span class="header__dropdown_info-title">Why allatrack</span>
         <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software.</p>
-        <a href="" class="link moreMargin">
+        <a href="" class="link moreMargin" routerLink="/about" (click)="openAbout = false; openDropdown('close'); openSidebar = false">
           About us
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.22789L16 12.9108H12.8L12.8 5.37167L2.26274 16.0001L0 13.7178L10.3999 3.22789L3.2 3.22789L3.2 0.000195805L12.8 0.000196652V0H16L16 0.000196934V3.22789Z" fill="#00CAA7"/>
