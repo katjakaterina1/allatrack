@@ -1,6 +1,6 @@
 <div class="overlay" (mouseover)="openDropdown('close')" (click)="openSidebar = false" [ngClass]="{'open': openAbout || openExpertise || openServices || openSidebar }"></div>
 <header class="header" [ngClass]="{'drop': openAbout || openExpertise || openServices }">
-  <a routerLink="/" class="logo">Allatrack</a>
+  <a routerLink="/" class="logo" (click)="openDropdown('close')">Allatrack</a>
   <ul class="header__nav">
     <li (mouseover)="openDropdown('about')" (mouseleave)="openDropdown('close')">
       <span [ngClass]="{'active': openAbout}">About us</span>
