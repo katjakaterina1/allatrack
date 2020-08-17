@@ -25,6 +25,7 @@ import { ExpertiseComponent } from './expertise/expertise.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CareesBlockComponent } from './carees-block/carees-block.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { TwoColumnedBlockComponent } from './two-columned-block/two-columned-block.component';
 @NgModule({
   declarations: [
     CasesComponent,
@@ -51,36 +52,38 @@ import { PaginationComponent } from './pagination/pagination.component';
     ContactsComponent,
     CareesBlockComponent,
     PaginationComponent,
+    TwoColumnedBlockComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
   ],
-  exports: [
-    CasesComponent,
-    FooterComponent,
-    HeaderComponent,
-    OurServicesComponent,
-    BlogSectionComponent,
-    ThreeColumnedBlockComponent,
-    StagesSliderComponent,
-    TabsBlockComponent,
-    FormComponent,
-    SmallContactComponent,
-    FaqBlockComponent,
-    NumbersBlockComponent,
-    TrianglesBlockComponent,
-    CaseResultComponent,
-    ReviewsComponent,
-    FoundersComponent,
-    TeamBlockComponent,
-    ProcessBlockComponent,
-    HeadingComponent,
-    AboutComponent,
-    ExpertiseComponent,
-    ContactsComponent,
-    CareesBlockComponent,
-    PaginationComponent,
-  ]
+    exports: [
+        CasesComponent,
+        FooterComponent,
+        HeaderComponent,
+        OurServicesComponent,
+        BlogSectionComponent,
+        ThreeColumnedBlockComponent,
+        StagesSliderComponent,
+        TabsBlockComponent,
+        FormComponent,
+        SmallContactComponent,
+        FaqBlockComponent,
+        NumbersBlockComponent,
+        TrianglesBlockComponent,
+        CaseResultComponent,
+        ReviewsComponent,
+        FoundersComponent,
+        TeamBlockComponent,
+        ProcessBlockComponent,
+        HeadingComponent,
+        AboutComponent,
+        ExpertiseComponent,
+        ContactsComponent,
+        CareesBlockComponent,
+        PaginationComponent,
+        TwoColumnedBlockComponent,
+    ]
 })
 export class SharedModule { }

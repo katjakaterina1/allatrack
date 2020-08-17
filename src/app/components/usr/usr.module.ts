@@ -9,7 +9,7 @@ import { UsrServicesListComponent } from './usr-services-list/usr-services-list.
 import { UsrServiceSingleComponent } from './usr-service-single/usr-service-single.component';
 import { UsrBlogSingleComponent } from './usr-blog-single/usr-blog-single.component';
 import { UsrCasesComponent } from './usr-cases/usr-cases.component';
-import { UsrCaseSingleComponent } from './usr-case-single/usr-case-single.component';
+import { UsrCaseSingleComponent } from './cases/usr-case-single/usr-case-single.component';
 import { UsrInfoComponent } from './usr-info/usr-info.component';
 import { UsrAboutComponent } from './usr-about/usr-about.component';
 import { UsrProcessComponent } from './usr-process/usr-process.component';
@@ -20,6 +20,8 @@ import { UsrCareersApplyComponent } from './usr-careers-apply/usr-careers-apply.
 import { UsrCareersComponent } from './usr-careers/usr-careers.component';
 import { UsrCareersSingleComponent } from './usr-careers-single/usr-careers-single.component';
 import { UsrBlogListComponent } from './usr-blog-list/usr-blog-list.component';
+import { UsrCaseEpicenterComponent } from './cases/usr-case-epicenter/usr-case-epicenter.component';
+import { UsrCaseGtruckComponent } from './cases/usr-case-gtruck/usr-case-gtruck.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -29,6 +31,8 @@ const userRoutes: Routes = [
   { path: 'service-single', component: UsrServiceSingleComponent },
   { path: 'cases', component: UsrCasesComponent },
   { path: 'case-single', component: UsrCaseSingleComponent },
+  { path: 'epicenter', component: UsrCaseEpicenterComponent },
+  { path: 'g-truck', component: UsrCaseGtruckComponent },
   { path: 'blog-single', component: UsrBlogSingleComponent },
   { path: 'info', component: UsrInfoComponent },
   { path: 'about', component: UsrAboutComponent },
@@ -61,7 +65,9 @@ const userRoutes: Routes = [
     UsrCareersApplyComponent,
     UsrCareersComponent,
     UsrCareersSingleComponent,
-    UsrBlogListComponent
+    UsrBlogListComponent,
+    UsrCaseEpicenterComponent,
+    UsrCaseGtruckComponent
   ],
   imports: [
     CommonModule,

@@ -38,6 +38,14 @@ table
     margin: 0 40px 120px 40px
   @include mobile
     margin: 0 16px 80px 16px
+.half-section
+  width: 40%
+  margin: 0 auto 120px auto
+  @include small-desktop
+    width: 100%
+    margin: 0 40px 120px 40px
+  @include mobile
+    margin: 0 16px 80px 16px
 .green-btn
   background: #00CAA7
   padding: 15px 24px
@@ -125,6 +133,17 @@ h2
     text-align: center
   &.white
     color: #FFFFFF
+  &.centered
+    justify-content: center
+    margin-bottom: 40px
+p.centered
+  font-family: Archivo, sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 14px
+  line-height: 28px
+  letter-spacing: 0.04em
+  color: #1D1D1F
 h3
   font-family: 'Oswald SemiBold', sans-serif
   font-style: normal

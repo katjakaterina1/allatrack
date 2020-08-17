@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsrCaseSingleComponent implements OnInit {
   public threeData: any[];
+  images: any;
   constructor() { }
 
   ngOnInit(): void {
@@ -41,6 +42,9 @@ export class UsrCaseSingleComponent implements OnInit {
         text: 'Help build a team or pick a ready-made team',
         link: ''
       },
+    ];
+    this.images = [
+      'case1.gif' , 'case1.gif', 'case2.gif', 'case2.gif', 'phone.gif', 'case2.gif'
     ];
   }
 
