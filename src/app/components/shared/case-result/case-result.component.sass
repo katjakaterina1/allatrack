@@ -4,6 +4,7 @@
   display: flex
   align-items: center
   flex-direction: column
+  margin-bottom: 0
   @include small-desktop
     margin-bottom: 200px
   @include mobile
@@ -38,8 +39,9 @@
       margin-bottom: 120px
     &_column
       display: flex
-      flex-direction: column
-      width: 49%
+      justify-content: space-between
+      width: 100%
+      flex-wrap: wrap
       @include mobile
         width: 100%
     &_single
@@ -57,6 +59,7 @@
           @include mobile
             height: 258px
       &.short
+        width: 49%
         img
           height: 408px
           @include small-desktop
@@ -88,13 +91,17 @@
         letter-spacing: 0.04em
         color: #1D1D1F
 
-  .link
-    font-size: 40px
-    line-height: 59px
-    color: #1D1D1F
-    @include mobile
-      font-size: 24px
-      line-height: 36px
-      svg
-        width: 24px
-        height: 24px
+a.link
+  display: flex
+  font-size: 40px
+  line-height: 59px
+  color: #1D1D1F
+  margin: 200px 0
+  justify-content: center
+  align-items: center
+  @include mobile
+    font-size: 24px
+    line-height: 36px
+    svg
+      width: 24px
+      height: 24px

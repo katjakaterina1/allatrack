@@ -1,0 +1,18 @@
+<section class="columned section">
+  <div class="columned__heading" [ngClass]="{'withoutBorder' : withoutBorder}">
+    <h2>{{heading1}}</h2>
+    <h2>{{heading2}}</h2>
+  </div>
+  <div class="columned__block" *ngFor="let content of contentData">
+    <h3 [ngClass]="{'half' : withoutBorder}">
+      {{content.heading}}
+    </h3>
+    <h3 [ngClass]="{'half' : withoutBorder}" *ngIf="content.secondHeading">{{content.secondHeading}}</h3>
+    <div class="columned__block_single">
+      <p>{{content.problem}}</p>
+    </div>
+    <div class="columned__block_single">
+      <p>{{content.decision}}</p>
+    </div>
+  </div>
+</section>

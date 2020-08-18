@@ -25,6 +25,7 @@ export class HeadingComponent implements OnInit {
   @Input() needBackButton: string;
   @Input() buttonLink: string;
   @Input() needForm = false;
+  @Input() centered = false;
   constructor() { }
 
   ngOnInit(): void {

@@ -44,7 +44,12 @@ export class UsrCaseSingleComponent implements OnInit {
       },
     ];
     this.images = [
-      'case1.gif' , 'case1.gif', 'case2.gif', 'case2.gif', 'phone.gif', 'case2.gif'
+      {img: 'case1.gif', alt: 'Home screen', size: 'full'},
+      {img: 'case1.gif', alt: 'Dashboard screen', size: 'short'},
+      {img: 'case2.gif', alt: 'Dashboard screen', size: 'short'},
+      {img: 'case2.gif', alt: 'Dashboard screen', size: 'short'},
+      {img: 'phone.gif', alt: 'Dashboard screen', size: 'short'},
+      {img: 'case2.gif', alt: 'Dashboard screen', size: 'rect'}
     ];
   }
 

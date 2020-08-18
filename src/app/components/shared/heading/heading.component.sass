@@ -17,7 +17,7 @@
     background-image: url("/assets/images/giphy.gif")
     background-repeat: no-repeat
     background-size: cover
-    opacity: 0.24
+    opacity: 0.16
     width: 559px
     height: 559px
     border-radius: 100%
@@ -38,6 +38,15 @@
     padding-bottom: 166px
     width: 50%
     z-index: 50
+    &.centered
+      width: 100%
+      margin: 166px 118px 0 118px
+      h1
+        text-align: center
+      .tags__wrapper
+        justify-content: center
+      .expertise__buttons
+        justify-content: center
     &.paddingBottom
       padding-bottom: 0
     @include mobile

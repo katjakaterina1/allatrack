@@ -22,6 +22,15 @@ import { UsrCareersSingleComponent } from './usr-careers-single/usr-careers-sing
 import { UsrBlogListComponent } from './usr-blog-list/usr-blog-list.component';
 import { UsrCaseEpicenterComponent } from './cases/usr-case-epicenter/usr-case-epicenter.component';
 import { UsrCaseGtruckComponent } from './cases/usr-case-gtruck/usr-case-gtruck.component';
+import { UsrArgentinaGrillComponent } from './cases/usr-argentina-grill/usr-argentina-grill.component';
+import { UsrCasesDarmenComponent } from './cases/usr-cases-darmen/usr-cases-darmen.component';
+import { UsrCaseFaComponent } from './cases/usr-case-fa/usr-case-fa.component';
+import { UsrCaseAnalysisComponent } from './cases/usr-case-analysis/usr-case-analysis.component';
+import { UsrCaseAntiPlagiatComponent } from './cases/usr-case-anti-plagiat/usr-case-anti-plagiat.component';
+import { UsrCaseAntifrodComponent } from './cases/usr-case-antifrod/usr-case-antifrod.component';
+import { UsrCaseAnimalsComponent } from './cases/usr-case-animals/usr-case-animals.component';
+import { UsrCaseCrmOptimizationComponent } from './cases/usr-case-crm-optimization/usr-case-crm-optimization.component';
+import { UsrCaseVrBuilderComponent } from './cases/usr-case-vr-builder/usr-case-vr-builder.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -30,9 +39,18 @@ const userRoutes: Routes = [
   { path: 'services-list', component: UsrServicesListComponent },
   { path: 'service-single', component: UsrServiceSingleComponent },
   { path: 'cases', component: UsrCasesComponent },
-  { path: 'case-single', component: UsrCaseSingleComponent },
-  { path: 'epicenter', component: UsrCaseEpicenterComponent },
-  { path: 'g-truck', component: UsrCaseGtruckComponent },
+  { path: 'cases/case-single', component: UsrCaseSingleComponent },
+  { path: 'cases/epicenter', component: UsrCaseEpicenterComponent },
+  { path: 'cases/g-truck', component: UsrCaseGtruckComponent },
+  { path: 'cases/darmen', component: UsrCasesDarmenComponent },
+  { path: 'cases/argentina-grill', component: UsrArgentinaGrillComponent },
+  { path: 'cases/fa', component: UsrCaseFaComponent },
+  { path: 'cases/analysis', component: UsrCaseAnalysisComponent},
+  { path: 'cases/anti-plagiat', component: UsrCaseAntiPlagiatComponent},
+  { path: 'cases/antifrod', component: UsrCaseAntifrodComponent},
+  { path: 'cases/animals', component: UsrCaseAnimalsComponent},
+  { path: 'cases/crm-optimization', component: UsrCaseCrmOptimizationComponent},
+  { path: 'cases/vr-builder', component: UsrCaseVrBuilderComponent},
   { path: 'blog-single', component: UsrBlogSingleComponent },
   { path: 'info', component: UsrInfoComponent },
   { path: 'about', component: UsrAboutComponent },
@@ -67,7 +85,16 @@ const userRoutes: Routes = [
     UsrCareersSingleComponent,
     UsrBlogListComponent,
     UsrCaseEpicenterComponent,
-    UsrCaseGtruckComponent
+    UsrCaseGtruckComponent,
+    UsrArgentinaGrillComponent,
+    UsrCasesDarmenComponent,
+    UsrCaseFaComponent,
+    UsrCaseAnalysisComponent,
+    UsrCaseAntiPlagiatComponent,
+    UsrCaseAntifrodComponent,
+    UsrCaseAnimalsComponent,
+    UsrCaseCrmOptimizationComponent,
+    UsrCaseVrBuilderComponent
   ],
   imports: [
     CommonModule,

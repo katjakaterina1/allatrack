@@ -1,0 +1,57 @@
+<section class="expertise">
+  <div class="circle"></div>
+  <div class="container">
+    <a href="" class="back" routerLink="/cases">
+      <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11736 18.0001L1.14441e-05 8.96124L2.25979 6.72092L2.2599 6.72102L9.03929 0L11.3186 2.25971L6.23421 7.30034L20.9862 7.36334L21 10.5454L6.05305 10.4815L11.3771 15.7598L9.11736 18.0001Z" fill="#00CAA7"/>
+      </svg>
+      all Cases
+    </a>
+    <h1>
+      Darmen
+    </h1>
+    <div class="tags__wrapper">
+      <div class="tag">iOs</div>
+      <div class="tag">Android</div>
+      <div class="tag">Design</div>
+      <div class="tag">AI</div>
+    </div>
+    <div class="expertise__buttons">
+      <button class="green-btn">Estimate your App</button>
+      <a href="" class="link">
+        Launch Project
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.42084V9.68307H9.6L9.6 4.02874L1.69706 12.0001L0 10.2883L7.8 2.42084L2.4 2.42084L2.4 6.97254e-05L9.6 7.03603e-05V0H12V7.05719e-05V2.42084Z" fill="#00CAA7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="exp-image">
+    <img src="/assets/images/darmen.png" alt="">
+  </div>
+</section>
+<app-heading
+  [backgroundColor]="'#F2F7FF'"
+  [top]="'-180px'"
+  [right]="'130px'"
+  [title]="'Darmen'"
+  [needSocial]="false"
+  [hasSocial]="false"
+  [hasLaunchButton]="true"
+  [hasTags]="true"
+  [hasContactButton]="'Estimate your App'"
+  [needBackButton]="'all Cases'"
+>
+</app-heading>
+<div class="half-section">
+  <h2 class="centered">
+    Компоненты системы
+  </h2>
+  <p class="centered">Uber для логистики  – это площадка, в которой водители большегрузов и транспортные компании смогут отслеживать доступные заказы, информацию о товарах, которые необходимо перевезти, место назначения, расстояние до него и стоимость, предлагаемую клиентами. Заказчики размещают на площадке свои заказы, а водители большегрузов выбирают подходящие для них. В карточке заказа отображается информация о местонахождении груза, пункте назначения, а также о стоимости и приблизительных сроках доставки.</p>
+  <div class="img-wrapper">
+    <img src="/assets/images/google-play.png" alt="">
+    <img src="/assets/images/app-store.png" alt="">
+  </div>
+</div>
+<app-case-result [images]="images" [height]="true" [tabs]="true" [tabsHeading]="'Stack'"></app-case-result>
+<app-cases [title]="'Other cases'" [needExtraTabs]="true"></app-cases>

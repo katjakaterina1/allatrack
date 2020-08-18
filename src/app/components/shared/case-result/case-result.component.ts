@@ -8,6 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CaseResultComponent implements OnInit {
   @Input() images: any = [];
   @Input() height = false;
+  @Input() tabs = false;
+  @Input() tabsHeading: string;
 
   constructor() { }
 

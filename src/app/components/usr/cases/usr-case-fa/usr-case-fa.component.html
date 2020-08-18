@@ -1,0 +1,57 @@
+<app-heading
+  [backgroundColor]="'#E7F2F3'"
+  [top]="'-114px'"
+  [right]="'-300px'"
+  [title]="'Казахтелеком 2FA Blockchain'"
+  [needSocial]="false"
+  [hasSocial]="false"
+  [hasLaunchButton]="true"
+  [hasTags]="true"
+  [hasContactButton]="'Estimate your App'"
+  [needBackButton]="'all Cases'"
+  [centered]="true"
+>
+</app-heading>
+<app-triangles-block [single]="true" [title]="'Цель'"> </app-triangles-block>
+<div class="half-section">
+  <h2 class="centered">
+    Постановка задачи
+  </h2>
+  <p class="centered">
+    Использование технологии Blockchain обезопасит пользователей благодаря прозрачности и защищенности, так как блокчейн это неизменный регистр, в который записываются все транзакции-записи между членами сети.</p>
+  <p class="centered">Децентрализованная база данных Blockchain решает проблему центрального сервера, который можно взломать. Кроме того, она работает на ассиметричном шифровании с длиной ключа 256 бит, являющемся в этом смысле супербезопасным паролем.
+  </p>
+  <p class="centered">
+    Генерируется уникальный токен по указанной при регистрации информации пользователя. Этот токен внедряется в базу данных Blockchain.
+  </p>
+</div>
+<div class="half-section">
+  <h2 class="centered">
+    Двухфакторная аутентификация
+  </h2>
+  <p class="centered">Механизмы двухфакторной аутентификации, как правило, используют два независимых канала передачи конфиденциальных данных и только соединенные данные позволяют сгенерировать аутентификатор и подтвердить личность уполномоченного пользователя.
+  </p>
+  <p class="centered">Двухфакторная аутентификация обычно отвечает на два вопроса:
+    1. Что я знаю (в нашем случае это пара логин/пароль)
+    2. Что я имею (в данном случае это некий набор цифр (символов) который вы получаете с помощью Push-уведомления в заявленном при регистрации мобильном приложении WhatsApp или Telegram на указанный номер телефона).
+  </p>
+  <img src="/assets/images/fa-img.png" alt="">
+  <p class="centered">
+    Внедрение Push-уведомлений на популярные мессенджеры в качестве нового метода аутентификации пользователя это оптимальное решение не использовать дополнительные устройства аутентификации, такие как смарт- карты, PKI-токены, аппаратные OTP-токены, а ограничиться уже имеющимися у них личными смартфонами.
+  </p>
+</div>
+<app-expertise [header]="'Техническое решение проблемы'"></app-expertise>
+<div class="section">
+  <h2 class="centered">
+    Компоненты системы
+  </h2>
+  <img src="/assets/images/f2components.png" alt="">
+</div>
+<app-tabs-block [heading]="'Stack'"></app-tabs-block>
+<a href="" class="big-link link">View next case<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M40 8.56966V32.7769H32L32 13.9283L5.65685 40.4994L0 34.7936L25.999 8.56966L8 8.56966L8 0.500436L32 0.500438V0.5H40V0.500439V8.56966Z" fill="#00CAA7"/>
+</svg>
+</a>
+<app-cases [title]="'Other cases'" [needExtraTabs]="true"></app-cases>
+
+

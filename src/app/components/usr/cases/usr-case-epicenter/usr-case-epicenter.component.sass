@@ -1,0 +1,133 @@
+@import "../../../../../mixins"
+
+.expertise
+  display: flex
+  margin: -102px 32px 120px 32px
+  background: #F6F6F6
+  background-size: contain
+  border-radius: 8px
+  position: relative
+  max-height: 660px
+  overflow: hidden
+  @include small-desktop
+    display: none
+  .exp-image
+    margin-top: 240px
+    margin-right: 120px
+    img
+      width: 573px
+      height: 320px
+      border: 8px solid #D6D6D6
+      border-radius: 16px
+  .circle
+    background-image: url("/assets/images/giphy.gif")
+    background-repeat: no-repeat
+    background-size: cover
+    opacity: 0.08
+    width: 559px
+    height: 559px
+    border-radius: 100%
+    filter: blur(100px)
+    -webkit-filter: blur(100px)
+    -ms-filter: blur(100px)
+    position: absolute
+    margin: 0 auto
+    top: -114px
+    right: 500px
+  .container
+    display: flex
+    flex-direction: column
+    margin: 173px 0 0 118px
+    padding-bottom: 166px
+    width: 50%
+  &__buttons
+    display: flex
+    align-items: center
+  h1
+    font-family: Oswald, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 64px
+    line-height: 95px
+    letter-spacing: 0.04em
+    text-transform: uppercase
+    color: #1D1D1F
+    margin-bottom: 40px
+  p
+    font-family: Archivo, sans-serif
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 28px
+    color: #000000
+    margin-bottom: 80px
+    width: 80%
+  a.link
+    margin-left: 40px
+  img
+    object-fit: contain
+    height: auto
+    border-radius: 0 8px 8px 0
+
+.expertise-section
+  display: flex
+  flex-direction: column
+  margin: 0 150px 120px 150px
+  &__block
+    margin-top: 32px
+    display: flex
+    justify-content: space-between
+  &__variants
+    display: flex
+    flex-direction: column
+    width: 33%
+    margin-bottom: 16px
+    &_single
+      display: flex
+      justify-content: space-between
+      align-items: center
+      box-sizing: border-box
+      width: 100%
+      font-family: Oswald, sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #1D1D1F
+      background: #F6F6F6
+      padding: 24px 40px
+      margin-bottom: 8px
+      cursor: pointer
+      &.active
+        background: #4545FB
+        color: #FFFFFF
+        svg
+          path
+            fill: #FFFFFF
+  &__description
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 60%
+    p
+      font-family: Archivo, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 28px
+      letter-spacing: 0.04em
+      color: #9F9FA0
+    &_links
+      display: flex
+      flex-wrap: wrap
+      .link
+        margin: 0 24px 24px 0
+app-heading
+  display: none
+  @include small-desktop
+    display: flex
+.tags__wrapper
+  display: flex
+  margin-bottom: 107px
