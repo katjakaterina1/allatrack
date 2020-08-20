@@ -11,12 +11,14 @@ import { SharedModule} from './components/shared/shared.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     UsrModule,
     SharedModule,
     RouterModule.forRoot([
-      {path: '', loadChildren: './components/usr/usr.module#UsrModule'},
-    ])
+    { path: '', loadChildren: './components/usr/usr.module#UsrModule' },
+], {
+    initialNavigation: 'enabled'
+})
   ],
   providers: [],
   bootstrap: [AppComponent]
