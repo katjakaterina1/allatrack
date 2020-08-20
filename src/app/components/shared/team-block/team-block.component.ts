@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-team-block',
@@ -11,7 +12,9 @@ export class TeamBlockComponent implements OnInit {
   devops: any;
   designers: any;
   frontends: any;
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -22,28 +25,36 @@ export class TeamBlockComponent implements OnInit {
         this.devops = false;
         this.designers = false;
         this.frontends = false;
-        document.getElementById('line__fill').style.transform = 'translateX(0)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(0)';
+        }
         break;
       case 'devops':
         this.all = false;
         this.devops = true;
         this.designers = false;
         this.frontends = false;
-        document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        }
         break;
       case 'designers':
         this.all = false;
         this.devops = false;
         this.designers = true;
         this.frontends = false;
-        document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        }
         break;
       case 'frontends':
         this.all = false;
         this.devops = false;
         this.designers = false;
         this.frontends = true;
-        document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        }
         break;
     }
   }

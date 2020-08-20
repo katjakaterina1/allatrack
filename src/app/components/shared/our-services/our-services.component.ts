@@ -13,7 +13,7 @@ export class OurServicesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.servicesData);
+    // console.log(this.servicesData);
   }
 
 }

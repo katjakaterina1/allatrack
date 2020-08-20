@@ -1,4 +1,5 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID, ViewChild} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-faq-block',
@@ -8,16 +9,23 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 export class FaqBlockComponent implements OnInit {
   active: any = true;
   questions: any = [1, 2, 3, 4, 5];
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
   }
   openQuestion(i): void{
-    const els = document.querySelectorAll('.faq__questions_single');
+    let els;
+    if (isPlatformBrowser(this.platformId)) {
+      els = document.querySelectorAll('.faq__questions_single');
+    }
     for (let j = 0; j < this.questions.length; j++) {
       els[j].classList.remove('active');
     }
-    document.getElementById(`question-${i}`).classList.add('active');
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById(`question-${i}`).classList.add('active');
+    }
   }
 
 }

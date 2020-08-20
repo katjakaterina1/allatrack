@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-carees-block',
@@ -14,7 +15,9 @@ export class CareesBlockComponent implements OnInit {
   management: any;
   marketing: any;
   business: any;
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +32,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(0)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(0)';
+        }
         break;
       case 'back':
         this.all = false;
@@ -40,7 +45,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        }
         break;
       case 'front':
         this.all = false;
@@ -51,7 +58,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        }
         break;
       case 'designer':
         this.all = false;
@@ -62,7 +71,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        }
         break;
       case 'devops':
         this.all = false;
@@ -73,7 +84,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(400%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(400%)';
+        }
         break;
       case 'management':
         this.all = false;
@@ -84,7 +97,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = true;
         this.marketing = false;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(500%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(500%)';
+        }
         break;
       case 'marketing':
         this.all = false;
@@ -95,7 +110,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = true;
         this.business = false;
-        document.getElementById('line__fill').style.transform = 'translateX(600%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(600%)';
+        }
         break;
       case 'business':
         this.all = false;
@@ -106,7 +123,9 @@ export class CareesBlockComponent implements OnInit {
         this.management = false;
         this.marketing = false;
         this.business = true;
-        document.getElementById('line__fill').style.transform = 'translateX(700%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(700%)';
+        }
         break;
     }
   }

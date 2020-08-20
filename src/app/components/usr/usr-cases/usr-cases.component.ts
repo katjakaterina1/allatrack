@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-usr-cases',
@@ -10,7 +11,9 @@ export class UsrCasesComponent implements OnInit {
   web: any;
   mobile: any;
   analyze: any;
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -21,28 +24,36 @@ export class UsrCasesComponent implements OnInit {
         this.web = false;
         this.mobile = false;
         this.analyze = false;
-        document.getElementById('line__fill').style.transform = 'translateX(0)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(0)';
+        }
         break;
       case 'web':
         this.cloud = false;
         this.web = true;
         this.mobile = false;
         this.analyze = false;
-        document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(100%)';
+        }
         break;
       case 'mobile':
         this.cloud = false;
         this.web = false;
         this.mobile = true;
         this.analyze = false;
-        document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(200%)';
+        }
         break;
       case 'analyze':
         this.cloud = false;
         this.web = false;
         this.mobile = false;
         this.analyze = true;
-        document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        if (isPlatformBrowser(this.platformId)) {
+          document.getElementById('line__fill').style.transform = 'translateX(300%)';
+        }
         break;
     }
   }

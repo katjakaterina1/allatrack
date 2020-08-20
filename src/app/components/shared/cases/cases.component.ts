@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, Input, OnInit, OnDestroy} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, OnDestroy, Inject, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-cases',
@@ -18,7 +19,9 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
   clearedInterval: boolean;
   clearedTimeout: boolean;
 
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
     if (this.needExtraTabs) {
@@ -40,8 +43,12 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
     this.clearedTimeout = true;
   }
   selectElement(): void {
-    const els = document.querySelectorAll('.projects__all_single');
-    const blocks = document.querySelectorAll('.projects__block');
+    let els;
+    let blocks;
+    if (isPlatformBrowser(this.platformId)) {
+      els = document.querySelectorAll('.projects__all_single');
+      blocks = document.querySelectorAll('.projects__block');
+    }
     if (els && blocks){
       for (let i = 0; i < this.cases.length; i++) {
         this.casesTimeout = setTimeout( () => {
@@ -52,8 +59,12 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
               // tslint:disable-next-line:no-unused-expression
               blocks[j] && blocks[j].classList.remove('selected');
             }
-            const elem = document.getElementById(`case-${i}`);
-            const block = document.getElementById(`block-${i}`);
+            let elem;
+            let block;
+            if (isPlatformBrowser(this.platformId)) {
+              elem = document.getElementById(`case-${i}`);
+              block = document.getElementById(`block-${i}`);
+            }
             // tslint:disable-next-line:no-unused-expression
             elem && elem.classList.add('selected');
             // tslint:disable-next-line:no-unused-expression
