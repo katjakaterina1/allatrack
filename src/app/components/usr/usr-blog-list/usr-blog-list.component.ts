@@ -1,4 +1,5 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from '@angular/common';
 
 @Component({
   selector: 'app-usr-blog-list',
@@ -7,7 +8,9 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 })
 export class UsrBlogListComponent implements AfterViewInit, OnInit {
   tabs: any;
-  constructor() { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+  ) { }
 
   ngOnInit(): void {
     this.tabs = [
@@ -27,14 +30,21 @@ export class UsrBlogListComponent implements AfterViewInit, OnInit {
       ];
   }
   ngAfterViewInit(): void {
-    document.getElementById(`tab-0`).classList.add('active');
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById(`tab-0`).classList.add('active');
+    }
   }
   setActive(i): any{
-    const els = document.querySelectorAll('.blog__tabs_heading_single');
+    let els;
+    if (isPlatformBrowser(this.platformId)) {
+      els = document.querySelectorAll('.blog__tabs_heading_single');
+    }
     for (let j = 0; j < this.tabs.length; j++) {
       els[j].classList.remove('active');
     }
-    document.getElementById(`tab-${i}`).classList.add('active');
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById(`tab-${i}`).classList.add('active');
+    }
   }
 
 }
