@@ -31,6 +31,7 @@ import { UsrCaseAntifrodComponent } from './cases/usr-case-antifrod/usr-case-ant
 import { UsrCaseAnimalsComponent } from './cases/usr-case-animals/usr-case-animals.component';
 import { UsrCaseCrmOptimizationComponent } from './cases/usr-case-crm-optimization/usr-case-crm-optimization.component';
 import { UsrCaseVrBuilderComponent } from './cases/usr-case-vr-builder/usr-case-vr-builder.component';
+import { UsrCaseEskulabsComponent } from './cases/usr-case-eskulabs/usr-case-eskulabs.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -51,6 +52,7 @@ const userRoutes: Routes = [
   { path: 'cases/animals', component: UsrCaseAnimalsComponent},
   { path: 'cases/crm-optimization', component: UsrCaseCrmOptimizationComponent},
   { path: 'cases/vr-builder', component: UsrCaseVrBuilderComponent},
+  { path: 'cases/eskulabs', component: UsrCaseEskulabsComponent},
   { path: 'blog-single', component: UsrBlogSingleComponent },
   { path: 'info', component: UsrInfoComponent },
   { path: 'about', component: UsrAboutComponent },
@@ -94,7 +96,8 @@ const userRoutes: Routes = [
     UsrCaseAntifrodComponent,
     UsrCaseAnimalsComponent,
     UsrCaseCrmOptimizationComponent,
-    UsrCaseVrBuilderComponent
+    UsrCaseVrBuilderComponent,
+    UsrCaseEskulabsComponent
   ],
   imports: [
     CommonModule,

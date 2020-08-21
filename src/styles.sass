@@ -38,14 +38,28 @@ table
     margin: 0 40px 120px 40px
   @include mobile
     margin: 0 16px 80px 16px
+  .cases-image
+    width: 100%
+    height: auto
+    object-fit: cover
+    margin-bottom: 40px
+  &.flex
+    display: flex
+    flex-wrap: wrap
+    &:not(:last-child)
+      margin-bottom: 0
 .half-section
-  width: 45%
+  width: 47%
   margin: 0 auto 120px auto
+  &.aligned
+    align-self: center
   img
     margin: 40px 0
     width: 100%
+    &.single
+      margin: 0
   @include small-desktop
-    width: 100%
+    width: auto
     margin: 0 40px 120px 40px
   @include mobile
     margin: 0 16px 80px 16px
@@ -157,7 +171,27 @@ h2
     justify-content: center
     margin-bottom: 40px
     text-align: center
-p.centered
+    width: 100%
+  &.half
+    width: 55%
+    margin: 0 auto 80px auto
+h5
+  font-family: Archivo, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 24px
+  line-height: 28px
+  color: #1D1D1F
+  margin-bottom: 24px
+h6
+  font-family: Archivo, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 18px
+  line-height: 28px
+  color: #1D1D1F
+  margin-bottom: 16px
+p
   font-family: Archivo, sans-serif
   font-style: normal
   font-weight: 500
@@ -165,8 +199,10 @@ p.centered
   line-height: 28px
   letter-spacing: 0.04em
   color: #1D1D1F
-  &:not(:last-child)
-    margin-bottom: 16px
+  &.centered
+    width: 100%
+    &:not(:last-child)
+      margin-bottom: 20px
 h3
   font-family: 'Oswald SemiBold', sans-serif
   font-style: normal
@@ -189,6 +225,9 @@ h3
   text-decoration: none
   &.white
     color: #FFFFFF
+    svg
+      path
+        fill: white
 .overlay
   position: fixed
   width: 100%
