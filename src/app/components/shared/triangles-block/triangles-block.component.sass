@@ -4,6 +4,7 @@
   display: flex
   justify-content: space-between
   align-items: center
+  flex-wrap: wrap
   @include small-desktop
     align-items: flex-end
   @include mobile
@@ -69,5 +70,23 @@
     object-fit: cover
     position: absolute
     z-index: 50
-
+  &__columns
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-top: 96px
+    &_single
+      width: 23%
+      display: flex
+      p
+        font-family: Archivo, sans-serif
+        font-style: normal
+        font-size: 14px
+        line-height: 28px
+        letter-spacing: 0.04em
+        display: flex
+        span
+          color: #4545FB
+          font-weight: bold
+          margin-right: 16px
 

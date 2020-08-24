@@ -1,9 +1,15 @@
-<div class="expertise-description__done section">
+<div class="expertise-description__done section" [ngClass]="{'single': single}">
   <h2 *ngIf="title !== ''">{{title}}</h2>
   <div class="expertise-description__done_wrap">
-    <div class="expertise-description__done_single" *ngFor="let item of threeData;">
-      <span>{{item.title}}</span>
-      <p>{{item.text}}</p>
+    <div class="expertise-description__done_single" *ngFor="let item of threeData; let i = index">
+      <span *ngIf="item.title">{{item.title}}</span>
+      <p [ngClass]="{'numbers': numbers || arrow}">
+        <svg *ngIf="arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.696 4.228H0.588V2.716H10.696L9.954 0.896H10.682L13.44 3.332V3.626L10.682 6.048H9.954L10.696 4.228Z" fill="#4545FB"/>
+        </svg>
+        <span class="numbers" *ngIf="numbers">0{{i+1}}.</span>
+        {{item.text}}
+      </p>
     </div>
   </div>
 </div>

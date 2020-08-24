@@ -1,7 +1,7 @@
 <div class="triangles section" [ngClass]="{'single': single}">
   <div class="triangles__heading">
     <h2>{{title}}</h2>
-    <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software development of any complexity. To each client an individual approach, depending on the specifics of the business.</p>
+    <p>{{text}}</p>
   </div>
   <div class="triangles__wrap">
     <div class="triangles__cover right">
@@ -9,6 +9,14 @@
     </div>
     <div class="triangles__cover">
       <img src="/assets/images/bg.gif" alt="">
+    </div>
+  </div>
+  <div *ngIf="columns" class="triangles__columns">
+    <div class="triangles__columns_single" *ngFor="let item of fourData; let i = index">
+      <p>
+        <span class="numbers">0{{i+1}}.</span>
+        {{item.text}}
+      </p>
     </div>
   </div>
 </div>

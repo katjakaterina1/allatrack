@@ -8,7 +8,7 @@
       all Cases
     </a>
     <h1>
-      Tickfind
+      TickBus
     </h1>
     <div class="tags__wrapper">
       <div class="tag">iOs</div>
@@ -27,14 +27,14 @@
     </div>
   </div>
   <div class="exp-image">
-    <img src="/assets/images/case1.gif" alt="">
+    <img src="/assets/images/tickbus.png" alt="">
   </div>
 </section>
 <app-heading
   [backgroundColor]="'#E7F2F3'"
   [top]="'-300px'"
   [right]="'-200px'"
-  [title]="'Tickfind'"
+  [title]="'TickBus'"
   [needSocial]="false"
   [hasSocial]="false"
   [hasLaunchButton]="true"
@@ -43,11 +43,24 @@
   [needBackButton]="'all Cases'"
 >
 </app-heading>
-<app-three-columned-block [title]="'The challenge and problems'" [threeData]="threeData" [numbers]="true"></app-three-columned-block>
-<app-triangles-block [title]="'Targets'" [columns]="true" [fourData]="fourData" [text]="'TickFind – универсальный инструмент для поиска билетов и событий. С помощью интеграции с разными сервисами и анализом данных, мы хотим построить лучшую рекомендательную систему для пользователей и создать единую платформу по торговле билетами.'"></app-triangles-block>
-<app-expertise [header]="'Functionality'"></app-expertise>
-<app-three-columned-block [threeData]="nextData"></app-three-columned-block>
+<app-triangles-block [title]="'О продукте'" [columns]="false" [single]="false" [text]="'Рынок СНГ по нашим оценкам составляет более 12 $. млрд.\n'+
+'(Мировой рынок автобсуных перевозок оценивается в 80$ млрд.)\n'+
+'→ 95% билетов продаются в офлайне (Мо миру10-15% онлайн)\n'+
+'→ 1000 перевозчиков с однимавтобусом\n'+
+'→ 50% автовок залов не имеют внешнего проток ола для продажи билетов\n'+
+'→ Билет на автобус в 2-3 раза дешевле чем аналогичный на поезд\n'+
+'→ Объём межрегиональных и международных пассажирских перевозок\n'+
+'сейчас можно оценить примерно в 600 миллионов пассажиров в\n'+
+'год. (СНГ)'"></app-triangles-block>
+<app-three-columned-block  [threeData]="threeData"></app-three-columned-block>
+<app-three-columned-block  [title]="'Проблемы'" [single]="true" [numbers]="true" [threeData]="threeSingleData"></app-three-columned-block>
+<app-three-columned-block  [title]="'Почему пассажиры выбирают автобус'" [threeData]="nextData"></app-three-columned-block>
+<app-three-columned-block  [title]="'Как мы меняем рынок'" [arrow]="true" [threeData]="sixData"></app-three-columned-block>
+<div class="section">
+  <img class="cases-image" src="/assets/images/tickbus1.png" alt="">
+</div>
 <app-tabs-block [heading]="'Stack'"></app-tabs-block>
 <app-case-result [images]="images"></app-case-result>
 <app-cases [title]="'Other cases'" [needExtraTabs]="true"></app-cases>
+
 

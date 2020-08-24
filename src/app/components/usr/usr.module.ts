@@ -32,6 +32,7 @@ import { UsrCaseAnimalsComponent } from './cases/usr-case-animals/usr-case-anima
 import { UsrCaseCrmOptimizationComponent } from './cases/usr-case-crm-optimization/usr-case-crm-optimization.component';
 import { UsrCaseVrBuilderComponent } from './cases/usr-case-vr-builder/usr-case-vr-builder.component';
 import { UsrCaseEskulabsComponent } from './cases/usr-case-eskulabs/usr-case-eskulabs.component';
+import { UsrCaseTickbusComponent } from './cases/usr-case-tickbus/usr-case-tickbus.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -40,7 +41,8 @@ const userRoutes: Routes = [
   { path: 'services-list', component: UsrServicesListComponent },
   { path: 'service-single', component: UsrServiceSingleComponent },
   { path: 'cases', component: UsrCasesComponent },
-  { path: 'cases/case-single', component: UsrCaseSingleComponent },
+  { path: 'cases/tickfind', component: UsrCaseSingleComponent },
+  { path: 'cases/tickbus', component: UsrCaseTickbusComponent },
   { path: 'cases/epicenter', component: UsrCaseEpicenterComponent },
   { path: 'cases/g-truck', component: UsrCaseGtruckComponent },
   { path: 'cases/darmen', component: UsrCasesDarmenComponent },
@@ -97,7 +99,8 @@ const userRoutes: Routes = [
     UsrCaseAnimalsComponent,
     UsrCaseCrmOptimizationComponent,
     UsrCaseVrBuilderComponent,
-    UsrCaseEskulabsComponent
+    UsrCaseEskulabsComponent,
+    UsrCaseTickbusComponent
   ],
   imports: [
     CommonModule,

@@ -9,7 +9,10 @@ export class ThreeColumnedBlockComponent implements OnInit {
   @Input() title: string;
   @Input() figure: string;
   @Input() text: string;
+  @Input() numbers = false;
   @Input() threeData: any[];
+  @Input() single = false;
+  @Input() arrow = false;
   constructor() { }
 
   ngOnInit(): void {
