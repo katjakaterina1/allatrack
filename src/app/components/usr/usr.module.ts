@@ -33,6 +33,7 @@ import { UsrCaseCrmOptimizationComponent } from './cases/usr-case-crm-optimizati
 import { UsrCaseVrBuilderComponent } from './cases/usr-case-vr-builder/usr-case-vr-builder.component';
 import { UsrCaseEskulabsComponent } from './cases/usr-case-eskulabs/usr-case-eskulabs.component';
 import { UsrCaseTickbusComponent } from './cases/usr-case-tickbus/usr-case-tickbus.component';
+import { UsrCaseLotaryComponent } from './cases/usr-case-lotary/usr-case-lotary.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -43,6 +44,7 @@ const userRoutes: Routes = [
   { path: 'cases', component: UsrCasesComponent },
   { path: 'cases/tickfind', component: UsrCaseSingleComponent },
   { path: 'cases/tickbus', component: UsrCaseTickbusComponent },
+  { path: 'cases/lotary', component: UsrCaseLotaryComponent },
   { path: 'cases/epicenter', component: UsrCaseEpicenterComponent },
   { path: 'cases/g-truck', component: UsrCaseGtruckComponent },
   { path: 'cases/darmen', component: UsrCasesDarmenComponent },
@@ -100,7 +102,8 @@ const userRoutes: Routes = [
     UsrCaseCrmOptimizationComponent,
     UsrCaseVrBuilderComponent,
     UsrCaseEskulabsComponent,
-    UsrCaseTickbusComponent
+    UsrCaseTickbusComponent,
+    UsrCaseLotaryComponent
   ],
   imports: [
     CommonModule,
