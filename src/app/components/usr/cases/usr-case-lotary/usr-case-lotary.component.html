@@ -12,59 +12,64 @@
   [centered]="true"
 >
 </app-heading>
-<app-triangles-block [single]="true" [title]="'Цель'"></app-triangles-block>
+<app-three-columned-block [title]="'Существующие проблемы'" [twoColumns]="true" [threeData]="threeData" [numbers]="true"></app-three-columned-block>
+<app-three-columned-block  [title]="'Проблемы'" [single]="true" [numbers]="true" [threeData]="threeSingleData"></app-three-columned-block>
+<app-three-columned-block [title]="'Техническое решение проблемы'" [twoColumns]="true" [threeData]="twoData" [arrow]="true"></app-three-columned-block>
 <div class="half-section">
-  <h2 class="centered">
-    Задачи и Проблемы
-  </h2>
-  <p class="centered">
-    o  Модернизация рекламной площадки. o  Устранение фрода в интернет-рекламе; <br>
-    o  Фрод - трафик и клики; <br>
-    o  Препятствование скликивания (перехода)  рекламы ботами; <br>
-    o  Наложение креативов; <br>
-    o  Повтор на странице; <br>
-    o  Сайты призраки. <br>
-  </p>
+  <img src="/assets/images/lotary.png" alt="">
+</div>
+<div class="section">
+  <h2 class="centered">Атрибуты фискального чека</h2>
+  <img class="cases-image" src="/assets/images/lotary1.png" alt="">
 </div>
 <div class="half-section">
-  <h2 class="centered">
-    Функции
-  </h2>
-  <p class="centered">
-    o  Модернизация рекламной площадки. o  Устранение фрода в интернет-рекламе; <br>
-    o  Фрод - трафик и клики; <br>
-    o  Препятствование скликивания (перехода)  рекламы ботами; <br>
-    o  Наложение креативов; <br>
-    o  Повтор на странице; <br>
-    o  Сайты призраки. <br>
-  </p>
+  <p class="centered">Совокупность налогового номера, фискального номера, суммы и даты выдачи чека является уникальной комбинацией.  Данная комбинация может служить в качестве идентификатора лотерейного билета. Так каждый чек станет билетом в лотерее.</p>
 </div>
 <div class="half-section">
-  <h2 class="centered">
-    Дополнительные Функции
-  </h2>
-  <p class="centered">
-    o  Модернизация рекламной площадки. o  Устранение фрода в интернет-рекламе; <br>
-    o  Фрод - трафик и клики; <br>
-    o  Препятствование скликивания (перехода)  рекламы ботами; <br>
-    o  Наложение креативов; <br>
-    o  Повтор на странице; <br>
-    o  Сайты призраки. <br>
-  </p>
+  <h2 class="centered">О системе потрибителя</h2>
+  <p class="centered" style="text-align: center">Как это работает?</p>
+</div>
+<div class="section">
+  <img class="cases-image" src="/assets/images/lotary2.png" alt="">
 </div>
 <div class="half-section">
-  <h2 class="centered">
-    Результат
-  </h2>
-  <p class="centered">
-    o  Модернизация рекламной площадки. o  Устранение фрода в интернет-рекламе; <br>
-    o  Фрод - трафик и клики; <br>
-    o  Препятствование скликивания (перехода)  рекламы ботами; <br>
-    o  Наложение креативов; <br>
-    o  Повтор на странице; <br>
-    o  Сайты призраки. <br>
-  </p>
+  <h2 class="centered">О системе для конролирубшего органая</h2>
+  <p class="centered" style="text-align: center">Как это работает?</p>
 </div>
+<div class="section">
+  <img class="cases-image" src="/assets/images/lotary3.png" alt="">
+</div>
+<div class="half-section">
+  <h2 class="centered">Оптимизация проверки и сбора данных о чеках</h2>
+  <p class="centered" style="text-align: center">Штрих код на фискальном чеке</p>
+</div>
+<div class="half-section">
+  <p class="centered">Для оптимизации процесса проверки данных фискального чека, полученных от пользователей некоторые страны вводят следующее:</p>
+</div>
+<div class="section">
+  <img class="cases-image" src="/assets/images/lotary4.png" alt="">
+</div>
+<div class="section flex">
+  <h2 class="centered">Автоматическое распознавание на чеке</h2>
+  <div class="half-section">
+    <p class="centered">В связи с наличием опыта, можем предложить автоматизировать внесение данных из чека в базу. Предлагаем реализовать эт:о с помощью распознавания параметров чека по фото на мобильном телефоне.</p>
+
+    <p class="centered">Для распознавания будет использована самообучаемая система. Для этого потребуется:</p>
+
+    <p class="centered">Стандартизировать шрифты и расположение уникальных элементов чека.</p>
+
+    <p class="centered">Для обучения системы необходимо собрать базу фотографий чеков. Данные можно наработать в процессе «ручного» этапа акции.</p>
+
+    <p class="centered">Обучение системы займет 2 месяца после окончания сбора базы фотографий.</p>
+  </div>
+  <div class="half-section">
+    <div class="img-wrapper">
+      <img class="cases-image" style="width: 188px; height: 364px; margin: 0 auto" src="/assets/images/lotary5.png" alt="">
+    </div>
+  </div>
+</div>
+<app-three-columned-block [title]="'Результат'" [titleCentered]="true" [twoColumns]="true" [threeData]="threeData" [numbers]="true"></app-three-columned-block>
+
 <app-tabs-block [heading]="'Stack'"></app-tabs-block>
 <a href="" class="big-link link">View next case<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M40 8.56966V32.7769H32L32 13.9283L5.65685 40.4994L0 34.7936L25.999 8.56966L8 8.56966L8 0.500436L32 0.500438V0.5H40V0.500439V8.56966Z" fill="#00CAA7"/>

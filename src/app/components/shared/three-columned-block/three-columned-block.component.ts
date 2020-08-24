@@ -13,6 +13,8 @@ export class ThreeColumnedBlockComponent implements OnInit {
   @Input() threeData: any[];
   @Input() single = false;
   @Input() arrow = false;
+  @Input() twoColumns = false;
+  @Input() titleCentered = false;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,11 +1,14 @@
 <div class="expertise-description__done section" [ngClass]="{'single': single}">
-  <h2 *ngIf="title !== ''">{{title}}</h2>
+  <h2 *ngIf="title !== ''" [ngClass]="{'centered': titleCentered}">{{title}}</h2>
   <div class="expertise-description__done_wrap">
-    <div class="expertise-description__done_single" *ngFor="let item of threeData; let i = index">
+    <div class="expertise-description__done_single" *ngFor="let item of threeData; let i = index" [ngClass]="{'two-columns': twoColumns}">
       <span *ngIf="item.title">{{item.title}}</span>
       <p [ngClass]="{'numbers': numbers || arrow}">
-        <svg *ngIf="arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10.696 4.228H0.588V2.716H10.696L9.954 0.896H10.682L13.44 3.332V3.626L10.682 6.048H9.954L10.696 4.228Z" fill="#4545FB"/>
+<!--        <svg *ngIf="arrow" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--          <path d="M10.696 4.228H0.588V2.716H10.696L9.954 0.896H10.682L13.44 3.332V3.626L10.682 6.048H9.954L10.696 4.228Z" fill="#4545FB"/>-->
+<!--        </svg>-->
+        <svg *ngIf="arrow" width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.904 3.832H0.352V2.104H11.904L11.056 0.0239997H11.888L15.04 2.808V3.144L11.888 5.912H11.056L11.904 3.832Z" fill="#00CAA7"/>
         </svg>
         <span class="numbers" *ngIf="numbers">0{{i+1}}.</span>
         {{item.text}}
