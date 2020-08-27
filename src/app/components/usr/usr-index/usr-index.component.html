@@ -38,4 +38,4 @@
 <app-about></app-about>
 <app-expertise [header]="'Expertise'" [button]="'View all Expertise'"></app-expertise>
 <app-reviews [heading]="'We help dozens of businesses become successful '"></app-reviews>
-<app-blog-section [heading]="'Blog'" [button]="'Discover all articles'" [mainArticle]="true"></app-blog-section>
+<app-blog-section [heading]="'Blog'" [button]="'Discover all articles'" [mainArticle]="true" [data]="news | slice:0:4"></app-blog-section>

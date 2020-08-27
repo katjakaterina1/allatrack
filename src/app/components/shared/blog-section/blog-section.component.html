@@ -7,52 +7,19 @@
     </a>
   </div>
   <div class="blog__articles">
-    <div class="blog__articles_single main" routerLink="/blog-single" *ngIf="mainArticle">
-      <img src="/assets/images/blog-img4.png" alt="">
+    <div class="blog__articles_single" *ngFor="let article of data; let i = index" [ngClass]="{'main': i === 0 && mainArticle}" routerLink='/blog-single/{{article.alias}}'>
+      <img src="https://allatrack.com/uploads/news/images/{{article.image}}" alt="">
       <div class="blog__articles_single-description">
-        <div class="blog__articles_single-description--tags">
-          <div class="tag light">Retail & Distribution</div>
-          <div class="tag light">Big data and AI</div>
+        <div class="blog__tabs scrollbar">
+          <div class="blog__articles_single-description--tags">
+            <div class="tag light" *ngFor="let tag of article.cats">{{tag}}</div>
+          </div>
         </div>
-        <h4>Blockchain: What is it and what does it mean for insurance?</h4>
-        <p>The introduction of artificial intelligence, data mining, virtual and augmented reality, blockchain, Neurotechnology and innovative solutions for your business.</p>
+        <h4>{{article.title_eng}}</h4>
+        <p *ngIf="article.description_eng" [innerHTML]="article.description_eng | slice:0:200"></p>
       </div>
     </div>
-    <div class="blog__articles_single">
-      <img src="/assets/images/blog-img.png" alt="">
-      <div class="blog__articles_single-description">
-        <div class="blog__articles_single-description--tags">
-          <div class="tag light">Retail & Distribution</div>
-          <div class="tag light">Big data and AI</div>
-        </div>
-        <h4>SoftData -> Allatrack</h4>
-        <p>The introduction of artificial intelligence, data mining, virtual and augmented reality...</p>
-      </div>
-    </div>
-    <div class="blog__articles_single">
-      <img src="/assets/images/blog-img2.png" alt="">
-      <div class="blog__articles_single-description">
-        <div class="blog__articles_single-description--tags">
-          <div class="tag light">iOs</div>
-          <div class="tag light">Android</div>
-          <div class="tag light">Design</div>
-          <div class="tag light">AI</div>
-        </div>
-        <h4>10 Big Financial Technology Trends for 2018</h4>
-        <p>The introduction of artificial intelligence, data mining, virtual and augmented reality...</p>
-      </div>
-    </div>
-    <div class="blog__articles_single">
-      <img src="/assets/images/blog-img3.png" alt="">
-      <div class="blog__articles_single-description">
-        <div class="blog__articles_single-description--tags">
-          <div class="tag light">Retail & Distribution</div>
-          <div class="tag light">Big data and AI</div>
-        </div>
-        <h4>Blockchain: What is it and what does it mean for insurance?</h4>
-        <p>The introduction of artificial intelligence, data mining, virtual and augmented reality...</p>
-      </div>
-    </div>
+
   </div>
 </section>
 

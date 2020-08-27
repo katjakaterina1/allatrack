@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewsService} from '../../../services/news.service';
 
 @Component({
   selector: 'app-usr-service-single',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class UsrServiceSingleComponent implements OnInit {
   public threeData: any[];
   public linkData: any[];
-  constructor() { }
+  public news: any[];
+  constructor(public newsService: NewsService) { }
 
   ngOnInit(): void {
     this.threeData = [
@@ -66,5 +68,8 @@ export class UsrServiceSingleComponent implements OnInit {
         title: 'Cloud & DevOps'
       },
     ];
+    this.newsService.load().subscribe(data => {
+      this.news = data;
+    });
   }
 }

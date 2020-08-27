@@ -57,7 +57,7 @@ const userRoutes: Routes = [
   { path: 'cases/crm-optimization', component: UsrCaseCrmOptimizationComponent},
   { path: 'cases/vr-builder', component: UsrCaseVrBuilderComponent},
   { path: 'cases/eskulabs', component: UsrCaseEskulabsComponent},
-  { path: 'blog-single', component: UsrBlogSingleComponent },
+  { path: 'blog-single/:alias', component: UsrBlogSingleComponent },
   { path: 'info', component: UsrInfoComponent },
   { path: 'about', component: UsrAboutComponent },
   { path: 'process', component: UsrProcessComponent },

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewsService} from '../../../services/news.service';
 
 @Component({
   selector: 'app-usr-expertise-single',
@@ -9,7 +10,8 @@ export class UsrExpertiseSingleComponent implements OnInit {
   public threeData: any[];
   public servicesData: any[];
   public linkedData: any[];
-  constructor() { }
+  news: any;
+  constructor(public newsService: NewsService) { }
 
   ngOnInit(): void {
     this.threeData = [
@@ -93,6 +95,9 @@ export class UsrExpertiseSingleComponent implements OnInit {
       {
         title: 'Software QA & Testing'
       }
-    ]
+    ];
+    this.newsService.load().subscribe(data => {
+      this.news = data;
+    });
   }
 }

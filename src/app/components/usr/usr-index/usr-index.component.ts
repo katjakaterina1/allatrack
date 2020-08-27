@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewsService} from '../../../services/news.service';
 
 @Component({
   selector: 'app-usr-index',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsrIndexComponent implements OnInit {
   public servicesData: any[];
-  constructor() { }
+  news: any;
+  constructor(public newsService: NewsService) { }
 
   ngOnInit(): void {
     this.servicesData = [
@@ -27,5 +29,8 @@ export class UsrIndexComponent implements OnInit {
         link: ''
       }
     ];
+    this.newsService.load().subscribe(data => {
+      this.news = data;
+    });
   }
 }

@@ -13,7 +13,7 @@
   <div class="blog__tabs scrollbar">
     <div class="blog__tabs_heading">
       <div class="blog__tabs_wrap">
-        <span class="blog__tabs_heading_single" *ngFor="let tab of tabs; let i = index" (click)="setActive(i)" id="tab-{{i}}">{{tab}}</span>
+        <span class="blog__tabs_heading_single" *ngFor="let tab of tabs; let i = index" (click)="setActive(i, tab.id)" id="tab-{{i}}">{{tab.title}}</span>
       </div>
     </div>
     <div class="line">
@@ -21,5 +21,5 @@
     </div>
   </div>
 </section>
-<app-blog-section [mainArticle]="true"></app-blog-section>
+<app-blog-section [mainArticle]="true" [data]="data"></app-blog-section>
 <app-pagination></app-pagination>
