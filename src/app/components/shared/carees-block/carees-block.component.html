@@ -27,360 +27,327 @@
     </div>
   </div>
   <div class="careers__content" *ngIf="all">
-    <div class="careers__content_single">
+    <div class="careers__content_single" *ngFor="let career of data">
       <div class="circle"></div>
       <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
+        <span routerLink="/careers-single/{{career.alias}}">{{career.title_eng}}</span>
         <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
+<!--          <div class="tag">Full time</div>-->
           <div class="tag">Back end</div>
         </div>
       </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
+      <div class="green-btn" routerLink="/careers-apply/{{career.alias}}">Apply</div>
     </div>
   </div>
-  <div class="careers__content" *ngIf="back">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
-  <div class="careers__content" *ngIf="front">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
-  <div class="careers__content" *ngIf="designer">
-  </div>
-  <div class="careers__content" *ngIf="devops">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
-  <div class="careers__content" *ngIf="management">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
-  <div class="careers__content" *ngIf="marketing">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
-  <div class="careers__content" *ngIf="business">
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-    <div class="careers__content_single">
-      <div class="circle"></div>
-      <div class="careers__content_single-descr">
-        <span>Senior Ruby Developer</span>
-        <div class="careers__content_single-descr--tags">
-          <div class="tag">Full time</div>
-          <div class="tag">Back end</div>
-        </div>
-      </div>
-      <div class="green-btn">Apply</div>
-    </div>
-  </div>
+<!--  <div class="careers__content" *ngIf="back">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="front">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="designer">-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="devops">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="management">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="marketing">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="careers__content" *ngIf="business">-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--    <div class="careers__content_single">-->
+<!--      <div class="circle"></div>-->
+<!--      <div class="careers__content_single-descr">-->
+<!--        <span>Senior Ruby Developer</span>-->
+<!--        <div class="careers__content_single-descr&#45;&#45;tags">-->
+<!--          <div class="tag">Full time</div>-->
+<!--          <div class="tag">Back end</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="green-btn">Apply</div>-->
+<!--    </div>-->
+<!--  </div>-->
 </section>

@@ -13,7 +13,7 @@ export class AppComponent {
   close: any = true;
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
-    router: Router
+    public router: Router,
   ) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {

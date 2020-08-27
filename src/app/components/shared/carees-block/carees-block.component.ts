@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {Component, Inject, Input, OnInit, PLATFORM_ID} from '@angular/core';
 import {isPlatformBrowser} from '@angular/common';
 
 @Component({
@@ -15,6 +15,7 @@ export class CareesBlockComponent implements OnInit {
   management: any;
   marketing: any;
   business: any;
+  @Input() data: any;
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
   ) { }

@@ -65,8 +65,8 @@ const userRoutes: Routes = [
   { path: 'overview', component: UsrOverviewComponent },
   { path: 'contacts', component: UsrContactUsComponent },
   { path: 'careers', component: UsrCareersComponent },
-  { path: 'careers-single', component: UsrCareersSingleComponent },
-  { path: 'careers-apply', component: UsrCareersApplyComponent },
+  { path: 'careers-single/:alias', component: UsrCareersSingleComponent },
+  { path: 'careers-apply/:alias', component: UsrCareersApplyComponent },
   { path: 'blog', component: UsrBlogListComponent },
 ];
 

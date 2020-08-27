@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VacanciesService} from '../../../services/vacancies.service';
 
 @Component({
   selector: 'app-usr-careers',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsrCareersComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public vacanciesService: VacanciesService) { }
+  data: any;
   ngOnInit(): void {
+    this.getCareers();
+  }
+  getCareers(): any {
+    this.vacanciesService.load().subscribe(data => {
+      this.data = data;
+    });
   }
 
 }

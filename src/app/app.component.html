@@ -4,7 +4,7 @@
     <router-outlet (activate)="onActivate($event)"></router-outlet>
   </div>
 </div>
-<app-footer [light]="route === '/contacts' || route === '/careers-apply'"></app-footer>
+<app-footer [light]="route === '/contacts' || router.url.indexOf('/careers-apply') !== -1"></app-footer>
 <div class="cookie" *ngIf="close">
   <span>We use cookie</span>
   <p>By continuing to use this site you agree with our <a href="">cookie policy</a>.</p>

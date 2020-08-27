@@ -140,7 +140,7 @@ export class NewsService{
       title: 'Mobile Development'
     }
   ];
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient) { }
   load(): any {
     return this.http.get<any>(`${domain}/news/getAllNews`).pipe(
       map(result => result.map(item => {
