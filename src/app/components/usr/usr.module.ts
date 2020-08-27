@@ -34,6 +34,7 @@ import { UsrCaseVrBuilderComponent } from './cases/usr-case-vr-builder/usr-case-
 import { UsrCaseEskulabsComponent } from './cases/usr-case-eskulabs/usr-case-eskulabs.component';
 import { UsrCaseTickbusComponent } from './cases/usr-case-tickbus/usr-case-tickbus.component';
 import { UsrCaseLotaryComponent } from './cases/usr-case-lotary/usr-case-lotary.component';
+import { UsrCaseTrackAndTraceComponent } from './cases/usr-case-track-and-trace/usr-case-track-and-trace.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -45,6 +46,7 @@ const userRoutes: Routes = [
   { path: 'cases/tickfind', component: UsrCaseSingleComponent },
   { path: 'cases/tickbus', component: UsrCaseTickbusComponent },
   { path: 'cases/lotary', component: UsrCaseLotaryComponent },
+  { path: 'cases/track-and-trace', component: UsrCaseTrackAndTraceComponent },
   { path: 'cases/epicenter', component: UsrCaseEpicenterComponent },
   { path: 'cases/g-truck', component: UsrCaseGtruckComponent },
   { path: 'cases/darmen', component: UsrCasesDarmenComponent },
@@ -103,7 +105,8 @@ const userRoutes: Routes = [
     UsrCaseVrBuilderComponent,
     UsrCaseEskulabsComponent,
     UsrCaseTickbusComponent,
-    UsrCaseLotaryComponent
+    UsrCaseLotaryComponent,
+    UsrCaseTrackAndTraceComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,40 @@
+<app-heading
+  [backgroundColor]="'#E7F2F3'"
+  [top]="'150px'"
+  [right]="'350px'"
+  [title]="'Track&Trace медикаменти'"
+  [needSocial]="false"
+  [hasSocial]="false"
+  [hasLaunchButton]="true"
+  [hasTags]="true"
+  [hasContactButton]="'Estimate your Project'"
+  [needBackButton]="'all Cases'"
+  [centered]="true"
+></app-heading>
+<app-tabs-block [heading]="'Stack'"></app-tabs-block>
+<div class="section">
+  <h2 class="centered">Общая схема работы всех конрагентов</h2>
+  <img class="cases-image" src="/assets/images/trace.png" alt="">
+</div>
+<div class="half-section">
+  <h2 class="centered">Цель</h2>
+  <p class="centered">
+    ITS является первой успешной инновационной и уникальной системой в мире. ITS предназначен для отслеживания местоположения каждой единицы лекарственного средства, чтобы обеспечить надежное снабжение лекарственных средств для пациентов. Предназначен для отслеживания местоположения каждого лекарственного средства для обеспечения безопасного доступа к лекарственным препаратам.
+  </p>
+  <p class="centered"><b>Основными задачами ITS являются:</b></p>
+  <p class="centered">
+    o Сохранения общественного здравоохранения<br>
+    o Обеспечение надежных поставок лекарственных средств<br>
+    o Официальная регистрация надежности лекарств<br>
+    o Повышение условий эксплуатации <br>
+  </p>
+  <p class="centered">
+    <b>Вторичные цели изложенные ниже , которые  были выполнены:</b>
+  </p>
+
+</div>
+<a href="" class="big-link link">View next case<svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M40 8.56966V32.7769H32L32 13.9283L5.65685 40.4994L0 34.7936L25.999 8.56966L8 8.56966L8 0.500436L32 0.500438V0.5H40V0.500439V8.56966Z" fill="#00CAA7"/>
+</svg>
+</a>
+<app-cases [title]="'Other cases'" [needExtraTabs]="true"></app-cases>
