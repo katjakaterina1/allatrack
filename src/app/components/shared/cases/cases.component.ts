@@ -11,6 +11,7 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
   @Input() needTitle = true;
   @Input() needExtraTabs: boolean;
   @Input() title: string;
+  @Input() caseData: any;
   @Input() image: string;
   @Input() backgroundColor: string;
   cases: any = [1, 2, 3, 4, 5, 6, 7, 8, 9];

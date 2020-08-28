@@ -22,4 +22,4 @@
   </div>
 </section>
 <app-blog-section [mainArticle]="true" [data]="data"></app-blog-section>
-<app-pagination></app-pagination>
+<app-pagination (pageChanged)="onPageChanged($event)" [total]="originData?.length" [activePage]="activePage"></app-pagination>

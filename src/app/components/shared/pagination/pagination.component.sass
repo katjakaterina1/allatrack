@@ -24,15 +24,20 @@
     cursor: pointer
     background: #FAFAFA
     transition: all .3s
-    &:hover
-      background: #1D1D1F
-      transition: all .3s
-      svg
-        path
-          fill: white
+    .arrow
+      fill: #1D1D1F
+      path
+        fill: #1D1D1F
+      &.next
+        transform: rotate(180deg)
     &.active
       background: #1D1D1F
-      color: white
+      transition: all .3s
+      .arrow
+        fill: white
+        path
+          fill: white
+
   &__pages
     display: flex
     &_single

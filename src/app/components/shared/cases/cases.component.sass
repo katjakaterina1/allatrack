@@ -48,12 +48,19 @@
     display: none
     position: relative
     overflow: hidden
+    height: 420px
     @include small-desktop
       flex-direction: column
       align-items: center
       padding: 0
+      height: unset
     &.selected
       display: flex
+    &.products
+      .projects__block_content
+        margin-top: 60px
+      p
+        margin: 20px 0 60px 0
     &.dark
       h3
         color: white
@@ -96,13 +103,27 @@
         font-size: 16px
         line-height: 24px
         margin-bottom: 24px
+    p
+      font-family: Archivo, sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 16px
+      line-height: 28px
+      letter-spacing: 0.04em
+      color: #9F9FA0
     .link
       font-size: 14px
+      margin-right: 24px
     img
       border-radius: 0 8px 8px 0
       width: 465px
       height: 420px
       object-fit: cover
+      &.fullImage
+        width: 511px
+        height: 330px
+        margin: 50px 40px
+        border-radius: 16px
       @include small-desktop
         width: 465px
         height: 420px

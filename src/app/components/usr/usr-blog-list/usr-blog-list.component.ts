@@ -11,6 +11,7 @@ export class UsrBlogListComponent implements AfterViewInit, OnInit {
   tabs: any;
   data: any[];
   originData: any[];
+  public activePage = [1];
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     public newsService: NewsService
@@ -53,10 +54,19 @@ export class UsrBlogListComponent implements AfterViewInit, OnInit {
   }
   getNews(): any {
     this.newsService.load().subscribe(data => {
-      console.log(data);
-      this.data = data;
+      this.data = data.slice((this.activePage[this.activePage.length - 1] - 1) * 4, 4 * this.activePage[this.activePage.length - 1]);
       this.originData = data;
     });
   }
-
+  onPageChanged($event: any): void {
+    this.activePage = $event.activePage;
+    this.data = [];
+    this.activePage.forEach(page => {
+      let result;
+      result = this.originData.slice((page - 1) * 4, 4 * page);
+      this.data = this.data.concat(result);
+      console.log(this.data);
+    });
+    // this.data = this.originData.slice((this.activePage[this.activePage.length - 1] - 1) * 10 , 10 * this.activePage[this.activePage.length - 1]);
+  }
 }

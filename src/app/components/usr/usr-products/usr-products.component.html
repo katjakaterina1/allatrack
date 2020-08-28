@@ -3,7 +3,5 @@
              [hasSocial]="false"
 ></app-heading>
 <div class="tabs section">
-  <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false"></app-cases>
-  <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" [image]="'case2.gif'" [backgroundColor]="'#181818'"></app-cases>
-  <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" [image]="'case1.gif'" [backgroundColor]="'#E7F2F3'"></app-cases>
+  <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" *ngFor="let caseItem of caseData" [caseData]="caseItem"></app-cases>
 </div>
