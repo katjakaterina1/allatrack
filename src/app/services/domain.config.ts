@@ -1,2 +1,2 @@
-const domain = 'https://allatrack.com/';
+const domain = 'https://cabinet.allatrack.com/';
 export default domain;
