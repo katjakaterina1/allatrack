@@ -39,13 +39,13 @@
     </div>
     <div class="footer__nav">
       <div class="footer__nav_block" (click)="openSection('services')" [ngClass]="{'open': openServices}">
-        <span class="footer__nav_block-head">Services
+        <span class="footer__nav_block-head" routerLink="services-list">Services
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
         </svg>
         </span>
         <ul>
-          <li>Extend your team</li>
+          <li routerLink="/service-single">Extend your team</li>
           <li>Build your idea</li>
           <li>Manage your service</li>
           <li>Software Product Development</li>
@@ -58,7 +58,7 @@
         </ul>
       </div>
       <div class="footer__nav_block" (click)="openSection('expertise')" [ngClass]="{'open': openExpertise}">
-        <span class="footer__nav_block-head">Expertise
+        <span class="footer__nav_block-head" routerLink="expertises">Expertise
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M9 0L7 0V7H0L0 9H7V16H9V9H16V7H9V0Z" fill="#00CAA7"/>
         </svg>
@@ -79,10 +79,10 @@
         </svg>
         </span>
         <ul>
-          <li>About us</li>
-          <li>Company overview</li>
-          <li>Process</li>
-          <li>Our product</li>
+          <li routerLink="/about">About us</li>
+          <li routerLink="/overview">Company overview</li>
+          <li routerLink="/process">Process</li>
+          <li routerLink="products">Our product</li>
         </ul>
       </div>
       <div class="footer__nav_block" (click)="openSection('blog')" [ngClass]="{'open': openBlog}">
@@ -92,10 +92,7 @@
         </svg>
         </span>
         <ul>
-          <li>SoftData -> Allatrack</li>
-          <li>10 Big Financial Technology Trends for 2018</li>
-          <li>5 Ways Banks Can Benefit From Blockchain Technology</li>
-          <li>The Future Of Data In Banking</li>
+          <li *ngFor="let title of news | slice:0:4" routerLink="/blog-single/{{title.alias}}">{{title.title_eng}}</li>
         </ul>
       </div>
       <div class="footer__nav_block" (click)="openSection('case')" [ngClass]="{'open': openCase}">

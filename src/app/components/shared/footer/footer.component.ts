@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {NewsService} from '../../../services/news.service';
 
 @Component({
   selector: 'app-footer',
@@ -13,9 +14,13 @@ export class FooterComponent implements OnInit {
   private openCompany: boolean;
   private openBlog: boolean;
   private openCase: boolean;
-  constructor() { }
+  private news: any;
+  constructor(public newsService: NewsService) { }
 
   ngOnInit(): void {
+    this.newsService.load().subscribe(data => {
+      this.news = data;
+    });
   }
   openSection(id): any{
     switch (id) {
@@ -55,6 +60,7 @@ export class FooterComponent implements OnInit {
         this.openCase = !this.openCase;
         break;
     }
+
   }
 
 }
