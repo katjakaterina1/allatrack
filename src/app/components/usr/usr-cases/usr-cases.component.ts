@@ -12,6 +12,7 @@ export class UsrCasesComponent implements OnInit {
   mobile: any;
   analyze: any;
   caseData: any;
+  otherCases: any;
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
   ) { }
@@ -89,6 +90,33 @@ export class UsrCasesComponent implements OnInit {
         circle: 'right: 100px; top: -280px; background-image: url("/assets/images/bg.gif")',
         darkMode: false,
         route: '/cases/analysis'},
+    ];
+    this.otherCases = [
+      {
+        title: 'Анти-плагиат',
+        caseTags: ['iOs', 'Design', 'AI'],
+        route: '/cases/anti-plagiat'
+      },
+      {
+        title: 'Антифрод',
+        caseTags: ['iOs', 'Design', 'AI'],
+        route: '/cases/antifrod'
+      },
+      {
+        title: 'Идентификация животных',
+        caseTags: ['iOs', 'Design', 'AI'],
+        route: '/cases/animals'
+      },
+      {
+        title: 'CRM оптимизация',
+        caseTags: ['iOs', 'Design', 'AI'],
+        route: '/cases/crm-optimization'
+      },
+      {
+        title: 'VR строитель',
+        caseTags: ['iOs', 'Design', 'AI'],
+        route: '/cases/vr-builder'
+      },
     ];
   }
   changeTab(tab: any): void {
