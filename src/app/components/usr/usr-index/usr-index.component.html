@@ -35,7 +35,7 @@
 </section>
 <app-cases [needExtraTabs]="true" [caseData]="caseData" ></app-cases>
 <app-our-services [flag]="'service'" [title]="'Our services'" [servicesData]="servicesData"></app-our-services>
-<app-about></app-about>
-<app-expertise [header]="'Expertise'" [button]="'View all Expertise'"></app-expertise>
+<app-about [aboutData]="aboutData"></app-about>
+<app-expertise [header]="'Expertise'" [button]="'View all Expertise'" [expertiseData]="expertiseData"></app-expertise>
 <app-reviews [heading]="'We help dozens of businesses become successful '"></app-reviews>
 <app-blog-section [heading]="'Blog'" [button]="'Discover all articles'" [mainArticle]="true" [data]="news | slice:0:4"></app-blog-section>

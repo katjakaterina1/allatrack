@@ -1,26 +1,18 @@
-<section class="about section">
+<section class="about section" *ngIf="aboutData">
   <div class="about__description">
-    <h2>From digital healthcare to health in a digital world</h2>
-    <p>Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software development of any complexity. To each client an individual approach, depending on the specifics of the business.</p>
+    <h2>{{aboutData.heading}}</h2>
+    <p>{{aboutData.paragraph}}</p>
   </div>
   <div class="about__images">
     <img class="animated-image" src="/assets/images/giphy.gif" alt="">
     <img class="animated-image top" src="/assets/images/bg.gif" alt="">
   </div>
   <div class="about__block">
-    <div class="about__block_single">
-      <h3 class="about__block_single-name">6 years</h3>
-      <p>Help build a team or pick a ready-made team</p>
+    <div class="about__block_single" *ngFor="let column of aboutData.columns">
+      <h3 class="about__block_single-name">{{column.title}}</h3>
+      <p>{{column.description}}</p>
     </div>
-    <div class="about__block_single">
-      <h3 class="about__block_single-name">30 projects</h3>
-      <p>Help build a team or pick a ready-made team</p>
-    </div>
-    <div class="about__block_single">
-      <h3 class="about__block_single-name">40 teammate</h3>
-      <p>Help build a team or pick a ready-made team</p>
-    </div>
-    <button class="purple-button">
+    <button class="purple-button" routerLink="/about">
       <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M12.622 1.9946L15.2203 4.59287C15.9417 5.31427 15.9417 6.48811 15.2203 7.20952L12.622 9.80778C11.9006 10.5292 10.7268 10.5292 10.0054 9.80778L7.40713 7.20952C6.68573 6.48811 6.68573 5.31427 7.40713 4.59287L10.0054 1.9946C10.7268 1.2732 11.9006 1.2732 12.622 1.9946ZM10.8893 8.9239C11.1233 9.15793 11.5041 9.15793 11.7382 8.9239L14.3364 6.32563C14.5705 6.0916 14.5705 5.71078 14.3364 5.47675L11.7382 2.87849C11.5041 2.64446 11.1233 2.64446 10.8893 2.87849L8.29102 5.47675C8.05699 5.71078 8.05699 6.0916 8.29102 6.32563L10.8893 8.9239ZM18.7383 8.1109L21.3016 10.6742C22.0327 11.4052 22.0327 12.5948 21.3016 13.3258L18.7383 15.8891C18.0073 16.6201 16.8178 16.6201 16.0867 15.8891L13.5234 13.3258C12.7924 12.5948 12.7924 11.4052 13.5234 10.6742L16.0867 8.1109C16.8178 7.37984 18.0073 7.37984 18.7383 8.1109ZM16.9706 15.0052C17.2143 15.2489 17.6108 15.2489 17.8545 15.0052L20.4177 12.4419C20.6614 12.1982 20.6614 11.8017 20.4177 11.558L17.8545 8.99478C17.6108 8.7511 17.2143 8.7511 16.9706 8.99478L14.4073 11.558C14.1636 11.8017 14.1636 12.1982 14.4073 12.4419L16.9706 15.0052ZM9.12151 10.6917L6.52325 8.0934C5.80185 7.372 4.628 7.372 3.9066 8.0934L1.30834 10.6917C0.586933 11.4131 0.586933 12.5869 1.30834 13.3083L3.9066 15.9066C4.628 16.628 5.80185 16.628 6.52325 15.9066L9.12151 13.3083C9.84292 12.5869 9.84292 11.4131 9.12151 10.6917ZM5.63937 15.0227C5.40534 15.2567 5.02451 15.2567 4.79048 15.0227L2.19222 12.4244C1.95819 12.1904 1.95819 11.8096 2.19222 11.5755L4.79048 8.97728C5.02451 8.74325 5.40534 8.74325 5.63937 8.97728L8.23763 11.5755C8.47166 11.8096 8.47166 12.1904 8.23763 12.4244L5.63937 15.0227ZM12.6395 14.2097L15.2028 16.773C15.9339 17.504 15.9339 18.6935 15.2028 19.4246L12.6395 21.9879C11.9085 22.7189 10.719 22.7189 9.9879 21.9879L7.42463 19.4246C6.69357 18.6935 6.69357 17.504 7.42463 16.773L9.9879 14.2097C10.719 13.4786 11.9085 13.4786 12.6395 14.2097ZM10.8718 21.104C11.1155 21.3477 11.512 21.3477 11.7557 21.104L14.3189 18.5407C14.5626 18.297 14.5626 17.9005 14.3189 17.6568L11.7557 15.0936C11.512 14.8499 11.1155 14.8499 10.8718 15.0936L8.30852 17.6568C8.06483 17.9005 8.06483 18.297 8.30852 18.5407L10.8718 21.104Z" fill="#FAFAFA"/>
       </svg>

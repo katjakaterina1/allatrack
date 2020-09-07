@@ -10,6 +10,8 @@ export class UsrIndexComponent implements OnInit {
   public servicesData: any[];
   news: any;
   caseData: any;
+  aboutData: any;
+  expertiseData: any;
   constructor(public newsService: NewsService) { }
 
   ngOnInit(): void {
@@ -110,21 +112,33 @@ export class UsrIndexComponent implements OnInit {
     ];
     this.servicesData = [
       {
-        title: 'Extand your team',
-        text: 'Help build a team or pick a ready-made team',
+        title: 'Extend your team',
+        text: 'Improve the development team with experts dedicated to Allatrack',
+        button: 'Help me improve',
         link: ''
       },
       {
-        title: 'Build your idea',
-        text: 'Help build a team or pick a ready-made team',
+        title: 'Build your product',
+        text: 'Support your operations with a custom-built application',
+        button: 'Build my product',
         link: ''
       },
       {
         title: 'Management',
-        text: 'Help build a team or pick a ready-made team',
+        text: 'Free up your team’s time with our Managed Support',
+        button: 'Scale my business',
         link: ''
       }
     ];
+    this.aboutData = {
+      heading: 'Inspiration for organizations to bring creative ideas to life',
+      paragraph: 'Thanks to the individual approach to each client, the Allatrack development team uses the most advanced methods of managing resources and processes when creating software, while providing the Customer with a high-quality software product.',
+      columns: [
+        {title: '6 Years', description: 'We work successfully in the market'},
+        {title: '35 projects', description: 'Allatrack team successfully implemented high-tech projects'},
+        {title: '40%', description: 'Saving campaign budget thanks to machine learning algorithms'},
+      ]
+    };
     this.newsService.load().subscribe(data => {
       this.news = data;
     });

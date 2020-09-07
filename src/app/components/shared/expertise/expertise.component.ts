@@ -9,6 +9,7 @@ export class ExpertiseComponent implements OnInit {
   @Input() header: string;
   @Input() button: string;
   @Input() back: string;
+  @Input() expertiseData: any;
   public firstTab = true;
   public secondTab = false;
   public thirdTab = false;
