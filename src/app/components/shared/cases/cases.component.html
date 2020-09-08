@@ -31,7 +31,7 @@
     </div>
   </ng-container>
   <ng-container *ngIf="needExtraTabs">
-    <div class="projects__block" [ngClass]="{'dark': caseItem.darkMode , 'products': caseItem.text}" [style.backgroundColor]="caseItem.background" *ngFor="let caseItem of caseData, let i = index" id="block-{{i}}">
+    <div class="projects__block" [ngClass]="{'dark': caseItem.darkMode , 'products': caseItem.text}" [style.backgroundColor]="caseItem.background" *ngFor="let caseItem of caseDataSlider, let i = index" id="block-{{i}}">
       <div class="circle" style="{{caseItem.circle}}"></div>
       <div class="projects__block_content">
         <div class="projects__block__tags">

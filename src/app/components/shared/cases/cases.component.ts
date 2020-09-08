@@ -16,6 +16,7 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
   @Input() backgroundColor: string;
   cases: any = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   casesInterval: any;
+  caseDataSlider: any;
   casesTimeout: any;
   clearedInterval: boolean;
   clearedTimeout: boolean;
@@ -25,7 +26,7 @@ export class CasesComponent implements AfterViewInit, OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.caseData = [
+    this.caseDataSlider = [
       {
         caseTitle: 'Eskulabs',
         shortTitle: 'Eskulabs',
