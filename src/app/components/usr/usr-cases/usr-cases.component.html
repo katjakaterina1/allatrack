@@ -36,10 +36,13 @@
       <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" *ngFor="let caseSingle of caseData" [caseData]="caseSingle"></app-cases>
     </div>
     <div class="tabs__content" *ngIf="web">
+      <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" *ngFor="let caseSingle of webCases" [caseData]="caseSingle"></app-cases>
     </div>
     <div class="tabs__content" *ngIf="mobile">
+      <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" *ngFor="let caseSingle of saasCases" [caseData]="caseSingle"></app-cases>
     </div>
     <div class="tabs__content" *ngIf="analyze">
+      <app-cases [needMargin]="false" [needExtraTabs]="false" [needTitle]="false" *ngFor="let caseSingle of mobileCases" [caseData]="caseSingle"></app-cases>
     </div>
   </div>
 </div>

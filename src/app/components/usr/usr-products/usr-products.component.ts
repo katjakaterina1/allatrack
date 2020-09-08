@@ -12,16 +12,17 @@ export class UsrProductsComponent implements OnInit {
   ngOnInit(): void {
     this.caseData = [
       {
-        caseTitle: 'TiPaymium modern and smart mobile payment system powered on AI. ',
+        caseTitle: '2FA',
+        shortTitle: '2FA',
         // caseTags: ['iOs', 'Android', 'Design', 'AI'],
-        caseImage: '/assets/images/phone.gif',
-        product: true,
-        fullImage: true,
-        text: 'Allatrack is a young and progressive IT company that provides a full range of services in the field of data analysis and software development of any complexity.',
-        background: '#FAFAFA',
-        circle: '',
+        caseImage: '/assets/images/fa-bg.png',
+        fullImage: false,
+        text: 'Service to find the new impressions Tick - The place where all the tickets are collected. Multipurpose searching service for events of any format, favorite artists, new places, routes, etc.',
+        background: '#FCC546',
+        circle: 'right: -900px; top: -380px;',
         darkMode: false,
-        route: ''},
+        route: '/cases/fa',
+        section: ['web', 'saas']},
       {
         caseTitle: 'Tickbus',
         // caseTags: ['iOs', 'Android', 'Design', 'AI'],

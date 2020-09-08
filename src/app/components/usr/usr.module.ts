@@ -35,6 +35,7 @@ import { UsrCaseEskulabsComponent } from './cases/usr-case-eskulabs/usr-case-esk
 import { UsrCaseTickbusComponent } from './cases/usr-case-tickbus/usr-case-tickbus.component';
 import { UsrCaseLotaryComponent } from './cases/usr-case-lotary/usr-case-lotary.component';
 import { UsrCaseTrackAndTraceComponent } from './cases/usr-case-track-and-trace/usr-case-track-and-trace.component';
+import { TAndTAlcoComponent } from './cases/t-and-t-alco/t-and-t-alco.component';
 
 const userRoutes: Routes = [
   { path: '', component: UsrIndexComponent },
@@ -47,6 +48,7 @@ const userRoutes: Routes = [
   { path: 'cases/tickbus', component: UsrCaseTickbusComponent },
   { path: 'cases/lotary', component: UsrCaseLotaryComponent },
   { path: 'cases/track-and-trace', component: UsrCaseTrackAndTraceComponent },
+  { path: 'cases/track-and-trace-alcohol', component: TAndTAlcoComponent },
   { path: 'cases/epicenter', component: UsrCaseEpicenterComponent },
   { path: 'cases/g-truck', component: UsrCaseGtruckComponent },
   { path: 'cases/darmen', component: UsrCasesDarmenComponent },
@@ -106,7 +108,8 @@ const userRoutes: Routes = [
     UsrCaseEskulabsComponent,
     UsrCaseTickbusComponent,
     UsrCaseLotaryComponent,
-    UsrCaseTrackAndTraceComponent
+    UsrCaseTrackAndTraceComponent,
+    TAndTAlcoComponent
   ],
   imports: [
     CommonModule,
